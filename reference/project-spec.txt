@@ -1,0 +1,1616 @@
+PROJECT: SQUARE – Bird Net & Invisible Grill Website
+TYPE: Multi-page service business website
+PRIMARY GOAL: Recreate the attached homepage UI accurately, then extend the same visual system into About, Services, individual service pages, Projects/Gallery, Videos, FAQ, and Contact pages.
+
+You are acting as a senior UI/UX designer, frontend developer, motion designer, and performance-focused web engineer.
+
+Build a complete, production-quality website for:
+
+SQUARE
+Bird Net & Invisible Grill
+
+The company provides bird protection and balcony safety services including:
+• Bird Netting
+• Invisible Grill
+• Bird Spikes / Anti-Bird Protection
+• Safety Nets
+• Child & Pet Safety solutions
+• Residential installations
+• Commercial / industrial installations
+
+IMPORTANT:
+The attached homepage UI is the PRIMARY visual reference.
+
+Do NOT redesign it into a generic template.
+Do NOT copy the reference websites.
+Reference websites are only for understanding the service industry and possible content requirements.
+
+The finished website should feel significantly more premium and modern than typical local bird-net service websites.
+
+
+==================================================
+1. DESIGN DIRECTION
+==================================================
+
+Closely reproduce the visual language of the attached homepage:
+
+• Clean white/light background
+• Deep navy blue as main brand colour
+• Royal/medium blue for interactive elements
+• Light icy-blue backgrounds and subtle section gradients
+• Small green accents only where appropriate, especially WhatsApp
+• Large confident headings
+• Generous whitespace
+• Professional residential architecture photography
+• Balcony imagery
+• Invisible grill imagery
+• Bird-net installation photography
+• Commercial building imagery
+• Installation-team photographs
+• Material/product closeups
+• Before/after photographs
+• Client-provided videos
+
+Use the supplied SQUARE logo exactly. Do not redesign or distort the logo.
+
+Overall visual personality:
+
+Premium
+Safe
+Trustworthy
+Modern
+Clean
+Residential
+Architectural
+Family-friendly
+Professional
+
+Avoid:
+
+• Generic SaaS design
+• Excessive card grids
+• Overuse of gradients
+• Cartoonish illustrations
+• Random stock-office imagery
+• Extremely rounded pill components everywhere
+• Excessive shadows
+• Cheap local-service website appearance
+• Clutter
+• Long uninterrupted text blocks
+
+
+==================================================
+2. LAYOUT SYSTEM
+==================================================
+
+Desktop:
+
+Use approximately 1280–1440px maximum content width depending on section.
+
+Most major sections should occupy approximately 88–94% of available desktop width where visually appropriate.
+
+Use full-bleed photography selectively.
+
+Recommended content grid:
+
+12-column responsive grid
+
+Desktop:
+80–120px vertical section spacing
+
+Tablet:
+60–80px
+
+Mobile:
+45–65px
+
+Use consistent spacing throughout the website.
+
+Border radius:
+Generally 10–18px.
+
+Use larger radius only for major visual containers where it matches the reference.
+
+Use subtle 1px light grey/blue borders.
+
+Use shadows sparingly.
+
+
+==================================================
+3. TYPOGRAPHY
+==================================================
+
+Use a modern premium sans-serif typeface.
+
+Good choices:
+Manrope
+Inter
+Plus Jakarta Sans
+DM Sans
+
+Prefer Manrope or a similar geometric sans-serif.
+
+Typography hierarchy:
+
+Hero H1:
+Desktop 58–72px
+Tablet 46–54px
+Mobile 36–44px
+
+Section H2:
+Desktop 38–48px
+Mobile 30–36px
+
+Body:
+16–18px
+
+Small labels:
+11–13px uppercase with increased letter spacing.
+
+Headlines should use strong weights.
+
+Avoid thin typography for important headings.
+
+
+==================================================
+4. GLOBAL HEADER
+==================================================
+
+Create a two-level header similar to the attached UI.
+
+TOP UTILITY BAR
+
+Dark/navy background.
+
+Left:
+“Protecting Homes. Beautifying Views.”
+
+Optional service area:
+“Serving Across Delhi NCR”
+
+Business hours:
+Mon – Sat 9:00 AM – 7:00 PM
+
+Right:
+Phone number
+WhatsApp link
+
+MAIN NAVIGATION
+
+Left:
+SQUARE logo
+
+Middle:
+Home
+About
+Services
+Projects
+Videos
+FAQ
+Contact
+
+Optional search icon if genuinely useful.
+
+Right CTA:
+“Get Free Site Visit”
+
+The header should become sticky after scrolling.
+
+Sticky state:
+• slightly reduced height
+• white/translucent background
+• subtle shadow or border
+• retain CTA
+
+Mobile:
+Use a premium full-height slide-in navigation drawer.
+
+Include:
+Phone
+WhatsApp
+Get Free Site Visit
+
+Do not make the mobile menu feel like a generic Bootstrap menu.
+
+
+==================================================
+5. HOMEPAGE
+==================================================
+
+Recreate the homepage structure shown in the supplied UI.
+
+
+SECTION 01 — HERO
+
+Use a split / diagonal composition closely inspired by the reference.
+
+Left:
+Eyebrow:
+SAFE HOMES. HAPPIER LIVING.
+
+Headline:
+Safe balconies.
+Clear views.
+Zero compromise.
+
+Supporting paragraph:
+Professional bird net, invisible grill and bird spike installation for safer, cleaner and more beautiful homes.
+
+Primary CTA:
+Book Free Site Visit
+
+Secondary CTA:
+View Our Work
+
+Small benefit row:
+Professional Installation
+Premium & Durable Materials
+Residential & Commercial
+
+Right:
+Large premium client-provided balcony/invisible-grill image or video.
+
+The visual should communicate:
+
+• unobstructed balcony view
+• high-rise residence
+• premium property
+• safety without visual obstruction
+
+Optional handwritten-style decorative line:
+“Same view. More peace.”
+
+Use decorative handwriting sparingly.
+
+
+SECTION 02 — TRUST METRICS
+
+Create a horizontal statistics strip.
+
+Examples:
+
+8+ Years of Experience
+500+ Projects Completed
+1,000+ Happy Customers
+2 Years Service Warranty
+Same-Day Site Visit
+
+IMPORTANT:
+Treat these as placeholders unless supplied by the client.
+Do not present invented statistics as final production data.
+
+Create configuration/data objects so numbers are easy to replace.
+
+
+SECTION 03 — SERVICES
+
+Eyebrow:
+OUR SERVICES
+
+Heading:
+Solutions for every space
+
+Subheading explaining residential and commercial coverage.
+
+Create visually strong service cards:
+
+1. Balcony Bird Netting
+2. Residential Bird Netting
+3. Commercial & Industrial Bird Netting
+4. Invisible Grill
+5. Bird Spikes / Anti-Bird Protection
+6. Safety Net / Child & Pet Safety
+
+Use actual/client-provided imagery wherever possible.
+
+Card interaction:
+Image subtly scales
+Arrow moves
+Title changes slightly
+Border/shadow responds
+
+Provide:
+Explore All Services →
+
+
+SECTION 04 — INVISIBLE GRILL FEATURE
+
+Large 50/50 composition.
+
+Left:
+Large balcony/invisible-grill image/video.
+
+Overlay:
+INVISIBLE GRILL
+Maximum safety.
+Minimum visibility.
+
+Optional video play control.
+
+Right:
+Eyebrow:
+PREMIUM & MODERN
+
+Heading:
+Invisible Grill
+Safety without blocking your beautiful view.
+
+Benefits:
+
+Unobstructed View
+High Tensile Strength
+Rust & Weather Resistant
+Ideal for Homes with Kids & Pets
+
+CTA:
+Know More About Invisible Grill
+
+Include a small high-quality closeup image of cable/fixture hardware.
+
+
+SECTION 05 — BEFORE / AFTER
+
+Heading:
+From a bird-prone space to a peaceful home
+
+Copy should explain hygienic and humane bird-control solutions.
+
+Show interactive Before/After comparison.
+
+Prefer draggable image comparison slider if high-quality matching photographs are available.
+
+Otherwise use clean adjacent Before / After images.
+
+Supporting benefits:
+
+Cleaner Spaces
+No Bird Nuisance
+Hygienic Environment
+Humane Solution
+
+
+SECTION 06 — WHY CHOOSE SQUARE
+
+Use an authentic installation-team photo or client video.
+
+Heading:
+Safe. Clean. Beautiful.
+
+Supporting line:
+More than just protection — we deliver peace of mind.
+
+Benefits:
+
+Experienced Team & Professional Installation
+UV & Weather Resistant Materials
+Child & Pet Safety Focus
+Clean & Neat Finishing
+Transparent Pricing
+Residential & Commercial Expertise
+
+Avoid six identical generic cards.
+Use iconography and visual hierarchy.
+
+
+SECTION 07 — PROJECTS
+
+Eyebrow:
+OUR PROJECTS
+
+Heading:
+Real spaces. Real results.
+
+Add filter buttons:
+
+All
+Bird Net
+Invisible Grill
+Bird Spike
+Commercial
+
+Project cards should include combinations such as:
+
+Residential Balcony — Invisible Grill
+High-Rise Apartment — Bird Netting
+Independent House — Bird Netting
+Commercial Building — Bird Netting
+Terrace — Bird Spikes
+Residential — Safety Net
+
+Use masonry/grid layout depending on available assets.
+
+Desktop:
+approximately 4–5 images visible at a time.
+
+Mobile:
+horizontal swipe/carousel or 1–2-column grid.
+
+CTA:
+View More Projects
+
+
+SECTION 08 — VIDEO SHOWCASE
+
+Use a navy full-width section.
+
+Heading:
+See our work in action
+
+Subheading:
+Real installations. Real happy customers.
+
+Use client-supplied videos.
+
+One large featured video plus 2–3 smaller videos.
+
+Examples:
+Invisible Grill Installation
+Balcony Bird Netting
+Commercial Bird Netting
+Installation Process
+
+Use custom thumbnail posters.
+
+Do not autoplay videos with sound.
+
+Video modal/lightbox should support:
+• play
+• pause
+• volume
+• fullscreen
+• ESC close
+
+CTA:
+Watch More Videos
+
+
+SECTION 09 — PROCESS
+
+Heading:
+A simple process for a safer tomorrow
+
+Steps:
+
+01
+Site Visit & Measurement
+
+02
+Solution Recommendation
+
+03
+Professional Installation
+
+04
+Final Safety Check
+
+Use a clean horizontal journey on desktop.
+
+On mobile convert into vertical timeline.
+
+Subtle connecting line animation may activate on scroll.
+
+
+SECTION 10 — MATERIAL QUALITY
+
+Eyebrow:
+QUALITY YOU CAN TRUST
+
+Heading:
+Premium materials.
+Long-lasting protection.
+
+Feature imagery:
+
+Bird net mesh
+Stainless steel cable
+Premium invisible-grill fittings
+Bird spikes if supplied
+
+Relevant attributes may include:
+
+UV Resistant
+High Tensile Strength
+Rust Resistant
+Weather Resistant
+
+Only make material specifications that are confirmed by the client.
+
+CTA:
+Our Materials & Quality
+
+
+SECTION 11 — REVIEWS
+
+Eyebrow:
+WHAT OUR CUSTOMERS SAY
+
+Heading:
+Homes that feel safer, happier
+
+Google Review summary area.
+
+Examples:
+4.8 / 5
+★★★★★
+Based on XXX Google Reviews
+
+Do not hardcode fabricated ratings/review counts into final production.
+
+Use genuine reviews supplied by client or pulled from an approved source.
+
+Cards can display:
+
+Reviewer
+Location
+Star rating
+Review copy
+
+Use horizontal slider on mobile.
+
+
+SECTION 12 — SERVICE AREAS
+
+Eyebrow:
+OUR SERVICE AREAS
+
+Heading:
+We are here for a safer community
+
+Display a subtle Delhi NCR map graphic.
+
+Possible locations:
+
+Delhi
+Gurugram
+Noida
+Greater Noida
+Ghaziabad
+Faridabad
+Dwarka
+Rohini
+South Delhi
+
+These locations must remain CMS/data-driven.
+
+CTA:
+Check Your Area
+
+
+SECTION 13 — FAQ PREVIEW
+
+Heading:
+Everything you need to know
+
+Questions:
+
+Is the invisible grill really invisible?
+Will it be safe for children and pets?
+How long does installation take?
+How long does bird net or grill last?
+Do you provide warranty?
+Is it safe for birds?
+
+Accordion interaction.
+
+Show approximately 6 homepage FAQs.
+
+CTA:
+View All FAQs
+
+
+SECTION 14 — FINAL CTA
+
+Large photographic banner.
+
+Headline:
+Need a safer, cleaner balcony?
+
+Subheading:
+Get a free site visit and expert consultation today.
+
+CTA 1:
+Chat on WhatsApp
+
+CTA 2:
+Get Free Site Visit
+
+Use an appealing premium balcony/home visual.
+
+
+SECTION 15 — FOOTER
+
+Column 1:
+Logo
+Short company description
+Social icons
+
+Column 2:
+Quick Links
+
+Home
+About
+Services
+Projects
+Videos
+Reviews
+Contact
+FAQ
+
+Column 3:
+Our Services
+
+Bird Netting
+Invisible Grill
+Bird Spikes
+Safety Net
+Commercial Solutions
+
+Column 4:
+Contact Us
+
+Phone
+WhatsApp
+Email
+Location
+Business hours
+
+CTA:
+Get Free Site Visit
+
+Bottom row:
+
+© SQUARE
+Privacy Policy
+Terms & Conditions
+
+Optional short handwritten decorative tagline:
+Safe.
+Clean.
+Beautiful.
+
+
+==================================================
+6. REQUIRED WEBSITE PAGES
+==================================================
+
+Create proper unique pages.
+
+Do NOT simply duplicate homepage sections.
+
+Routes:
+
+/
+Homepage
+
+/about
+About Us
+
+/services
+All Services
+
+/services/bird-netting
+Bird Netting
+
+/services/invisible-grill
+Invisible Grill
+
+/services/bird-spikes
+Bird Spikes
+
+/services/safety-net
+Safety Net / Child & Pet Safety
+
+/services/commercial
+Commercial Solutions
+
+/projects
+Projects / Gallery
+
+/videos
+Videos
+
+/faq
+FAQ
+
+/contact
+Contact
+
+Optional:
+/privacy-policy
+/terms
+
+
+==================================================
+7. ABOUT PAGE
+==================================================
+
+Build an editorial and trustworthy About page.
+
+Hero:
+Safety that blends into your home.
+
+Sections:
+
+• Company introduction
+• Our story
+• What SQUARE provides
+• Mission / service philosophy
+• Installation expertise
+• Residential + commercial expertise
+• Why customers choose us
+• Team / installation professionals
+• Materials and safety standards
+• Service areas
+• Statistics
+• Project imagery
+• Reviews
+• CTA
+
+Use photographs of actual installers/work wherever supplied.
+
+Avoid generic corporate/team stock photography.
+
+
+==================================================
+8. SERVICES OVERVIEW PAGE
+==================================================
+
+Hero:
+Protection solutions made for modern spaces.
+
+Create visual service index for:
+
+Bird Netting
+Invisible Grill
+Bird Spikes
+Safety Nets
+Child & Pet Safety
+Commercial Protection
+
+Each service block should contain:
+
+Image
+Service name
+Short explanation
+Best applications
+Key benefits
+CTA
+
+Add a recommendation/selection section:
+
+Not sure what you need?
+
+Examples:
+
+Pigeon problem → Bird Netting / Spikes
+Child balcony safety → Invisible Grill
+Pet safety → Safety Net / Invisible Grill
+Commercial property → Commercial Bird Netting
+
+
+==================================================
+9. INDIVIDUAL SERVICE PAGE TEMPLATE
+==================================================
+
+Each service must have an SEO-friendly unique page.
+
+Recommended structure:
+
+Hero
+Overview
+Problem it solves
+How the solution works
+Key benefits
+Applications
+Materials
+Installation process
+Before/after
+Project gallery
+Video
+Why choose SQUARE
+FAQ specific to that service
+Free-site-visit CTA
+
+
+==================================================
+10. BIRD NETTING PAGE
+==================================================
+
+Focus on:
+
+Balconies
+Windows
+Terraces
+Duct areas
+Commercial properties
+Warehouses
+Apartment buildings
+
+Potential benefits:
+
+Humane bird prevention
+Reduced bird nuisance
+Cleaner balconies
+Durable mesh
+Minimal obstruction
+
+Show net closeups and installation photography.
+
+
+==================================================
+11. INVISIBLE GRILL PAGE
+==================================================
+
+This should be one of the strongest pages.
+
+Focus on:
+
+Premium appearance
+Unobstructed views
+Child safety
+Pet safety
+Balconies
+Windows
+High-rise apartments
+Durable cable system
+
+Use architecture-driven photography.
+
+Include detailed closeups of:
+Cable
+Mounting
+Fixtures
+Spacing
+
+Include video where available.
+
+
+==================================================
+12. BIRD SPIKES PAGE
+==================================================
+
+Focus on:
+
+Ledges
+AC outdoor areas
+Parapets
+Building edges
+Signboards
+Commercial facades
+
+Explain bird-deterrent purpose professionally.
+
+Avoid visually unpleasant pest-control imagery.
+
+
+==================================================
+13. SAFETY NET PAGE
+==================================================
+
+Focus on:
+
+Balconies
+Children
+Pets
+Open areas
+Stair/opening protection
+
+Communicate safety responsibly.
+
+Do not make absolute safety claims such as:
+“100% accident proof.”
+
+Use factual wording.
+
+
+==================================================
+14. COMMERCIAL SOLUTIONS PAGE
+==================================================
+
+Design this page slightly more architectural/B2B.
+
+Cover:
+
+Factories
+Warehouses
+Office buildings
+Hospitals
+Schools
+Hotels
+Apartment societies
+Commercial complexes
+
+Include:
+
+Site survey
+Custom assessment
+Large-scale installation
+Maintenance/support
+Project gallery
+Request commercial quotation CTA
+
+
+==================================================
+15. PROJECTS PAGE
+==================================================
+
+Create an immersive project gallery.
+
+Filtering:
+
+All
+Bird Net
+Invisible Grill
+Bird Spike
+Safety Net
+Residential
+Commercial
+
+Each item may open a project lightbox/case-study view containing:
+
+Location
+Property type
+Service
+Challenge
+Solution
+Images
+Video if available
+
+Lazy-load project images.
+
+
+==================================================
+16. VIDEOS PAGE
+==================================================
+
+Use client videos extensively.
+
+Categories:
+
+Installation
+Invisible Grill
+Bird Netting
+Commercial
+Before / After
+Customer Experience
+
+Use poster thumbnails.
+
+Avoid downloading/loading all video files on initial page load.
+
+Lazy-load players when clicked.
+
+
+==================================================
+17. FAQ PAGE
+==================================================
+
+Create categorized FAQ sections.
+
+Categories:
+
+General
+Bird Netting
+Invisible Grill
+Bird Spikes
+Installation
+Warranty
+Maintenance
+Pricing
+Child & Pet Safety
+
+Include search/filter if there are more than approximately 20 questions.
+
+FAQ cards/accordions should support FAQPage schema where appropriate.
+
+
+==================================================
+18. CONTACT PAGE
+==================================================
+
+Hero:
+Let’s make your space safer.
+
+Two-column layout.
+
+LEFT:
+
+Phone
+WhatsApp
+Email
+Service area
+Business hours
+
+RIGHT:
+
+Lead form
+
+Fields:
+
+Full Name
+Mobile Number
+Email optional
+Location
+Property Type
+Service Required
+Message
+
+Service options:
+
+Bird Netting
+Invisible Grill
+Bird Spikes
+Safety Net
+Commercial Solution
+Not Sure
+
+CTA:
+Request Free Site Visit
+
+Also include:
+
+WhatsApp quick contact
+Service areas
+Map if the client has a physical office
+FAQ mini-section
+Final CTA
+
+
+==================================================
+19. LEAD FORM BEHAVIOUR
+==================================================
+
+Create proper validation.
+
+Validate:
+
+Name
+Indian mobile number
+Email when provided
+Required service
+Consent if necessary
+
+Show:
+
+Submitting
+Success
+Error
+
+Prevent repeated duplicate submissions.
+
+Do not expose email credentials/client secrets in frontend code.
+
+If backend/API is not available, create a clean abstraction for later integration.
+
+
+==================================================
+20. WHATSAPP INTEGRATION
+==================================================
+
+Use WhatsApp strategically without becoming intrusive.
+
+Include:
+
+Header WhatsApp button
+Mobile floating button
+Footer contact
+CTA sections
+
+Pre-filled message example:
+
+“Hi SQUARE, I would like to enquire about [SERVICE] and request a free site visit.”
+
+Where possible dynamically pass the selected service/page name.
+
+
+==================================================
+21. CLIENT MEDIA
+==================================================
+
+This requirement is critical.
+
+The client will supply:
+
+• Photos
+• Installation photos
+• Completed-project photos
+• Before/after photos
+• Material closeups
+• Videos
+• Logo
+
+Use these as primary media.
+
+Create an organized structure such as:
+
+/public/images/brand
+/public/images/hero
+/public/images/services
+/public/images/projects
+/public/images/materials
+/public/images/team
+/public/images/reviews
+/public/videos
+
+If exact media is not yet available:
+
+Use clearly named placeholders.
+
+Example:
+
+hero-invisible-grill.webp
+bird-net-balcony-01.webp
+commercial-net-project-01.webp
+installation-team-01.webp
+
+Do not permanently substitute unrelated stock images.
+
+
+==================================================
+22. IMAGE HANDLING
+==================================================
+
+Optimize assets.
+
+Prefer:
+WebP / AVIF
+
+Use responsive image sizing.
+
+Prevent layout shift.
+
+Use meaningful alt text.
+
+Examples:
+
+“Invisible grill installed on high-rise apartment balcony”
+
+instead of:
+
+“image1”
+
+
+==================================================
+23. VIDEO PERFORMANCE
+==================================================
+
+Client videos must not destroy Core Web Vitals.
+
+Use:
+
+poster images
+preload="metadata" or none
+lazy loading
+click-to-play
+modal players
+
+Hero background videos should only be used if sufficiently optimized.
+
+Provide static poster fallback on slower devices/mobile if necessary.
+
+
+==================================================
+24. MOTION & INTERACTION
+==================================================
+
+Use refined movement similar to modern premium architecture websites.
+
+Possible animation system:
+
+Framer Motion or GSAP where appropriate.
+
+Animations:
+
+Hero text reveal
+Image clip/mask reveal
+Subtle scroll parallax
+Staggered service cards
+Animated metrics
+Before/after slider
+Project image zoom
+Video modal
+Accordion
+Timeline animation
+Sticky header
+CTA micro-interactions
+
+Motion guidelines:
+
+Duration approximately 300–700ms
+
+Use smooth ease-out transitions.
+
+Avoid animating every element.
+
+Do not create distracting exaggerated effects.
+
+Respect:
+prefers-reduced-motion
+
+
+==================================================
+25. RESPONSIVE DESIGN
+==================================================
+
+Design intentionally for:
+
+1440px+
+1280px
+1024px
+768px
+430px
+390px
+360px
+
+Mobile should not look like a compressed desktop page.
+
+Mobile changes:
+
+Stack hero content
+Keep main CTA prominent
+Service cards → horizontal swipe or compact grid
+Statistics → 2-column layout
+Before/after → full-width
+Projects → swipe/grid
+Process → vertical
+Testimonials → slider
+Footer → accordion/stacked layout
+
+Maintain comfortable touch targets:
+44px minimum.
+
+
+==================================================
+26. ACCESSIBILITY
+==================================================
+
+Target WCAG AA where practical.
+
+Ensure:
+
+Semantic HTML
+Keyboard navigation
+Visible focus states
+ARIA labels
+Accessible accordions
+Accessible mobile menu
+Alt text
+Sufficient colour contrast
+No information communicated only by colour
+Reduced-motion support
+
+
+==================================================
+27. SEO
+==================================================
+
+Implement page-specific:
+
+<title>
+meta description
+canonical
+Open Graph
+Twitter metadata
+
+Use proper:
+
+H1 → H2 → H3 hierarchy
+
+Add structured data where valid:
+
+LocalBusiness
+Service
+BreadcrumbList
+FAQPage
+Review only when legitimate data exists
+
+Generate:
+
+sitemap.xml
+robots.txt
+
+Do not keyword-stuff.
+
+Potential search themes:
+
+bird net installation
+bird netting services
+balcony bird net
+pigeon net
+invisible grill installation
+balcony invisible grill
+bird spikes
+safety net
+bird net Delhi NCR
+invisible grill Delhi NCR
+
+Local content should be natural and based on real service areas.
+
+
+==================================================
+28. PERFORMANCE TARGETS
+==================================================
+
+Aim for Lighthouse:
+
+Performance 90+
+Accessibility 90+
+Best Practices 90+
+SEO 90+
+
+Prioritize:
+
+LCP
+CLS
+INP
+
+Use:
+
+Code splitting
+Lazy loading
+Optimized images
+Deferred video
+Font optimization
+Minimal unnecessary JS
+Server-rendered/static content wherever appropriate
+
+
+==================================================
+29. RECOMMENDED TECH STACK
+==================================================
+
+Preferred:
+
+Next.js latest stable version
+TypeScript
+React
+Tailwind CSS
+Framer Motion
+
+Optional:
+GSAP only for advanced sequences.
+
+Use:
+Next/Image
+Next/Font
+
+Icons:
+Lucide React
+
+Do not install a large UI framework unnecessarily.
+
+Build reusable components instead.
+
+
+==================================================
+30. PROJECT ARCHITECTURE
+==================================================
+
+Keep components modular.
+
+Example:
+
+components/
+  layout/
+    Header
+    Footer
+    MobileMenu
+
+  ui/
+    Button
+    SectionHeading
+    IconFeature
+    Accordion
+    Modal
+    VideoPlayer
+
+  home/
+    Hero
+    TrustMetrics
+    Services
+    InvisibleGrillFeature
+    BeforeAfter
+    WhyChooseUs
+    Projects
+    VideoShowcase
+    Process
+    Materials
+    Testimonials
+    ServiceAreas
+    FAQPreview
+    FinalCTA
+
+  services/
+    ServiceHero
+    Benefits
+    Applications
+    InstallationProcess
+    ServiceGallery
+    ServiceFAQ
+
+Keep data separate from components where reasonable.
+
+
+==================================================
+31. CONTENT MANAGEMENT
+==================================================
+
+Do not scatter important text throughout JSX.
+
+Create structured data/config files for:
+
+Services
+Projects
+FAQs
+Testimonials
+Service areas
+Contact details
+Statistics
+Videos
+Social links
+
+This must make future client updates easy.
+
+
+==================================================
+32. CTA STRATEGY
+==================================================
+
+Primary CTA:
+Get Free Site Visit
+
+Secondary CTAs:
+
+Chat on WhatsApp
+Call Now
+View Our Work
+Explore Services
+
+Do not show 4 competing CTA buttons simultaneously.
+
+Primary conversion path:
+
+Landing
+→ understand service
+→ establish trust
+→ see actual work
+→ request site visit
+
+
+==================================================
+33. CONTENT RULES
+==================================================
+
+Write professional but straightforward copy.
+
+Avoid exaggerated phrases such as:
+
+“India’s No. 1”
+“100% guaranteed”
+“Best company”
+“Zero risk”
+
+unless client can substantiate them.
+
+The tone should communicate:
+
+Safety
+Clean installation
+Durability
+Professional workmanship
+Transparency
+Visual appeal
+Family protection
+
+
+==================================================
+34. COMPONENT QUALITY
+==================================================
+
+Every component must have intentional:
+
+Hover
+Focus
+Active
+Loading
+Empty/error states where relevant.
+
+Avoid unfinished placeholder styling.
+
+Buttons must have consistent:
+
+Height
+Radius
+Typography
+Arrow behaviour
+Hover transitions
+
+
+==================================================
+35. DEVELOPMENT PROCESS
+==================================================
+
+Work in this order:
+
+PHASE 1
+Set up:
+Typography
+Colours
+Spacing
+Container
+Buttons
+Header
+Footer
+Global components
+
+PHASE 2
+Build homepage section-by-section matching the supplied screenshot.
+
+PHASE 3
+Build About page.
+
+PHASE 4
+Build Services overview.
+
+PHASE 5
+Build reusable service-page framework.
+
+PHASE 6
+Create individual service pages.
+
+PHASE 7
+Projects + Videos.
+
+PHASE 8
+FAQ + Contact.
+
+PHASE 9
+Responsive refinement.
+
+PHASE 10
+Animation + performance optimization.
+
+PHASE 11
+SEO + accessibility.
+
+PHASE 12
+Final QA.
+
+
+==================================================
+36. IMPORTANT WORKING RULE
+==================================================
+
+When I provide a screenshot, photo, video, logo or design reference later:
+
+1. Inspect it first.
+2. Understand its composition.
+3. Implement it within the existing SQUARE design system.
+4. Do not unexpectedly redesign unrelated sections.
+5. Preserve responsive behaviour.
+6. Avoid breaking existing functionality.
+7. Reuse components where practical.
+8. Maintain visual consistency throughout the complete website.
+
+
+==================================================
+37. FINAL EXPECTATION
+==================================================
+
+The result should look like a professionally designed 2026 service-business website, not a theme customized with different text.
+
+It should combine:
+
+Architectural cleanliness
+Premium residential imagery
+Strong conversion design
+Real project proof
+Real client videos
+Clear service communication
+Local-business trust
+Fast performance
+Responsive UX
+
+The attached homepage UI remains the primary visual anchor for the entire project.
+
+Start by establishing the design system and application structure, then develop the homepage from HEADER → HERO → FOOTER in the exact visual order of the supplied reference before proceeding to the internal pages.
