@@ -6,6 +6,22 @@
 
 export type ServiceFaq = { q: string; a: string };
 
+/**
+ * A focused sub-section of a service page — e.g. industrial netting within the
+ * bird net service. Each pairs a site photograph with a real client video, and
+ * its `id` is an anchor the homepage cards link straight to.
+ */
+export type ServiceSpotlight = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  text: string;
+  points: string[];
+  image: string;
+  imageAlt: string;
+  videoSlug: string;
+};
+
 export type Service = {
   slug: string;
   name: string;
@@ -28,6 +44,7 @@ export type Service = {
   bestFor: string;
   materials: string[];
   faqs: ServiceFaq[];
+  spotlights?: ServiceSpotlight[];
   videoSlug?: string;
 };
 
@@ -35,33 +52,33 @@ export const services: Service[] = [
   {
     slug: "bird-netting",
     name: "Bird Netting",
-    cardTitle: "Balcony Bird Netting",
-    cardSubtitle: "Clean, humane bird protection for balconies and open areas.",
-    navLabel: "Bird Netting",
-    eyebrow: "BIRD NETTING",
+    cardTitle: "Bird Net Service",
+    cardSubtitle: "Humane bird protection for balconies, buildings and factory sheds.",
+    navLabel: "Bird Net Service",
+    eyebrow: "BIRD NET SERVICE",
     heroTitle: "Cleaner open spaces, without the constant bird nuisance.",
     heroLead:
-      "A fine, near-transparent mesh installed across your balcony, window or terrace opening keeps pigeons out while daylight, airflow and your view stay exactly as they were.",
-    image: "/images/services/bird-netting-balcony.webp",
-    heroImage: "/images/projects/project-01.webp",
+      "From a single balcony to a full building facade or a factory shed — a tensioned, near-transparent net keeps pigeons out while daylight, airflow and your view stay exactly as they were.",
+    image: "/images/services/balcony-bird-net.webp",
+    heroImage: "/images/services/bird-netting-residential.webp",
     galleryImages: [
-      "/images/projects/project-01.webp",
-      "/images/projects/project-05.webp",
-      "/images/projects/project-07.webp",
-      "/images/services/window-netting.webp",
-      "/images/projects/project-10.webp",
-      "/images/projects/project-12.webp",
+      "/images/services/society-balcony-netting.webp",
+      "/images/projects/project-03.webp",
+      "/images/services/building-facade-netting.webp",
+      "/images/services/factory-roof-netting.webp",
+      "/images/services/factory-net-fittings.webp",
+      "/images/projects/project-09.webp",
     ],
-    metaTitle: "Bird Netting Installation in Delhi NCR",
+    metaTitle: "Bird Net Service in Gujarat — Balcony, Building & Industrial",
     metaDescription:
-      "Professional balcony, window, terrace and duct bird netting across Delhi NCR. UV-stabilised mesh, neat fixings and a free site visit.",
+      "Professional bird netting for balconies, windows, full building facades, societies and factory sheds across Gujarat. UV-stabilised mesh, neat fixings and a free site visit.",
     overview: [
-      "Bird netting is the most reliable way to keep pigeons and other birds out of an opening without harming them. A tensioned mesh is fixed to the perimeter of the balcony, window, duct or shed so birds simply cannot enter or nest.",
+      "Bird netting is the most reliable way to keep pigeons and other birds out of an opening without harming them. A tensioned mesh is fixed to the perimeter of the balcony, window, duct, facade or shed so birds simply cannot enter or nest.",
       "Because the mesh is thin and taut, it reads as almost invisible from a few feet away. You keep the light, the breeze and the view — you only lose the birds.",
     ],
     problem: {
       title: "The problem it solves",
-      text: "Pigeons nest on unused balconies, air-conditioner ledges and duct areas. The result is droppings, feathers, nesting material, blocked drains, and a space the family stops using. Cleaning it repeatedly does not fix the cause — blocking access does.",
+      text: "Pigeons nest on unused balconies, air-conditioner ledges, building facades and factory roof trusses. The result is droppings, feathers, nesting material, blocked drains, contaminated stock and spaces nobody wants to use. Cleaning repeatedly does not fix the cause — blocking access does.",
     },
     how: [
       { title: "Perimeter framing", text: "Fixing points are marked around the full opening so the net has a continuous, gap-free boundary." },
@@ -71,61 +88,105 @@ export const services: Service[] = [
     ],
     benefits: [
       { title: "Humane bird prevention", text: "Birds are kept out rather than harmed or trapped." },
-      { title: "Cleaner balconies", text: "No more droppings, feathers or nesting material to clear each week." },
+      { title: "Cleaner spaces", text: "No more droppings, feathers or nesting material to clear each week." },
       { title: "Minimal obstruction", text: "The mesh is thin enough that your view and daylight stay intact." },
       { title: "Durable outdoors", text: "UV-stabilised cord holds its strength through sun, rain and wind." },
-      { title: "Fits any opening", text: "Balconies, odd-shaped ducts and full warehouse spans are all workable." },
+      { title: "Any size of opening", text: "Balconies, odd-shaped ducts, full facades and factory spans are all workable." },
       { title: "Low maintenance", text: "An occasional rinse is usually all the net needs." },
     ],
     applications: [
       "Apartment balconies",
       "Windows & French windows",
+      "Society & high-rise towers",
+      "Full building facades",
+      "Factory sheds & warehouses",
       "Open terraces",
       "Duct and shaft areas",
-      "Air-conditioner ledges",
-      "Warehouses & factory sheds",
-      "Apartment common areas",
-      "Parking & stilt areas",
+      "Cricket practice nets",
     ],
-    bestFor: "You have a pigeon problem and want it to stop permanently.",
+    bestFor: "You have a pigeon problem — at home, across a building or in a factory — and want it to stop permanently.",
     materials: [
       "UV-stabilised HDPE knotted mesh",
-      "Stainless steel perimeter cable",
-      "Corrosion-resistant anchors and hooks",
-      "Nylon ties rated for outdoor use",
+      "Heavy-duty large-span mesh for sheds and facades",
+      "Stainless steel perimeter cable and turnbuckles",
+      "Corrosion-resistant anchors, hooks and structural fittings",
     ],
     faqs: [
       { q: "Will the net block my view?", a: "The cord is thin and installed under tension, so from inside the room it mostly disappears. You will see it if you stand right against it, which is unavoidable with any physical barrier." },
       { q: "Can I still dry clothes on the balcony?", a: "Yes. The net sits at the outer edge of the balcony, so the usable floor area does not change." },
       { q: "Does the net harm birds?", a: "No. It is a barrier, not a trap. We tension it properly and seal the edges specifically so birds cannot get caught in it." },
-      { q: "How long does installation take?", a: "A typical balcony is completed within a few hours. Larger terraces, sheds and commercial spans are scheduled after measurement." },
+      { q: "Do you net full buildings and factory sheds?", a: "Yes. Societies, full building facades, factory roofs and warehouse walls are surveyed first, then netted in planned phases so residents and production are not disturbed." },
+      { q: "How long does installation take?", a: "A typical balcony is completed within a few hours. Full buildings, sheds and other large spans are scheduled after measurement." },
       { q: "What colours are available?", a: "Transparent and black are the most common choices. Transparent disappears against the sky; black reads better against a dark facade." },
     ],
-    videoSlug: "residential-netting",
+    spotlights: [
+      {
+        id: "society",
+        eyebrow: "Societies & high-rises",
+        title: "Morbi Eden Garden — balcony netting across the towers",
+        text: "Every balcony across the residential towers was netted to one consistent line. Residents keep the open view over the gardens, and pigeons no longer nest on the upper floors.",
+        points: [
+          "Uniform finish across every floor",
+          "View over the gardens stays open",
+          "Planned floor by floor with the society",
+        ],
+        image: "/images/services/society-garden-netting.webp",
+        imageAlt: "View over the Eden Garden society in Morbi through a newly installed balcony bird net",
+        videoSlug: "morbi-eden-garden",
+      },
+      {
+        id: "industrial",
+        eyebrow: "Industrial & factory",
+        title: "Factory sheds netted from the roof down",
+        text: "Birds roosting in roof trusses contaminate stock and corrode steelwork. We run a large-span net under the roof and along the side walls, anchored to the steel structure, in phases around live production.",
+        points: [
+          "Roof-level and side-wall coverage",
+          "Fittings anchored to the steel structure",
+          "Installed around working shifts",
+        ],
+        image: "/images/services/factory-net-fittings.webp",
+        imageAlt: "Bird net and steel fittings installed along the wall of a factory shed",
+        videoSlug: "industrial-factory-netting",
+      },
+      {
+        id: "facade",
+        eyebrow: "Full building coverage",
+        title: "Complete facade netting for tall buildings",
+        text: "When birds use an entire elevation, netting single balconies is not enough. The whole facade is covered in one continuous, tensioned net so there is nowhere left to land or nest.",
+        points: [
+          "One continuous net across the elevation",
+          "Reads as a clean, uniform finish from the street",
+          "Suited to towers, hostels and office blocks",
+        ],
+        image: "/images/videos/residential-netting.webp",
+        imageAlt: "Bird net fitted across the full height of a residential building",
+        videoSlug: "building-facade-netting",
+      },
+    ],
   },
   {
     slug: "invisible-grill",
     name: "Invisible Grill",
     cardTitle: "Invisible Grill",
-    cardSubtitle: "High-tensile safety with a cleaner, open balcony view.",
-    navLabel: "Invisible Grill",
-    eyebrow: "INVISIBLE GRILL",
+    cardSubtitle: "Child and pet safety with a clean, open balcony view.",
+    navLabel: "Invisible Grill Installation",
+    eyebrow: "INVISIBLE GRILL — CHILD & PET SAFETY",
     heroTitle: "Safety that does not block your beautiful view.",
     heroLead:
       "Slim stainless steel cables tensioned vertically across your balcony give you a real physical barrier for children and pets, while keeping the open, uncluttered look of a modern home.",
-    image: "/images/services/invisible-grill.webp",
+    image: "/images/services/invisible-grill-balcony.webp",
     heroImage: "/images/services/invisible-grill-wide.webp",
     galleryImages: [
-      "/images/services/invisible-grill-wide.webp",
-      "/images/services/invisible-grill-closeup.webp",
-      "/images/hero/hero-balcony.webp",
-      "/images/projects/project-06.webp",
-      "/images/projects/project-11.webp",
-      "/images/materials/steel-cable.webp",
+      "/images/services/invisible-grill-balcony.webp",
+      "/images/services/invisible-grill-night.webp",
+      "/images/projects/project-02.webp",
+      "/images/projects/project-05.webp",
+      "/images/projects/project-07.webp",
+      "/images/projects/project-12.webp",
     ],
-    metaTitle: "Invisible Grill Installation in Delhi NCR",
+    metaTitle: "Invisible Grill Installation for Child & Pet Safety — Gujarat",
     metaDescription:
-      "Premium invisible grill installation for balconies and windows in Delhi NCR. High-tensile stainless cable, rust-resistant fittings and a free site visit.",
+      "Invisible grill installation for balconies and windows in Gujarat. Child and pet safety with high-tensile stainless cable, rust-resistant fittings and a free site visit.",
     overview: [
       "An invisible grill replaces the heavy welded MS grill with a run of tensioned stainless steel cables. Each cable is only a few millimetres thick, so at normal viewing distance the balcony reads as open.",
       "It is the solution most high-rise families choose when a society will not allow external grills, or when the view is the reason they bought the home in the first place.",
@@ -149,6 +210,7 @@ export const services: Service[] = [
       { title: "Long service life", text: "No welding, no painting, no annual rust treatment." },
     ],
     applications: [
+      "Homes with children & pets",
       "High-rise apartment balconies",
       "French windows & full-height glazing",
       "Bedroom and kitchen windows",
@@ -166,6 +228,7 @@ export const services: Service[] = [
     faqs: [
       { q: "Is the invisible grill really invisible?", a: "The cables are intentionally slim and are genuinely hard to see from a few feet away or from outside the building. Standing directly at the balcony edge you will see them — nothing physical is truly invisible." },
       { q: "Is it safe for children?", a: "Cable spacing is the critical factor. For homes with small children we set the spacing tighter so a child cannot pass through or use the cables as a ladder. We confirm the spacing during the site visit." },
+      { q: "Is it safe for pets?", a: "Yes. For cats and small dogs we set the cable spacing tighter so they cannot squeeze through or jump between cables. Tell us about your pets at the site visit and we specify accordingly." },
       { q: "Can it rust?", a: "Stainless cable and stainless fittings are specified precisely to resist rust in outdoor conditions. Quality of the hardware matters more than anything else here." },
       { q: "Can the cables loosen over time?", a: "Cables are installed with tensioners so they can be re-tightened if needed. A check during your first service visit covers this." },
       { q: "Will it obstruct cleaning the windows?", a: "No. The cables run vertically with space between them, so the glass stays reachable." },
@@ -176,7 +239,7 @@ export const services: Service[] = [
     name: "Bird Spikes",
     cardTitle: "Bird Spikes",
     cardSubtitle: "Professional deterrence for ledges, parapets and building edges.",
-    navLabel: "Bird Spikes",
+    navLabel: "Bird Spike Installation",
     eyebrow: "BIRD SPIKES",
     heroTitle: "Stop birds perching where they cause the most mess.",
     heroLead:
@@ -187,13 +250,11 @@ export const services: Service[] = [
       "/images/services/bird-spikes.webp",
       "/images/materials/bird-spikes.webp",
       "/images/hero/commercial-facade.webp",
-      "/images/projects/project-02.webp",
-      "/images/projects/project-09.webp",
       "/images/hero/towers-skyline.webp",
     ],
-    metaTitle: "Bird Spikes Installation in Delhi NCR",
+    metaTitle: "Bird Spikes Installation in Gujarat",
     metaDescription:
-      "Stainless steel bird spike installation for ledges, parapets, AC units and commercial facades across Delhi NCR. Humane, discreet and durable.",
+      "Stainless steel bird spike installation for ledges, parapets, AC units and commercial facades across Gujarat. Humane, discreet and durable.",
     overview: [
       "Bird spikes are the right answer where netting would be impractical — a narrow ledge, the top of a signboard, a parapet edge, the casing of an outdoor AC unit.",
       "The strips are fixed along the landing surface so there is no comfortable place to perch. Birds are not injured; they simply choose somewhere else.",
@@ -238,176 +299,50 @@ export const services: Service[] = [
       { q: "Can spikes be fitted on any surface?", a: "Most ledges, parapets and metal casings are suitable. Very narrow or crumbling edges are assessed during the site visit." },
     ],
   },
-  {
-    slug: "safety-net",
-    name: "Safety Net",
-    cardTitle: "Safety Net",
-    cardSubtitle: "Protective netting for children, pets and open residential areas.",
-    navLabel: "Safety Net",
-    eyebrow: "SAFETY NET — CHILD & PET SAFETY",
-    heroTitle: "Peace of mind for the people who matter most.",
-    heroLead:
-      "A close-knit safety net across balconies, openings and stairwells adds a protective layer for children and pets, while keeping the space light and usable.",
-    image: "/images/services/safety-net.webp",
-    heroImage: "/images/services/safety-net.webp",
-    galleryImages: [
-      "/images/services/safety-net.webp",
-      "/images/projects/project-03.webp",
-      "/images/projects/project-08.webp",
-      "/images/compare/after-clean.webp",
-      "/images/projects/project-04.webp",
-      "/images/materials/bird-net-mesh.webp",
-    ],
-    metaTitle: "Balcony Safety Net for Children & Pets — Delhi NCR",
-    metaDescription:
-      "Child and pet safety net installation for balconies, windows and open areas across Delhi NCR. Close-knit mesh, secure anchoring and a free site visit.",
-    overview: [
-      "A safety net is a tightly woven mesh fixed across an opening to add a protective layer where there is a fall risk — a balcony, a stairwell void, a window a toddler can reach.",
-      "It is a practical, quickly installed measure. It is not a substitute for supervision, and we will always tell you where it is and is not the right answer.",
-    ],
-    problem: {
-      title: "The problem it solves",
-      text: "Modern apartments have low railings, wide gaps and full-height windows. Children climb and pets jump. A safety net closes the opening without rebuilding the balcony or blocking the light.",
-    },
-    how: [
-      { title: "Risk assessment", text: "We look at railing height, gap width, what a child can climb on and how the space is used day to day." },
-      { title: "Mesh selection", text: "Mesh size and cord thickness are chosen for the expected load and the age of the children." },
-      { title: "Secure anchoring", text: "Anchors go into sound structure with a continuous perimeter — a net is only as strong as its fixings." },
-      { title: "Load check", text: "Every fixing point is tested by hand and the perimeter is checked for gaps before handover." },
-    ],
-    benefits: [
-      { title: "Added protection layer", text: "Closes the gap between railing and reality in most apartment balconies." },
-      { title: "Pet friendly", text: "Keeps cats and small dogs from slipping through railings or jumping." },
-      { title: "Light and air retained", text: "The mesh is fine enough to keep the balcony bright and ventilated." },
-      { title: "Quick to install", text: "Most balconies are completed in a single visit." },
-      { title: "Removable", text: "Can be taken down or relocated if you move, unlike a welded grill." },
-      { title: "Cost effective", text: "A far lower outlay than structural changes to the balcony." },
-    ],
-    applications: [
-      "Apartment balconies",
-      "Full-height windows",
-      "Stairwell and mezzanine voids",
-      "Open terraces & sit-outs",
-      "Pet enclosures",
-      "Society play areas",
-    ],
-    bestFor: "You have small children or pets and an open balcony.",
-    materials: [
-      "Close-knit UV-stabilised nylon or HDPE mesh",
-      "Stainless steel perimeter cable",
-      "Structural anchors rated for outdoor use",
-      "Corrosion-resistant hooks and turnbuckles",
-    ],
-    faqs: [
-      { q: "Does a safety net make a balcony completely child-proof?", a: "No barrier removes the need for supervision. A correctly specified and correctly anchored net adds a substantial protective layer, and we will tell you honestly if a balcony needs more than a net." },
-      { q: "What mesh size should I choose?", a: "For toddlers we recommend a tighter mesh that a foot or hand cannot pass through. We confirm the right size against your railing during the site visit." },
-      { q: "Will it block sunlight?", a: "Only marginally. The cord is thin, so the balcony stays bright and ventilated." },
-      { q: "Can it be removed later?", a: "Yes. The system is mechanically fixed and can be removed, with anchor points made good afterwards." },
-    ],
-  },
-  {
-    slug: "commercial",
-    name: "Commercial Solutions",
-    cardTitle: "Commercial & Industrial",
-    cardSubtitle: "Large-format protection for buildings, factories and warehouses.",
-    navLabel: "Commercial",
-    eyebrow: "COMMERCIAL SOLUTIONS",
-    heroTitle: "Bird control systems for larger, more demanding properties.",
-    heroLead:
-      "Warehouses, factory sheds, hospitals, schools, hotels and societies need a surveyed, planned installation — not a residential approach scaled up. We plan around your operations and your access constraints.",
-    image: "/images/services/bird-netting-commercial.webp",
-    heroImage: "/images/hero/commercial-facade.webp",
-    galleryImages: [
-      "/images/services/bird-netting-commercial.webp",
-      "/images/hero/commercial-facade.webp",
-      "/images/projects/project-11.webp",
-      "/images/projects/project-02.webp",
-      "/images/hero/towers-skyline.webp",
-      "/images/projects/project-09.webp",
-    ],
-    metaTitle: "Commercial & Industrial Bird Netting — Delhi NCR",
-    metaDescription:
-      "Large-span bird netting and spike systems for warehouses, factories, hospitals, hotels and societies across Delhi NCR. Site survey, planned execution and maintenance support.",
-    overview: [
-      "At commercial scale the problem is rarely just birds. It is contamination risk in a food or pharma facility, stained facades on a corporate building, blocked gutters on a shed roof, and hygiene complaints in a hospital or school.",
-      "We survey the property, map where birds actually enter and roost, and propose a system that can be installed without shutting your operations down.",
-    ],
-    problem: {
-      title: "The problem it solves",
-      text: "Large sheds and open structures give birds ideal roosting cover. Droppings contaminate stock, corrode steelwork, block drainage and create a hygiene and audit risk. Periodic cleaning is a recurring cost that never resolves the cause.",
-    },
-    how: [
-      { title: "Site survey", text: "We map openings, roosting points, bird activity, access routes and the working constraints on site." },
-      { title: "Custom assessment", text: "System type, span strategy and fixing method are matched to your structure — steel truss, RCC or masonry." },
-      { title: "Planned execution", text: "Work is sequenced and scheduled around your shifts, with access equipment and safety planned in advance." },
-      { title: "Handover & support", text: "You get a documented installation, quality checks and an agreed maintenance and inspection schedule." },
-    ],
-    benefits: [
-      { title: "Hygiene compliance", text: "Supports audit and hygiene requirements in food, pharma and healthcare environments." },
-      { title: "Asset protection", text: "Prevents the corrosion and staining that droppings cause to steel and facades." },
-      { title: "Large-span capability", text: "Engineered cable runs cover full warehouse and atrium spans." },
-      { title: "Minimal disruption", text: "Phased installation planned around live operations." },
-      { title: "Documented handover", text: "Drawings, material details and inspection records on completion." },
-      { title: "Maintenance support", text: "Scheduled inspection and repair so the system keeps working." },
-    ],
-    applications: [
-      "Factories & industrial sheds",
-      "Warehouses & logistics hubs",
-      "Office buildings & atriums",
-      "Hospitals & clinics",
-      "Schools & colleges",
-      "Hotels & banquet halls",
-      "Apartment societies",
-      "Malls & commercial complexes",
-    ],
-    bestFor: "You manage a property where bird fouling is an operational and hygiene problem.",
-    materials: [
-      "Heavy-duty UV-stabilised large-span mesh",
-      "Engineered stainless cable and turnbuckle system",
-      "Structural fixings rated for steel and RCC",
-      "Stainless spike strips for ledges and trusses",
-    ],
-    faqs: [
-      { q: "Do you provide a site survey before quoting?", a: "Yes. Commercial quotations are only issued after a survey — span, height, access and structure change the cost significantly." },
-      { q: "Will installation disrupt our operations?", a: "We plan work in phases and can schedule around shifts, shutdown windows or weekends." },
-      { q: "Can you work at height safely?", a: "Yes. Access equipment and working-at-height precautions are planned as part of the method statement before work begins." },
-      { q: "Do you offer maintenance contracts?", a: "Yes. Larger installations are best kept under a scheduled inspection arrangement so small damage is repaired before it spreads." },
-    ],
-    videoSlug: "commercial-netting",
-  },
 ];
 
 export const serviceBySlug = (slug: string) => services.find((s) => s.slug === slug);
 
-/** Cards shown on the homepage services grid — mirrors the six-card reference layout. */
+/**
+ * Cards shown on the homepage services grid. Every card leads into one of the
+ * three services; the bird-net cards deep-link to the matching section of
+ * that page where one exists.
+ */
 export const homeServiceCards = [
   {
     href: "/services/bird-netting",
     title: "Balcony",
     titleBold: "Bird Netting",
-    image: "/images/services/bird-netting-balcony.webp",
-    alt: "Bird netting installed across an apartment balcony overlooking the city",
-  },
-  {
-    href: "/services/bird-netting",
-    title: "Residential",
-    titleBold: "Bird Netting",
-    image: "/images/services/bird-netting-residential.webp",
-    alt: "Residential bird netting fitted along a high-rise balcony railing",
-  },
-  {
-    href: "/services/commercial",
-    title: "Commercial & Industrial",
-    titleBold: "Bird Netting",
-    image: "/images/services/bird-netting-commercial.webp",
-    alt: "Large-span bird netting under the roof of an industrial warehouse",
+    image: "/images/services/balcony-bird-net.webp",
+    alt: "Near-transparent bird net fitted across an apartment balcony overlooking the city",
   },
   {
     href: "/services/invisible-grill",
-    title: "Invisible",
-    titleBold: "Grill",
-    image: "/images/services/invisible-grill.webp",
-    alt: "Invisible grill cables running across an open balcony with a city view",
+    title: "Invisible Grill",
+    titleBold: "Child & Pet Safety",
+    image: "/images/services/invisible-grill-balcony.webp",
+    alt: "Close-up of stainless invisible grill cables on a residential balcony",
+  },
+  {
+    href: "/services/bird-netting#society",
+    title: "Society & High-Rise",
+    titleBold: "Bird Netting",
+    image: "/images/services/society-balcony-netting.webp",
+    alt: "Balcony bird net at Eden Garden society in Morbi with the neighbouring towers behind",
+  },
+  {
+    href: "/services/bird-netting#industrial",
+    title: "Industrial & Factory",
+    titleBold: "Bird Netting",
+    image: "/images/services/factory-roof-netting.webp",
+    alt: "Large-span bird net installed under the roof of a factory shed",
+  },
+  {
+    href: "/services/bird-netting#facade",
+    title: "Full Building",
+    titleBold: "Net Coverage",
+    image: "/images/services/building-facade-netting.webp",
+    alt: "Bird net covering the full facade of a tall building",
   },
   {
     href: "/services/bird-spikes",
@@ -416,21 +351,14 @@ export const homeServiceCards = [
     image: "/images/services/bird-spikes.webp",
     alt: "Stainless steel bird spikes installed along a concrete building parapet",
   },
-  {
-    href: "/services/safety-net",
-    title: "Safety Net",
-    titleBold: "Child & Pet Safety",
-    image: "/images/services/safety-net.webp",
-    alt: "Balcony safety net protecting a family living space",
-  },
 ] as const;
 
 /** "Not sure what you need?" recommendation matrix on the services index. */
 export const recommendations = [
-  { need: "Pigeon problem on the balcony", answer: "Bird Netting", href: "/services/bird-netting", icon: "bird" },
-  { need: "Child safety without losing the view", answer: "Invisible Grill", href: "/services/invisible-grill", icon: "shield" },
-  { need: "Pet safety on an open balcony", answer: "Safety Net or Invisible Grill", href: "/services/safety-net", icon: "paw" },
+  { need: "Pigeon problem on the balcony", answer: "Bird Net Service", href: "/services/bird-netting", icon: "bird" },
+  { need: "Child & pet safety without losing the view", answer: "Invisible Grill", href: "/services/invisible-grill", icon: "paw" },
+  { need: "Society or high-rise building", answer: "Building Bird Netting", href: "/services/bird-netting#society", icon: "building" },
+  { need: "Factory, warehouse or industrial shed", answer: "Industrial Bird Netting", href: "/services/bird-netting#industrial", icon: "factory" },
   { need: "Birds perching on ledges & signage", answer: "Bird Spikes", href: "/services/bird-spikes", icon: "spike" },
-  { need: "Warehouse, factory or society", answer: "Commercial Bird Netting", href: "/services/commercial", icon: "building" },
   { need: "Still not sure", answer: "Book a free site visit", href: "/contact", icon: "help" },
 ] as const;

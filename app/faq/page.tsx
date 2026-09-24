@@ -10,7 +10,7 @@ import PageHero from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Answers about bird netting, invisible grills, bird spikes, safety nets, installation, warranty, maintenance and pricing.",
+    "Answers about bird netting, invisible grills, bird spikes, installation, warranty, maintenance and pricing.",
   alternates: { canonical: "/faq" },
 };
 

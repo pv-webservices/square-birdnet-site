@@ -19,8 +19,8 @@ export default function WhyChooseUs() {
           <div className="why-badge">
             <BadgeCheck size={22} aria-hidden="true" />
             <div>
-              <strong>Trusted by 1,000+ homeowners</strong>
-              <span>Across Delhi NCR</span>
+              <strong>Trusted by 20000+ Happy Customers</strong>
+              <span>Across Gujarat</span>
             </div>
           </div>
         </div>

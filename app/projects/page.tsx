@@ -11,14 +11,15 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Projects & Gallery — Real Installations",
   description:
-    "Browse real bird netting, invisible grill, bird spike and safety net installations completed by SQUARE across Delhi NCR.",
+    "Browse real bird netting, invisible grill and industrial netting installations completed by SQUARE across Gujarat.",
   alternates: { canonical: "/projects" },
 };
 
 const SEGMENTS = [
   { label: "Residential", count: projects.filter((p) => p.segment === "Residential").length },
   { label: "Commercial", count: projects.filter((p) => p.segment === "Commercial").length },
-  { label: "Locations covered", count: new Set(projects.map((p) => p.location)).size },
+  // Projects without a confirmed town are listed as "Gujarat" — not a location to count.
+  { label: "Locations covered", count: new Set(projects.map((p) => p.location).filter((l) => l !== "Gujarat")).size },
 ];
 
 export default function Page() {

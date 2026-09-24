@@ -1,5 +1,5 @@
 /**
- * Stylised Delhi NCR coverage map.
+ * Stylised Gujarat coverage map.
  *
  * Drawn inline as SVG rather than shipped as an image so it stays crisp,
  * themes with the brand palette and adds no network request. Positions are
@@ -7,21 +7,21 @@
  */
 
 const PINS = [
-  { label: "Rohini", x: 176, y: 120 },
-  { label: "Delhi", x: 232, y: 168 },
-  { label: "Ghaziabad", x: 320, y: 138 },
-  { label: "Noida", x: 316, y: 214 },
-  { label: "Gr. Noida", x: 366, y: 262 },
-  { label: "South Delhi", x: 216, y: 236 },
-  { label: "Dwarka", x: 140, y: 214 },
-  { label: "Gurugram", x: 160, y: 286 },
-  { label: "Faridabad", x: 268, y: 308 },
+  { label: "Morbi", x: 205, y: 120 },
+  { label: "Jamnagar", x: 105, y: 170 },
+  { label: "Rajkot", x: 215, y: 190 },
+  { label: "Gandhinagar", x: 335, y: 110 },
+  { label: "Vadodra", x: 375, y: 195 },
+  { label: "Upleta", x: 120, y: 255 },
+  { label: "Gondal", x: 230, y: 255 },
+  { label: "Bhavnagar", x: 310, y: 275 },
+  { label: "Junagadh", x: 170, y: 315 },
 ];
 
 export default function ServiceAreaMap() {
   return (
     <div className="area-map">
-      <svg viewBox="0 0 480 380" role="img" aria-label="Map showing SQUARE service coverage across Delhi NCR">
+      <svg viewBox="0 0 480 380" role="img" aria-label="Map showing SQUARE service coverage across Gujarat">
         <defs>
           <radialGradient id="mapGlow" cx="50%" cy="48%" r="60%">
             <stop offset="0%" stopColor="#e2f2fd" />
@@ -36,9 +36,9 @@ export default function ServiceAreaMap() {
 
         <rect x="0" y="0" width="480" height="380" rx="28" fill="url(#mapGlow)" />
 
-        {/* Schematic NCR boundary */}
+        {/* Schematic Gujarat boundary */}
         <path
-          d="M118 148 L168 78 L262 64 L352 96 L402 168 L386 262 L318 332 L214 344 L136 300 L104 216 Z"
+          d="M125 130 L195 80 L330 65 L415 90 L425 210 L385 285 L320 330 L220 355 L130 345 L70 290 L65 190 L125 130 Z"
           fill="#ffffff"
           fillOpacity="0.72"
           stroke="#bcdcf1"
@@ -48,14 +48,15 @@ export default function ServiceAreaMap() {
 
         {/* Arterial lines */}
         <g stroke="#d3e8f6" strokeWidth="1.4" fill="none">
-          <path d="M232 168 L176 120" />
-          <path d="M232 168 L320 138" />
-          <path d="M232 168 L316 214" />
-          <path d="M232 168 L216 236" />
-          <path d="M232 168 L140 214" />
-          <path d="M216 236 L160 286" />
-          <path d="M216 236 L268 308" />
-          <path d="M316 214 L366 262" />
+          <path d="M215 190 L205 120" />
+          <path d="M215 190 L105 170" />
+          <path d="M215 190 L230 255" />
+          <path d="M230 255 L170 315" />
+          <path d="M230 255 L120 255" />
+          <path d="M215 190 L310 275" />
+          <path d="M215 190 L335 110" />
+          <path d="M335 110 L375 195" />
+          <path d="M375 195 L310 275" />
         </g>
 
         {PINS.map((pin, i) => (
@@ -80,7 +81,7 @@ export default function ServiceAreaMap() {
       <p className="area-map__script">
         Serving homes &amp; businesses
         <br />
-        across the region
+        across Gujarat
       </p>
     </div>
   );

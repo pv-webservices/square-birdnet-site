@@ -6,7 +6,8 @@
  * public/ so the heavy originals are never shipped — and writes optimised WebP
  * derivatives into the public/images folders the site references.
  *
- * Run with: node scripts/build-media.mjs
+ * Run with: node scripts/build-media.mjs            (every step)
+ *       or: node scripts/build-media.mjs services   (named steps only)
  */
 import { mkdir, readdir, unlink } from "node:fs/promises";
 import { existsSync } from "node:fs";
@@ -18,6 +19,8 @@ const IMAGES = path.join(ROOT, "public/images");
 const SOURCE = path.join(ROOT, "media-source");
 const CLIENT = (n) => path.join(SOURCE, `client-${n}.jpeg`);
 const GENERATED = (n) => path.join(SOURCE, `${n}.png`);
+// Still frames lifted from the client's site videos (ffmpeg -ss <t> -frames:v 1).
+const FRAME = (n) => path.join(SOURCE, `frame-${n}.png`);
 
 const QUALITY = 78;
 
@@ -77,12 +80,18 @@ async function hero() {
 /* ------------------------------------------------------------- services -- */
 async function services() {
   console.log("services");
-  await emit(CLIENT(1), "services/bird-netting-balcony.webp", 1000);
+  await emit(CLIENT(1), "services/invisible-grill-balcony.webp", 1000);
+  await emit(CLIENT(16), "services/invisible-grill-night.webp", 1000);
   await emit(CLIENT(3), "services/bird-netting-residential.webp", 1000);
   await emit(CLIENT(14), "services/bird-netting-commercial.webp", 1000);
   await emit(GENERATED("invisible-grill-wide"), "services/invisible-grill.webp", 1000);
   await emit(GENERATED("bird-spikes"), "services/bird-spikes.webp", 1000);
-  await emit(GENERATED("safety-net"), "services/safety-net.webp", 1000);
+  await emit(GENERATED("safety-net"), "services/balcony-bird-net.webp", 1000);
+  await emit(FRAME("factory-roof"), "services/factory-roof-netting.webp", 720);
+  await emit(FRAME("factory-fittings"), "services/factory-net-fittings.webp", 720);
+  await emit(FRAME("building-facade"), "services/building-facade-netting.webp", 720);
+  await emit(FRAME("morbi-balcony"), "services/society-balcony-netting.webp", 720);
+  await emit(FRAME("morbi-garden"), "services/society-garden-netting.webp", 720);
   await emit(CLIENT(8), "services/window-netting.webp", 1000);
   await emit(GENERATED("invisible-grill-wide"), "services/invisible-grill-wide.webp", 1400);
   await emit(GENERATED("invisible-grill-closeup"), "services/invisible-grill-closeup.webp", 760);
@@ -126,6 +135,9 @@ async function videoPosters() {
   console.log("video posters");
   await emit(path.join(SOURCE, "video-1-poster.jpg"), "videos/residential-netting.webp", 720, { quality: 72 });
   await emit(path.join(SOURCE, "video-2-poster.jpg"), "videos/commercial-netting.webp", 720, { quality: 72 });
+  await emit(FRAME("morbi-balcony"), "videos/morbi-eden-garden.webp", 720, { quality: 72 });
+  await emit(FRAME("factory-poster"), "videos/industrial-factory-netting.webp", 720, { quality: 72 });
+  await emit(FRAME("building-facade"), "videos/building-facade-netting.webp", 720, { quality: 72 });
 }
 
 /* ---------------------------------------------------------------- clean -- */
@@ -136,13 +148,9 @@ async function removeLegacyPlaceholders() {
   for (const file of await readdir(dir)) await unlink(path.join(dir, file));
 }
 
-await brand();
-await hero();
-await services();
-await projects();
-await materials();
-await team();
-await compare();
-await videoPosters();
-await removeLegacyPlaceholders();
+const STEPS = { brand, hero, services, projects, materials, team, compare, videoPosters, removeLegacyPlaceholders };
+const requested = process.argv.slice(2);
+for (const [name, step] of Object.entries(STEPS)) {
+  if (requested.length === 0 || requested.includes(name)) await step();
+}
 console.log("\nmedia build complete");

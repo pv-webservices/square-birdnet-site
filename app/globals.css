@@ -513,6 +513,19 @@ strong { font-weight: 800; }
 }
 .hero-visual img { object-fit: cover; animation: heroZoom 14s var(--ease-out) forwards; }
 @keyframes heroZoom { from { transform: scale(1.1); } to { transform: scale(1); } }
+/* Tinted backdrop so the photo area never flashes empty while it decodes. */
+.hero-visual { background: linear-gradient(135deg, #dcebf7, #eef6fc); }
+
+/*  Above-the-fold entrance. Pure CSS, so it starts on first paint together
+    with the preloaded hero image instead of waiting for hydration. The
+    stagger is kept tiny so copy and photo read as arriving at once.        */
+.hero-enter {
+  animation: heroEnter .7s var(--ease-out) both;
+  animation-delay: var(--enter-delay, 0ms);
+}
+.hero-enter--fade { animation-name: heroFade; animation-duration: .8s; }
+@keyframes heroEnter { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes heroFade { from { opacity: 0; } to { opacity: 1; } }
 .hero-note {
   position: absolute; right: 48px; top: 96px; z-index: 2;
   color: #2f5e80; font-size: 27px; line-height: 1.15;
@@ -843,7 +856,7 @@ strong { font-weight: 800; }
   font-family: var(--font-script), cursive; font-size: 22px;
   color: #8ccbf4; margin-top: 26px; line-height: 1.3;
 }
-.video-rail { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.video-rail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .video-card {
   position: relative; border-radius: var(--radius-md); overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1237,6 +1250,31 @@ strong { font-weight: 800; }
 .problem-panel p { color: #c3d8e8; margin: 0; font-size: 14.5px; }
 
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.gallery-grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Service spotlights — copy beside a site photo and its video, alternating. */
+.spotlight-list { display: grid; gap: 64px; }
+.spotlight {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+  scroll-margin-top: 110px;
+}
+.spotlight:nth-child(even) .spotlight__copy { order: 2; }
+.spotlight__copy h3 { font-size: clamp(22px, 2.2vw, 30px); margin-bottom: 12px; }
+.spotlight__points { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+.spotlight__points li {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 14px; font-weight: 700; color: #4e687d;
+}
+.spotlight__points svg { color: var(--blue-600); flex: 0 0 auto; }
+.spotlight__media { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.spotlight__photo {
+  position: relative; aspect-ratio: 3 / 4; overflow: hidden;
+  border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--blue-50);
+}
+.spotlight__photo img { object-fit: cover; transition: transform .9s var(--ease-out); }
+.spotlight__photo:hover img { transform: scale(1.06); }
+.spotlight .video-card { border-color: var(--line); background: var(--navy-900); }
+.spotlight .video-card:hover { border-color: var(--blue-200); box-shadow: var(--shadow-lg); }
 .gallery-tile {
   position: relative; aspect-ratio: 1.3; border-radius: var(--radius-md);
   overflow: hidden; border: 1px solid var(--line); background: var(--blue-50);
@@ -1454,6 +1492,10 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .contact-grid { grid-template-columns: 1fr; }
   .service-row, .service-rows > *:nth-child(even) .service-row { grid-template-columns: 1fr; }
   .service-rows > *:nth-child(even) .service-row__media { order: 0; }
+  .spotlight { grid-template-columns: 1fr; gap: 26px; }
+  .spotlight:nth-child(even) .spotlight__copy { order: 0; }
+  .spotlight-list { gap: 52px; }
+  .gallery-grid--4 { grid-template-columns: repeat(2, 1fr); }
   .service-row__media { min-height: 260px; }
   .service-row__body { padding: 32px 28px; }
   .lightbox__grid { grid-template-columns: 1fr; }
@@ -1505,7 +1547,18 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .projects-grid--page { display: grid; grid-template-columns: 1fr 1fr; overflow: visible; }
   .projects-grid--page .project-card { min-width: 0; }
   .service-card .hover-media { aspect-ratio: 1.4; }
-  .video-rail { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .video-rail {
+    display: flex; overflow-x: auto; gap: 12px;
+    scroll-snap-type: x mandatory; padding-bottom: 8px;
+    scrollbar-width: thin; -webkit-overflow-scrolling: touch;
+  }
+  .video-rail .video-card { width: 60vw; max-width: 260px; flex: 0 0 auto; scroll-snap-align: start; }
+  .spotlight__media { gap: 10px; }
+  .spotlight__points li { font-size: 13.5px; }
+
+  /* Side-entering reveals start 32px off-axis, which pushes content past the
+     screen edge on phones and causes sideways scrolling. Rise vertically. */
+  .reveal--left, .reveal--right { transform: translateY(26px); }
 
   .feature-media { min-height: 330px; }
   .feature-copy { padding: 44px 22px; }
@@ -1515,14 +1568,15 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .why-media { min-height: 300px; }
   .why-copy { padding: 36px 22px; }
   .why-list { grid-template-columns: 1fr; gap: 18px; }
-  .process-grid { grid-template-columns: 1fr; gap: 0; }
+  /* Room for the step icons, which sit half outside the timeline line. */
+  .process-grid { grid-template-columns: 1fr; gap: 0; padding-left: 26px; }
   .process-step { padding: 0 0 26px 26px; border-left: 2px solid var(--blue-200); }
   .process-step:last-child { border-left-color: transparent; padding-bottom: 0; }
   .process-step__icon { position: absolute; left: -27px; top: 0; width: 52px; height: 52px; }
   .process-step__n { display: inline-block; margin-left: 34px; }
   .process-step h3, .process-step p { margin-left: 0; }
   .process-step h3 { margin-top: 18px; }
-  .feature-grid, .feature-grid--2, .feature-grid--4 { grid-template-columns: 1fr; }
+  .feature-grid, .feature-grid--2, .feature-grid--4, .reco-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .form-grid { grid-template-columns: 1fr; }
   .contact-panel { padding: 26px 22px; }

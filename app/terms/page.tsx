@@ -90,7 +90,7 @@ export default function Page() {
 
             <h2>8. Safety statement</h2>
             <p>
-              Safety nets and invisible grills are protective measures. They add a substantial barrier when
+              Invisible grills and bird nets are protective measures. They add a substantial barrier when
               correctly specified and correctly installed, but no barrier removes the need for adult
               supervision of children or pets. We will advise you honestly if a particular space needs
               more than the system you are asking about.
@@ -116,7 +116,7 @@ export default function Page() {
             </p>
 
             <h2>12. Governing law</h2>
-            <p>These terms are governed by the laws of India, with courts in Delhi NCR having jurisdiction.</p>
+            <p>These terms are governed by the laws of India, with courts in Gujarat having jurisdiction.</p>
 
             <h2>13. Contact</h2>
             <p>

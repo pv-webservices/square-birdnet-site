@@ -23,7 +23,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.squarebirdnet.com"),
   title: {
-    default: "SQUARE | Bird Net & Invisible Grill in Delhi NCR",
+    default: "SQUARE | Bird Net & Invisible Grill in Gujarat",
     template: "%s | SQUARE",
   },
   description: brand.description,
@@ -31,24 +31,25 @@ export const metadata: Metadata = {
     "bird net installation",
     "bird netting services",
     "balcony bird net",
-    "pigeon net Delhi NCR",
+    "pigeon net Gujarat",
     "invisible grill installation",
     "balcony invisible grill",
     "bird spikes",
-    "balcony safety net",
+    "industrial bird netting",
+    "building bird net",
   ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     siteName: "SQUARE — Bird Net & Invisible Grill",
-    title: "SQUARE | Bird Net & Invisible Grill in Delhi NCR",
+    title: "SQUARE | Bird Net & Invisible Grill in Gujarat",
     description: brand.description,
     images: [{ url: "/images/hero/hero-balcony.webp", width: 1400, height: 939, alt: "Balcony protected by an invisible grill overlooking the city" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SQUARE | Bird Net & Invisible Grill in Delhi NCR",
+    title: "SQUARE | Bird Net & Invisible Grill in Gujarat",
     description: brand.description,
     images: ["/images/hero/hero-balcony.webp"],
   },
@@ -65,7 +66,7 @@ const localBusinessSchema = {
   telephone: contact.phoneDisplay,
   email: contact.email,
   image: "https://www.squarebirdnet.com/images/hero/hero-balcony.webp",
-  address: { "@type": "PostalAddress", addressRegion: "Delhi NCR", addressCountry: "IN" },
+  address: { "@type": "PostalAddress", addressRegion: "Gujarat", addressCountry: "IN" },
   areaServed: serviceAreas.map((area) => ({ "@type": "City", name: area })),
   openingHoursSpecification: [
     {

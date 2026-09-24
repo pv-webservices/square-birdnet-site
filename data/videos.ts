@@ -10,7 +10,7 @@ export type Video = {
   slug: string;
   title: string;
   description: string;
-  category: "Installation" | "Bird Netting" | "Commercial";
+  category: "Bird Netting" | "Industrial";
   src: string;
   poster: string;
   duration: string;
@@ -18,6 +18,39 @@ export type Video = {
 };
 
 export const videos: Video[] = [
+  {
+    slug: "morbi-eden-garden",
+    title: "Morbi Eden Garden — Balcony Bird Netting",
+    description:
+      "Balcony bird netting across the residential towers of Eden Garden, Morbi. The view over the gardens stays open while pigeons stay out.",
+    category: "Bird Netting",
+    src: "/videos/morbi-eden-garden.mp4",
+    poster: "/images/videos/morbi-eden-garden.webp",
+    duration: "0:15",
+    orientation: "portrait",
+  },
+  {
+    slug: "industrial-factory-netting",
+    title: "Industrial Factory Bird Netting",
+    description:
+      "A large-span net run under the roof and along the side walls of a working factory shed, with fittings anchored to the steel structure.",
+    category: "Industrial",
+    src: "/videos/industrial-factory-netting.mp4",
+    poster: "/images/videos/industrial-factory-netting.webp",
+    duration: "0:20",
+    orientation: "portrait",
+  },
+  {
+    slug: "building-facade-netting",
+    title: "Full Building Facade Netting",
+    description:
+      "One continuous net across the full facade of a tall building, so birds have nowhere left to land or nest on any floor.",
+    category: "Bird Netting",
+    src: "/videos/building-facade-netting.mp4",
+    poster: "/images/videos/building-facade-netting.webp",
+    duration: "0:15",
+    orientation: "portrait",
+  },
   {
     slug: "residential-netting",
     title: "Residential Building Bird Netting",
@@ -29,19 +62,13 @@ export const videos: Video[] = [
     duration: "0:15",
     orientation: "portrait",
   },
-  {
-    slug: "commercial-netting",
-    title: "Industrial Shed Bird Netting",
-    description:
-      "A large-span net run beneath the roof trusses of a working industrial shed, installed in phases around live operations.",
-    category: "Commercial",
-    src: "/videos/services video-2.mp4",
-    poster: "/images/videos/commercial-netting.webp",
-    duration: "0:13",
-    orientation: "portrait",
-  },
 ];
 
 export const videoBySlug = (slug: string) => videos.find((v) => v.slug === slug);
 
-export const videoCategories = ["All", "Bird Netting", "Commercial"] as const;
+/** The three clips featured in the homepage video showcase. */
+export const homeVideos: Video[] = ["morbi-eden-garden", "industrial-factory-netting", "building-facade-netting"]
+  .map(videoBySlug)
+  .filter((video): video is Video => Boolean(video));
+
+export const videoCategories = ["All", "Bird Netting", "Industrial"] as const;

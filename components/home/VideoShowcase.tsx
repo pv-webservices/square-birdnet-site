@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { videos } from "@/data/videos";
+import { homeVideos } from "@/data/videos";
 import { VideoCard, VideoModal, useVideoModal } from "@/components/ui/VideoPlayer";
 import Reveal from "@/components/ui/Reveal";
 
@@ -15,7 +15,10 @@ export default function VideoShowcase() {
         <Reveal className="video-copy" variant="left">
           <div className="eyebrow eyebrow--light">Video showcase</div>
           <h2>See our work in action</h2>
-          <p>Real installations. Real happy customers. Filmed on our own sites across Delhi NCR.</p>
+          <p>
+            Real installations filmed on our own sites across Gujarat — from Morbi Eden Garden to
+            full building facades and working factory sheds.
+          </p>
           <div style={{ marginTop: 26 }}>
             <Link href="/videos" className="btn btn--light">
               Watch More Videos <ArrowRight size={17} />
@@ -29,7 +32,7 @@ export default function VideoShowcase() {
         </Reveal>
 
         <Reveal className="video-rail" variant="right" delay={100}>
-          {videos.map((video) => (
+          {homeVideos.map((video) => (
             <VideoCard key={video.slug} video={video} onPlay={modal.open} />
           ))}
         </Reveal>

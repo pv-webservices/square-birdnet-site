@@ -13,7 +13,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Contact — Book a Free Site Visit",
   description:
-    "Call, WhatsApp or send an enquiry to book a free site visit for bird netting, invisible grill, bird spikes or safety nets across Delhi NCR.",
+    "Call, WhatsApp or send an enquiry to book a free site visit for bird netting, invisible grill or bird spikes across Gujarat.",
   alternates: { canonical: "/contact" },
 };
 

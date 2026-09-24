@@ -12,7 +12,7 @@ export const brand = {
   promise: "Safe. Clean. Beautiful.",
   utilityLine: "Protecting Homes. Beautifying Views.",
   description:
-    "Professional bird netting, invisible grill, bird spike and safety net installation for homes, societies and commercial properties across Delhi NCR.",
+    "Professional bird netting, invisible grill and bird spike installation for homes, societies and factories across Gujarat.",
   logoMark: "/images/brand/logo-mark.webp",
   logoLockup: "/images/brand/logo-lockup.webp",
 } as const;
@@ -23,10 +23,10 @@ export const contact = {
   whatsappNumber: "919104416804",
   whatsappDisplay: "+91 91044 16804",
   email: "squarebirdnetservice@gmail.com",
-  location: "Delhi NCR, India",
-  addressLine: "Serving Delhi, Gurugram, Noida, Ghaziabad & Faridabad",
+  location: "Gujarat, India",
+  addressLine: "Serving Morbi, Rajkot, Bhavnagar, Junagadh, Jamnagar, Vadodra & Gandhinagar",
   hours: "Mon – Sat, 9:00 AM – 7:00 PM",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Delhi+NCR",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Gujarat",
 } as const;
 
 /** Builds a WhatsApp deep link with a pre-filled, context-aware message. */
@@ -46,23 +46,23 @@ export const socials = [
 
 // TODO(client): confirm each figure before launch.
 export const metrics = [
-  { value: 8, suffix: "+", label: "Years of Experience" },
-  { value: 500, suffix: "+", label: "Projects Completed" },
-  { value: 1000, suffix: "+", label: "Happy Customers" },
-  { value: 2, suffix: " Years", label: "Service Warranty" },
+  { value: 12, suffix: "+", label: "Years of Experience" },
+  { value: 25000, suffix: "+", label: "Projects Completed" },
+  { value: 20000, suffix: "+", label: "Happy Customers" },
+  { value: 5, suffix: " Year", label: "Service Warranty" },
   { value: null, display: "Same-Day", label: "Site Visit (Select Areas)" },
 ] as const;
 
 export const serviceAreas = [
-  "Delhi",
-  "Gurugram",
-  "Noida",
-  "Greater Noida",
-  "Ghaziabad",
-  "Faridabad",
-  "Dwarka",
-  "Rohini",
-  "South Delhi",
+  "Morbi",
+  "Rajkot",
+  "Bhavnagar",
+  "Junagadh",
+  "Upleta",
+  "Jamnagar",
+  "Gondal",
+  "Vadodra",
+  "Gandhinagar",
 ] as const;
 
 export const processSteps = [
@@ -143,8 +143,8 @@ export const whyChoose = [
   },
   {
     icon: "building",
-    title: "Residential & Commercial",
-    text: "From a single balcony to a full warehouse span.",
+    title: "Homes, Societies & Factories",
+    text: "From a single balcony to a full building or factory shed.",
   },
 ] as const;
 
@@ -158,31 +158,31 @@ export const reviewSummary = {
 export const testimonials = [
   {
     name: "Rohit Sharma",
-    location: "Gurugram",
+    location: "Rajkot",
     rating: 5,
     copy: "Excellent service and professional installation. The invisible grill is barely visible and the quality of the cable is outstanding. Highly recommended.",
   },
   {
     name: "Priya Mehta",
-    location: "Noida",
+    location: "Morbi",
     rating: 5,
     copy: "Very neat work and a polite team. Our balcony looks the same but now feels much safer for our kids. Great experience overall.",
   },
   {
     name: "Amit Verma",
-    location: "Delhi",
+    location: "Gandhinagar",
     rating: 5,
     copy: "Quick response, genuine pricing and high-quality material. Highly satisfied with both the workmanship and the service.",
   },
   {
     name: "Neha Gupta",
-    location: "Ghaziabad",
+    location: "Jamnagar",
     rating: 5,
     copy: "We had a constant pigeon problem on our terrace. After the netting was installed the space is finally usable and easy to keep clean.",
   },
   {
     name: "Sandeep Rana",
-    location: "Faridabad",
+    location: "Bhavnagar",
     rating: 5,
     copy: "They surveyed our factory shed properly and installed a large-span net without disturbing our operations. Very professional.",
   },

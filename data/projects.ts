@@ -1,16 +1,12 @@
 /**
- * Project gallery. Images are real client installation photographs.
+ * Project gallery. Images are real client installation photographs and still
+ * frames from the client's site videos.
  *
  * TODO(client): confirm the location and property details on each entry —
  * the categories and imagery are correct, the narrative copy is indicative.
  */
 
-export type ProjectCategory =
-  | "Bird Net"
-  | "Invisible Grill"
-  | "Bird Spike"
-  | "Safety Net"
-  | "Commercial";
+export type ProjectCategory = "Bird Net" | "Invisible Grill" | "Industrial";
 
 export type Project = {
   id: string;
@@ -26,60 +22,98 @@ export type Project = {
   alt: string;
 };
 
-export const projectFilters = [
-  "All",
-  "Bird Net",
-  "Invisible Grill",
-  "Bird Spike",
-  "Safety Net",
-  "Commercial",
-] as const;
+export const projectFilters = ["All", "Bird Net", "Invisible Grill", "Industrial"] as const;
 
 export const projects: Project[] = [
   {
     id: "p01",
-    title: "Residential Balcony",
-    service: "Balcony Bird Netting",
-    category: "Bird Net",
+    title: "Covered Balcony",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
     segment: "Residential",
-    location: "Gurugram",
+    location: "Rajkot",
     propertyType: "Apartment balcony",
     challenge:
-      "A covered balcony with a wooden soffit was being used by pigeons for nesting, leaving the seating area unusable.",
+      "A family with a young child wanted the balcony made safe without a welded grill hiding the timber-finished wall and the street view.",
     solution:
-      "A transparent net was framed to the full opening and tensioned along the soffit line so the timber finish stays visible.",
+      "Vertical stainless cables with a horizontal cross-cable were tensioned slab to slab, keeping the balcony open and the finish visible.",
     image: "/images/projects/project-01.webp",
-    alt: "Bird netting fitted across a covered residential balcony with a timber ceiling",
+    alt: "Invisible grill cables with stainless ferrules across a covered residential balcony",
+  },
+  {
+    id: "p13",
+    title: "Morbi Eden Garden",
+    service: "Society Bird Netting",
+    category: "Bird Net",
+    segment: "Residential",
+    location: "Morbi",
+    propertyType: "Residential society",
+    challenge:
+      "Pigeons were nesting on the upper-floor balconies across the towers, and residents did not want to lose the view over the gardens.",
+    solution:
+      "Every balcony was netted to one consistent line, so the towers read uniformly from outside and the garden view stays open.",
+    image: "/images/services/society-balcony-netting.webp",
+    alt: "Balcony bird net at Eden Garden society in Morbi with the neighbouring towers behind",
+  },
+  {
+    id: "p14",
+    title: "Factory Shed",
+    service: "Industrial Bird Netting",
+    category: "Industrial",
+    segment: "Commercial",
+    location: "Gujarat",
+    propertyType: "Factory shed",
+    challenge:
+      "Birds were roosting in the roof structure of a working factory, fouling the floor and the equipment below.",
+    solution:
+      "A large-span net was run under the roof sheeting and along the side walls, with fittings anchored to the steel structure.",
+    image: "/images/services/factory-roof-netting.webp",
+    alt: "Large-span bird net installed under the roof of a factory shed",
   },
   {
     id: "p02",
     title: "High-Rise Apartment",
-    service: "Building Bird Netting",
-    category: "Bird Net",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
     segment: "Residential",
-    location: "Noida",
+    location: "Morbi",
     propertyType: "High-rise tower",
     challenge:
-      "Multiple floors of an apartment tower had recurring bird activity across balconies and service openings.",
+      "An upper-floor balcony overlooking the neighbouring towers needed a safe barrier the society would accept on its facade.",
     solution:
-      "Netting was installed floor by floor to a consistent line so the facade reads uniformly from the street.",
+      "Slim stainless cables were fitted across the full opening, keeping the facade uniform and the balcony open.",
     image: "/images/projects/project-02.webp",
-    alt: "Multi-storey apartment building with bird netting fitted across its balconies",
+    alt: "Invisible grill cables across an apartment balcony facing neighbouring towers",
   },
   {
     id: "p03",
-    title: "Independent House",
-    service: "Balcony Safety Net",
-    category: "Safety Net",
+    title: "Apartment Balcony",
+    service: "Balcony Bird Netting",
+    category: "Bird Net",
     segment: "Residential",
-    location: "Delhi",
-    propertyType: "Independent house",
+    location: "Gandhinagar",
+    propertyType: "Apartment balcony",
     challenge:
-      "An open first-floor balcony with a low railing needed protection for young children without closing in the space.",
+      "Pigeons were landing on the railing and nesting in the corners of a long apartment balcony.",
     solution:
-      "A close-knit safety mesh was anchored to the slab and railing, keeping the balcony bright and fully usable.",
+      "A transparent net was framed from the ceiling to the railing line and tensioned along its full length.",
     image: "/images/projects/project-03.webp",
-    alt: "Safety netting fitted to the balcony railing of an independent house",
+    alt: "Bird netting fitted from the ceiling to the railing of an apartment balcony",
+  },
+  {
+    id: "p15",
+    title: "Full Facade Coverage",
+    service: "Building Bird Netting",
+    category: "Bird Net",
+    segment: "Commercial",
+    location: "Gujarat",
+    propertyType: "High-rise building",
+    challenge:
+      "Birds were landing and nesting across an entire elevation, where netting individual balconies would never have been enough.",
+    solution:
+      "The whole facade was covered in one continuous, tensioned net so there is nowhere left for birds to land.",
+    image: "/images/services/building-facade-netting.webp",
+    alt: "Bird net covering the full facade of a tall building",
   },
   {
     id: "p04",
@@ -87,7 +121,7 @@ export const projects: Project[] = [
     service: "Invisible Grill",
     category: "Invisible Grill",
     segment: "Residential",
-    location: "Dwarka",
+    location: "Jamnagar",
     propertyType: "Apartment balcony",
     challenge:
       "The family wanted child safety on a balcony they use every evening, without a welded grill blocking the greenery.",
@@ -97,123 +131,138 @@ export const projects: Project[] = [
     alt: "Invisible grill cables running vertically across a balcony overlooking greenery",
   },
   {
-    id: "p05",
-    title: "Terrace Sit-Out",
-    service: "Terrace Bird Netting",
+    id: "p09",
+    title: "Open Balcony",
+    service: "Balcony Bird Netting",
     category: "Bird Net",
     segment: "Residential",
-    location: "Greater Noida",
-    propertyType: "Terrace",
+    location: "Upleta",
+    propertyType: "Apartment balcony",
     challenge:
-      "An open terrace overlooking green land attracted birds daily, making the sit-out impossible to keep clean.",
+      "An open balcony facing empty land attracted pigeons every morning, leaving droppings across the floor.",
     solution:
-      "The full terrace span was netted between the parapet and the beam line with a tensioned perimeter cable.",
-    image: "/images/projects/project-05.webp",
-    alt: "Terrace sit-out protected by bird netting with an open landscape view",
+      "A tensioned net was fixed around the full opening, keeping the balcony bright and the open view intact.",
+    image: "/images/projects/project-09.webp",
+    alt: "Bird net installed across an open apartment balcony",
   },
   {
-    id: "p06",
-    title: "Garden-Facing Balcony",
+    id: "p05",
+    title: "Balcony with Planting",
     service: "Invisible Grill",
     category: "Invisible Grill",
     segment: "Residential",
-    location: "South Delhi",
+    location: "Bhavnagar",
     propertyType: "Apartment balcony",
     challenge:
-      "A ground-floor balcony facing a garden needed a barrier that would not interrupt the view from inside the living room.",
+      "A balcony with planters and a low railing needed a barrier for a toddler, without closing in the view over the open land.",
     solution:
-      "Slim cables were tensioned from slab to slab, retaining the full garden outlook from every seat in the room.",
-    image: "/images/projects/project-06.webp",
-    alt: "Invisible grill installed on a garden-facing balcony",
-  },
-  {
-    id: "p07",
-    title: "Corner Balcony",
-    service: "Balcony Bird Netting",
-    category: "Bird Net",
-    segment: "Residential",
-    location: "Ghaziabad",
-    propertyType: "Apartment balcony",
-    challenge:
-      "A wide corner balcony with two open faces was a favourite perching spot for pigeons throughout the day.",
-    solution:
-      "Both faces were netted to a single continuous perimeter so there was no gap left at the corner return.",
-    image: "/images/projects/project-07.webp",
-    alt: "Corner balcony with bird netting across two open faces",
-  },
-  {
-    id: "p08",
-    title: "Window Protection",
-    service: "Window Bird Netting",
-    category: "Bird Net",
-    segment: "Residential",
-    location: "Rohini",
-    propertyType: "Apartment window",
-    challenge:
-      "Birds were entering through a bedroom window that had to stay open for ventilation through the day.",
-    solution:
-      "A fine mesh was framed to the window reveal so it can stay open without letting anything in.",
-    image: "/images/projects/project-08.webp",
-    alt: "Fine bird netting framed across an apartment window opening",
-  },
-  {
-    id: "p09",
-    title: "Parapet & Ledge Line",
-    service: "Bird Spikes",
-    category: "Bird Spike",
-    segment: "Residential",
-    location: "Faridabad",
-    propertyType: "Terrace parapet",
-    challenge:
-      "Pigeons were roosting on a narrow parapet edge that was far too slim to frame a net across.",
-    solution:
-      "Stainless spike strips were fixed in a continuous run along the parapet, including both corner returns.",
-    image: "/images/projects/project-09.webp",
-    alt: "Terrace parapet edge protected against bird perching",
-  },
-  {
-    id: "p10",
-    title: "Evening City View",
-    service: "Balcony Bird Netting",
-    category: "Bird Net",
-    segment: "Residential",
-    location: "Noida",
-    propertyType: "High-rise balcony",
-    challenge:
-      "The owners wanted bird protection that would not interfere with the evening skyline view they bought the flat for.",
-    solution:
-      "A transparent mesh at high tension keeps the net visually quiet against the night sky and city lights.",
-    image: "/images/projects/project-10.webp",
-    alt: "High-rise balcony netting with an evening city skyline behind",
+      "Cables were run from slab to railing at close spacing, leaving the planters and the outlook untouched.",
+    image: "/images/projects/project-05.webp",
+    alt: "Invisible grill on an apartment balcony with a plant pot and open land beyond",
   },
   {
     id: "p11",
     title: "Industrial Shed",
-    service: "Commercial Bird Netting",
-    category: "Commercial",
+    service: "Industrial Bird Netting",
+    category: "Industrial",
     segment: "Commercial",
-    location: "Delhi NCR",
-    propertyType: "Factory shed",
+    location: "Morbi",
+    propertyType: "Warehouse",
     challenge:
       "Birds were roosting in the roof trusses of a working shed, contaminating stored material below.",
     solution:
-      "A large-span net was run under the truss line in phases so production continued through the installation.",
+      "A large-span net was run under the truss line in phases so work continued through the installation.",
     image: "/images/projects/project-11.webp",
     alt: "Large-span bird netting under the roof trusses of an industrial shed",
   },
   {
-    id: "p12",
-    title: "Society Common Area",
-    service: "Bird Netting",
-    category: "Commercial",
-    segment: "Commercial",
-    location: "Gurugram",
-    propertyType: "Apartment society",
+    id: "p16",
+    title: "Night View Balcony",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
+    segment: "Residential",
+    location: "Gujarat",
+    propertyType: "Apartment balcony",
     challenge:
-      "Shared corridors and service openings across a society block needed one consistent treatment.",
+      "A long glass-railed balcony needed protection for children and pets without spoiling the evening view.",
     solution:
-      "A single specification was applied across every opening so the result is uniform and easy to maintain.",
+      "Close-spaced stainless cables were run along the full length, almost disappearing against the night sky.",
+    image: "/images/services/invisible-grill-night.webp",
+    alt: "Invisible grill along a glass-railed balcony at night",
+  },
+  {
+    id: "p06",
+    title: "Corner Balcony",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
+    segment: "Residential",
+    location: "Vadodra",
+    propertyType: "Apartment balcony",
+    challenge:
+      "A corner balcony with a solid parapet needed a barrier above it that would not interrupt the view.",
+    solution:
+      "Slim cables were tensioned from the parapet to the slab above, retaining the outlook from inside the room.",
+    image: "/images/projects/project-06.webp",
+    alt: "Invisible grill fitted above the parapet of a corner balcony",
+  },
+  {
+    id: "p07",
+    title: "Evening City View",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
+    segment: "Residential",
+    location: "Junagadh",
+    propertyType: "High-rise balcony",
+    challenge:
+      "The owners wanted balcony safety that would not interfere with the evening skyline they bought the flat for.",
+    solution:
+      "Stainless cables at even spacing keep the barrier visually quiet against the night sky and city lights.",
+    image: "/images/projects/project-07.webp",
+    alt: "Invisible grill on a high-rise balcony with the city lights behind",
+  },
+  {
+    id: "p08",
+    title: "Long Balcony at Night",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
+    segment: "Residential",
+    location: "Gondal",
+    propertyType: "Apartment balcony",
+    challenge:
+      "A long balcony used by the whole family needed one continuous barrier from end to end.",
+    solution:
+      "Cables were run along the full length to a consistent tension so the run stays perfectly parallel.",
+    image: "/images/projects/project-08.webp",
+    alt: "Invisible grill along the full length of an apartment balcony at night",
+  },
+  {
+    id: "p10",
+    title: "Society Tower View",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
+    segment: "Residential",
+    location: "Rajkot",
+    propertyType: "High-rise balcony",
+    challenge:
+      "A balcony overlooking the society courtyard needed child safety without an external grill on the facade.",
+    solution:
+      "Stainless cables were fitted across the opening, leaving the courtyard view and the facade line unchanged.",
+    image: "/images/projects/project-10.webp",
+    alt: "Invisible grill on a balcony overlooking a residential society courtyard",
+  },
+  {
+    id: "p12",
+    title: "Glass-Railed Balcony",
+    service: "Invisible Grill",
+    category: "Invisible Grill",
+    segment: "Residential",
+    location: "Gandhinagar",
+    propertyType: "Apartment balcony",
+    challenge:
+      "A glass railing left a climbable gap above it, which worried a family with young children.",
+    solution:
+      "Cables were run from the railing to the slab above, closing the gap while the glass stays clear.",
     image: "/images/projects/project-12.webp",
-    alt: "Bird netting across the shared service openings of an apartment society",
+    alt: "Invisible grill above a glass balcony railing overlooking nearby houses",
   },
 ];

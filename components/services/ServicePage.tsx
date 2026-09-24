@@ -14,7 +14,7 @@ import {
 import type { Service } from "@/data/services";
 import { videoBySlug } from "@/data/videos";
 import { processSteps, whatsappLink, whyChoose } from "@/data/site";
-import { projects } from "@/data/projects";
+import { projects, type ProjectCategory } from "@/data/projects";
 import Accordion from "@/components/ui/Accordion";
 import BeforeAfter from "@/components/ui/BeforeAfter";
 import CtaBand from "@/components/ui/CtaBand";
@@ -22,9 +22,16 @@ import Icon from "@/components/ui/Icon";
 import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ServiceSpotlights from "@/components/services/ServiceSpotlights";
 import ServiceVideo from "@/components/services/ServiceVideo";
 
 const HOW_ICONS = [Ruler, Layers3, Wrench, CheckCircle2];
+
+/** Which project-gallery categories count as real work for each service. */
+const PROJECT_CATEGORIES: Record<string, ProjectCategory[]> = {
+  "bird-netting": ["Bird Net", "Industrial"],
+  "invisible-grill": ["Invisible Grill"],
+};
 
 /**
  * One template renders every /services/<slug> page from the service data,
@@ -32,7 +39,8 @@ const HOW_ICONS = [Ruler, Layers3, Wrench, CheckCircle2];
  */
 export default function ServicePage({ service }: { service: Service }) {
   const video = service.videoSlug ? videoBySlug(service.videoSlug) : undefined;
-  const related = projects.filter((p) => p.service.toLowerCase().includes(service.name.split(" ")[0].toLowerCase()));
+  const related = projects.filter((p) => PROJECT_CATEGORIES[service.slug]?.includes(p.category));
+  const galleryClass = service.galleryImages.length === 4 ? "gallery-grid gallery-grid--4" : "gallery-grid";
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -49,7 +57,7 @@ export default function ServicePage({ service }: { service: Service }) {
     "@type": "Service",
     serviceType: service.name,
     provider: { "@type": "LocalBusiness", name: "SQUARE — Bird Net & Invisible Grill" },
-    areaServed: "Delhi NCR",
+    areaServed: "Gujarat",
     description: service.metaDescription,
   };
 
@@ -150,7 +158,7 @@ export default function ServicePage({ service }: { service: Service }) {
       {/* Benefits */}
       <section className="section">
         <div className="container">
-          <SectionHeading eyebrow="Key benefits" title={`Why homeowners choose ${service.name.toLowerCase()}`} />
+          <SectionHeading eyebrow="Key benefits" title={`Why customers choose ${service.name.toLowerCase()}`} />
           <div className="feature-grid">
             {service.benefits.map((benefit, i) => (
               <Reveal key={benefit.title} delay={(i % 3) * 80}>
@@ -166,6 +174,20 @@ export default function ServicePage({ service }: { service: Service }) {
           </div>
         </div>
       </section>
+
+      {/* Focused sections (society, industrial, full facade) with site videos */}
+      {service.spotlights?.length ? (
+        <section className="section section--soft" id="work">
+          <div className="container">
+            <SectionHeading
+              eyebrow="On site"
+              title="Homes, societies and factories"
+              body="The same careful netting, scaled to the job. Press play to watch each installation."
+            />
+            <ServiceSpotlights spotlights={service.spotlights} />
+          </div>
+        </section>
+      ) : null}
 
       {/* Applications + materials */}
       <section className="section section--icy">
@@ -263,7 +285,7 @@ export default function ServicePage({ service }: { service: Service }) {
               </Link>
             }
           />
-          <div className="gallery-grid">
+          <div className={galleryClass}>
             {service.galleryImages.map((src, i) => (
               <Reveal key={src} delay={(i % 3) * 80}>
                 <div className="gallery-tile">

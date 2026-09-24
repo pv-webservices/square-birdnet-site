@@ -14,7 +14,7 @@ export default function ServiceAreasFaq() {
         <Reveal variant="left">
           <div className="eyebrow">Our service areas</div>
           <h2>We are here for a safer community</h2>
-          <p>Get in touch to check if we serve your area — coverage extends across Delhi NCR.</p>
+          <p>Get in touch to check if we serve your area — coverage extends across Gujarat.</p>
           <div className="area-pills">
             {serviceAreas.map((area) => (
               <span key={area}>

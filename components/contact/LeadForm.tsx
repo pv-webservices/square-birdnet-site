@@ -6,11 +6,9 @@ import { submitLead, validateLead, type LeadErrors } from "@/lib/leads";
 import { whatsappLink } from "@/data/site";
 
 const SERVICES = [
-  "Bird Netting",
-  "Invisible Grill",
-  "Bird Spikes",
-  "Safety Net",
-  "Commercial Solution",
+  "Bird Net Service",
+  "Invisible Grill Installation",
+  "Bird Spike Installation",
   "Not Sure",
 ] as const;
 
@@ -190,7 +188,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
             onChange={(e) => update("location", e.target.value)}
             aria-invalid={Boolean(errors.location)}
             aria-describedby={errors.location ? "lead-location-error" : undefined}
-            placeholder="e.g. Sector 57, Gurugram"
+            placeholder="e.g. Rajkot"
           />
           {errors.location ? (
             <span className="field__error" id="lead-location-error">

@@ -12,7 +12,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Which areas do you serve?",
-        a: "We work across Delhi NCR — Delhi, Gurugram, Noida, Greater Noida, Ghaziabad, Faridabad and the surrounding areas. If you are just outside, call us and we will tell you honestly whether we can reach you.",
+        a: "We work across Gujarat — Morbi, Rajkot, Bhavnagar, Junagadh, Upleta, Jamnagar, Gondal, Vadodra, Gandhinagar and surrounding areas. If you are just outside, call us and we will tell you honestly whether we can reach you.",
       },
       {
         q: "Is the site visit really free?",
@@ -20,7 +20,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "How soon can you visit?",
-        a: "In most parts of Delhi NCR we can arrange a same-day or next-day visit. Peak season and outlying areas may take a little longer.",
+        a: "In most of our service locations across Gujarat we can arrange a same-day or next-day visit. Peak season and outlying areas may take a little longer.",
       },
       {
         q: "Do you work on weekends?",
@@ -42,6 +42,10 @@ export const faqGroups: FaqGroup[] = [
       {
         q: "What net colours are available?",
         a: "Transparent and black are the usual choices. Transparent blends into the sky; black reads better against a dark facade or a covered soffit.",
+      },
+      {
+        q: "Do you install netting for full buildings and factories?",
+        a: "Yes. Society towers, full building facades, factory roofs and warehouse walls are surveyed first, then netted in planned phases so residents and production are not disturbed.",
       },
       {
         q: "Can netting be fitted on an odd-shaped balcony?",
@@ -158,16 +162,16 @@ export const faqGroups: FaqGroup[] = [
     category: "Child & Pet Safety",
     items: [
       {
-        q: "Which is better for a toddler — safety net or invisible grill?",
-        a: "An invisible grill gives a firmer barrier and keeps the view. A safety net is quicker and lighter on budget. Railing height and what a child can climb on decide it — we advise at the site visit.",
+        q: "Is an invisible grill safe for a toddler?",
+        a: "Yes, when the spacing is right. For small children we set the cables close enough that a child cannot pass through or use them as a ladder. Railing height and what a child can climb on are checked at the site visit.",
       },
       {
-        q: "Does a safety net make a balcony completely child-proof?",
-        a: "No barrier removes the need for supervision. A correctly specified and correctly anchored net adds a substantial protective layer, and we will tell you if a balcony needs more than a net.",
+        q: "Does an invisible grill make a balcony completely child-proof?",
+        a: "No barrier removes the need for supervision. A correctly specified and correctly anchored invisible grill adds a substantial protective layer, and we will tell you honestly if a balcony needs anything more.",
       },
       {
         q: "Will my cat be able to get through?",
-        a: "Not with the right mesh. Cats need a tighter mesh than birds do, so we specify accordingly when there is a pet in the home.",
+        a: "Not with the right spacing. Cats need tighter cable spacing than a toddler does, so we specify accordingly when there is a pet in the home.",
       },
     ],
   },

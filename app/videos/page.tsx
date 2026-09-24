@@ -13,7 +13,7 @@ import VideoLibrary from "@/components/videos/VideoLibrary";
 export const metadata: Metadata = {
   title: "Videos — Installations on Site",
   description:
-    "Watch real SQUARE bird netting and safety installations filmed on site across Delhi NCR. Residential buildings and industrial sheds.",
+    "Watch real SQUARE bird netting installations filmed on site across Gujarat — Morbi Eden Garden, full building facades and industrial factory sheds.",
   alternates: { canonical: "/videos" },
 };
 
@@ -23,8 +23,8 @@ export default function Page() {
       <PageHero
         eyebrow="Videos"
         title="See the work, not just the claims."
-        lead="Footage from our own sites — a residential block fitted floor by floor, and a working industrial shed netted across the full span."
-        image="/images/videos/commercial-netting.webp"
+        lead="Footage from our own sites — Morbi Eden Garden, a full building facade, a residential block and a working factory shed."
+        image="/images/services/bird-netting-commercial.webp"
         imageAlt="Industrial shed interior with large-span bird netting"
         crumbs={[{ label: "Videos" }]}
         actions={

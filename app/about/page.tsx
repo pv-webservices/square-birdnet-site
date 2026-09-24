@@ -14,7 +14,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "About SQUARE — Bird Net & Invisible Grill Specialists",
   description:
-    "Who we are, how we work and what we stand for. Bird netting, invisible grill and safety net installation across Delhi NCR since day one.",
+    "Who we are, how we work and what we stand for. Bird netting, invisible grill and bird spike installation across Gujarat since day one.",
   alternates: { canonical: "/about" },
 };
 
@@ -61,9 +61,9 @@ export default function Page() {
       <PageHero
         eyebrow="About SQUARE"
         title="Safety that blends into your home."
-        lead="We install bird netting, invisible grills, bird spikes and safety nets across Delhi NCR — carefully specified, cleanly fitted and built to keep working."
+        lead="We install bird netting, invisible grills and bird spikes across Gujarat — carefully specified, cleanly fitted and built to keep working."
         image="/images/hero/towers-skyline.webp"
-        imageAlt="Residential towers across Delhi NCR"
+        imageAlt="Residential towers across Gujarat"
         crumbs={[{ label: "About" }]}
         actions={
           <Link href="/contact" className="btn btn--primary btn--large">
@@ -281,7 +281,7 @@ export default function Page() {
           <SectionHeading
             eyebrow="Service areas"
             title="Where we work"
-            body="Coverage across Delhi NCR. If you are just outside the list, call us — we will tell you honestly."
+            body="Coverage across Gujarat. If you are just outside the list, call us — we will tell you honestly."
             align="center"
           />
           <Reveal className="pill-list" style={{ justifyContent: "center" }}>

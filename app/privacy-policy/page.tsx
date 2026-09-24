@@ -29,8 +29,8 @@ export default function Page() {
 
             <h2>1. Who we are</h2>
             <p>
-              SQUARE — Bird Net &amp; Invisible Grill provides bird netting, invisible grill, bird spike
-              and safety net installation services across Delhi NCR. This policy explains how we handle
+              SQUARE — Bird Net &amp; Invisible Grill provides bird netting, invisible grill and bird spike
+              installation services across Gujarat. This policy explains how we handle
               personal information collected through this website.
             </p>
 

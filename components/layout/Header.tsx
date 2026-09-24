@@ -32,8 +32,6 @@ const SERVICE_ICONS: Record<string, string> = {
   "bird-netting": "bird",
   "invisible-grill": "shield",
   "bird-spikes": "spike",
-  "safety-net": "paw",
-  commercial: "building",
 };
 
 function Brand({ onClick }: { onClick?: () => void }) {
@@ -109,7 +107,7 @@ export default function Header() {
           <div className="utility-bar__left">
             <span>{brand.utilityLine}</span>
             <span className="utility-hide">
-              <MapPin size={13} aria-hidden="true" /> Serving Across Delhi NCR
+              <MapPin size={13} aria-hidden="true" /> Serving Across Gujarat
             </span>
             <span className="utility-hide">
               <Clock3 size={13} aria-hidden="true" /> {contact.hours}
@@ -141,7 +139,7 @@ export default function Header() {
                     {services.map((service) => (
                       <Link key={service.slug} href={`/services/${service.slug}`}>
                         <Icon name={SERVICE_ICONS[service.slug] ?? "shield"} size={17} />
-                        {service.name}
+                        {service.navLabel}
                       </Link>
                     ))}
                     <Link href="/services">
@@ -215,7 +213,7 @@ export default function Header() {
                         <Link href="/services">All Services</Link>
                         {services.map((service) => (
                           <Link key={service.slug} href={`/services/${service.slug}`}>
-                            {service.name}
+                            {service.navLabel}
                           </Link>
                         ))}
                       </div>
