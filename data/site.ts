@@ -12,19 +12,46 @@ export const brand = {
   promise: "Safe. Clean. Beautiful.",
   utilityLine: "Protecting Homes. Beautifying Views.",
   description:
-    "Professional bird netting, invisible grill and bird spike installation for homes, societies and factories across Gujarat.",
+    "Bird netting services, stainless steel invisible grills, bird spikes and cricket nets — installed for homes, societies and factories across Gujarat.",
   logoMark: "/images/brand/logo-mark.webp",
   logoLockup: "/images/brand/logo-lockup.webp",
 } as const;
 
+/**
+ * Every town we serve. This one list drives the header, footer, contact page,
+ * service-area map, FAQ answer and LocalBusiness schema — add or remove a town
+ * here and it changes everywhere.
+ */
+export const serviceAreas = [
+  "Morbi",
+  "Rajkot",
+  "Bhavnagar",
+  "Junagadh",
+  "Upleta",
+  "Jamnagar",
+  "Gondal",
+  "Vadodara",
+  "Gandhinagar",
+  "Porbandar",
+] as const;
+
+/** "Morbi, Rajkot, … & Porbandar" */
+export const serviceAreaList = `${serviceAreas.slice(0, -1).join(", ")} & ${serviceAreas[serviceAreas.length - 1]}`;
+
+/** Both numbers take calls; the first is also the WhatsApp line. */
+export const phones = [
+  { display: "+91 91044 16804", href: "tel:+919104416804" },
+  { display: "+91 62076 09077", href: "tel:+916207609077" },
+] as const;
+
 export const contact = {
-  phoneDisplay: "+91 91044 16804",
-  phoneHref: "tel:+919104416804",
+  phoneDisplay: phones[0].display,
+  phoneHref: phones[0].href,
   whatsappNumber: "919104416804",
   whatsappDisplay: "+91 91044 16804",
   email: "squarebirdnetservice@gmail.com",
   location: "Gujarat, India",
-  addressLine: "Serving Morbi, Rajkot, Bhavnagar, Junagadh, Jamnagar, Vadodra & Gandhinagar",
+  addressLine: `Serving ${serviceAreaList}`,
   hours: "Mon – Sat, 9:00 AM – 7:00 PM",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Gujarat",
 } as const;
@@ -53,16 +80,11 @@ export const metrics = [
   { value: null, display: "Same-Day", label: "Site Visit (Select Areas)" },
 ] as const;
 
-export const serviceAreas = [
-  "Morbi",
-  "Rajkot",
-  "Bhavnagar",
-  "Junagadh",
-  "Upleta",
-  "Jamnagar",
-  "Gondal",
-  "Vadodra",
-  "Gandhinagar",
+// TODO(client): confirm each figure before launch.
+export const projectStats = [
+  { value: "220+", label: "Residential" },
+  { value: "90+", label: "Commercial" },
+  { value: String(serviceAreas.length), label: "Locations covered" },
 ] as const;
 
 export const processSteps = [
@@ -144,7 +166,7 @@ export const whyChoose = [
   {
     icon: "building",
     title: "Homes, Societies & Factories",
-    text: "From a single balcony to a full building or factory shed.",
+    text: "From a single balcony to a full building, factory shed or cricket practice net.",
   },
 ] as const;
 

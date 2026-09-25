@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { contact, serviceAreas, whatsappLink } from "@/data/site";
+import { contact, phones, serviceAreas, whatsappLink } from "@/data/site";
 import { homeFaqs } from "@/data/faqs";
 import Accordion from "@/components/ui/Accordion";
 import CtaBand from "@/components/ui/CtaBand";
@@ -13,7 +13,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Contact — Book a Free Site Visit",
   description:
-    "Call, WhatsApp or send an enquiry to book a free site visit for bird netting, invisible grill or bird spikes across Gujarat.",
+    "Call +91 91044 16804 or +91 62076 09077, WhatsApp or send an enquiry to book a free site visit for bird netting, invisible grill, bird spikes or cricket nets across Gujarat.",
   alternates: { canonical: "/contact" },
 };
 
@@ -50,15 +50,17 @@ export default function Page() {
               </p>
 
               <div className="contact-list">
-                <a href={contact.phoneHref}>
-                  <span className="contact-list__icon" aria-hidden="true">
-                    <Phone size={19} />
-                  </span>
-                  <span className="contact-list__text">
-                    <span>Phone</span>
-                    <strong>{contact.phoneDisplay}</strong>
-                  </span>
-                </a>
+                {phones.map((phone, i) => (
+                  <a href={phone.href} key={phone.href}>
+                    <span className="contact-list__icon" aria-hidden="true">
+                      <Phone size={19} />
+                    </span>
+                    <span className="contact-list__text">
+                      <span>{i === 0 ? "Phone" : "Alternate phone"}</span>
+                      <strong>{phone.display}</strong>
+                    </span>
+                  </a>
+                ))}
                 <a href={whatsappLink()} target="_blank" rel="noreferrer">
                   <span className="contact-list__icon" aria-hidden="true">
                     <MessageCircle size={19} />

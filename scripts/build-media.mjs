@@ -21,6 +21,9 @@ const CLIENT = (n) => path.join(SOURCE, `client-${n}.jpeg`);
 const GENERATED = (n) => path.join(SOURCE, `${n}.png`);
 // Still frames lifted from the client's site videos (ffmpeg -ss <t> -frames:v 1).
 const FRAME = (n) => path.join(SOURCE, `frame-${n}.png`);
+// Named client photographs (jpeg) and free-licence stock (Pexels licence).
+const PHOTO = (n) => path.join(SOURCE, `${n}.jpeg`);
+const STOCK = (id) => path.join(SOURCE, `pexels-${id}.jpg`);
 
 const QUALITY = 78;
 
@@ -28,10 +31,24 @@ async function ensureDir(dir) {
   await mkdir(dir, { recursive: true });
 }
 
+/** Blurs rectangular regions (e.g. third-party names printed on clothing). */
+async function redacted(input, regions) {
+  const base = sharp(input).rotate();
+  const patches = await Promise.all(
+    regions.map(async (region) => ({
+      input: await sharp(input).rotate().extract(region).blur(28).toBuffer(),
+      left: region.left,
+      top: region.top,
+    })),
+  );
+  return base.composite(patches).toBuffer();
+}
+
 async function emit(input, outRelative, width, options = {}) {
   const out = path.join(IMAGES, outRelative);
   await ensureDir(path.dirname(out));
-  const pipeline = sharp(input).rotate();
+  const source = options.redact ? await redacted(input, options.redact) : input;
+  const pipeline = sharp(source);
   if (options.extract) pipeline.extract(options.extract);
   pipeline.resize({
     width,
@@ -95,6 +112,30 @@ async function services() {
   await emit(CLIENT(8), "services/window-netting.webp", 1000);
   await emit(GENERATED("invisible-grill-wide"), "services/invisible-grill-wide.webp", 1400);
   await emit(GENERATED("invisible-grill-closeup"), "services/invisible-grill-closeup.webp", 760);
+  // Client photographs added in the second revision.
+  await emit(PHOTO("grill-net-worker"), "services/grill-bird-net.webp", 1000, {
+    // The installer's shirt carries another company's name and phone numbers.
+    redact: [{ left: 830, top: 640, width: 190, height: 230 }],
+  });
+  await emit(PHOTO("factory-warehouse-net"), "services/factory-warehouse-netting.webp", 1000);
+  await emit(PHOTO("invisible-grill-customers"), "services/invisible-grill-customers.webp", 1000);
+  await emit(PHOTO("spike-1"), "services/bird-spikes-rooftop.webp", 1400);
+  await emit(PHOTO("spike-4"), "services/bird-spikes-ledge.webp", 1000);
+  await emit(PHOTO("spike-2"), "services/bird-spikes-terrace.webp", 1000);
+  // Crop the product photo out of the catalogue screenshot (drops the price row).
+  await emit(PHOTO("spike-3"), "services/bird-spikes-strip.webp", 1000, {
+    extract: { left: 0, top: 122, width: 1077, height: 763 },
+  });
+  await emit(PHOTO("spike-5"), "services/bird-spikes-ac-unit.webp", 1000);
+}
+
+/* -------------------------------------------------------------- cricket -- */
+// Free-licence stock from pexels.com (Pexels licence: commercial use allowed).
+async function cricket() {
+  console.log("cricket net");
+  await emit(STOCK(36676877), "services/cricket-box-net.webp", 1600);
+  await emit(STOCK(31171122), "services/cricket-net-batting.webp", 1000);
+  await emit(STOCK(9559761), "services/cricket-net-practice.webp", 1000);
 }
 
 /* ------------------------------------------------------------- projects -- */
@@ -148,7 +189,7 @@ async function removeLegacyPlaceholders() {
   for (const file of await readdir(dir)) await unlink(path.join(dir, file));
 }
 
-const STEPS = { brand, hero, services, projects, materials, team, compare, videoPosters, removeLegacyPlaceholders };
+const STEPS = { brand, hero, services, cricket, projects, materials, team, compare, videoPosters, removeLegacyPlaceholders };
 const requested = process.argv.slice(2);
 for (const [name, step] of Object.entries(STEPS)) {
   if (requested.length === 0 || requested.includes(name)) await step();

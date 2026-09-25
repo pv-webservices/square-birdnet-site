@@ -14,7 +14,7 @@ import {
   Phone,
   X,
 } from "lucide-react";
-import { brand, contact, whatsappLink } from "@/data/site";
+import { brand, contact, phones, whatsappLink } from "@/data/site";
 import { services } from "@/data/services";
 import Icon from "@/components/ui/Icon";
 
@@ -32,6 +32,7 @@ const SERVICE_ICONS: Record<string, string> = {
   "bird-netting": "bird",
   "invisible-grill": "shield",
   "bird-spikes": "spike",
+  "cricket-net": "net",
 };
 
 function Brand({ onClick }: { onClick?: () => void }) {
@@ -114,9 +115,11 @@ export default function Header() {
             </span>
           </div>
           <div className="utility-bar__right">
-            <a href={contact.phoneHref}>
-              <Phone size={13} aria-hidden="true" /> {contact.phoneDisplay}
-            </a>
+            {phones.map((phone) => (
+              <a key={phone.href} href={phone.href}>
+                <Phone size={13} aria-hidden="true" /> {phone.display}
+              </a>
+            ))}
             <a className="utility-bar__wa" href={whatsappLink()} target="_blank" rel="noreferrer">
               <MessageCircle size={13} aria-hidden="true" /> WhatsApp Us
             </a>
@@ -229,9 +232,11 @@ export default function Header() {
             </nav>
 
             <div className="mobile-drawer__contact">
-              <a href={contact.phoneHref}>
-                <Phone size={18} aria-hidden="true" /> {contact.phoneDisplay}
-              </a>
+              {phones.map((phone) => (
+                <a key={phone.href} href={phone.href}>
+                  <Phone size={18} aria-hidden="true" /> {phone.display}
+                </a>
+              ))}
               <a href={whatsappLink()} target="_blank" rel="noreferrer">
                 <MessageCircle size={18} aria-hidden="true" /> Chat on WhatsApp
               </a>

@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFab from "@/components/ui/WhatsAppFab";
-import { brand, contact, serviceAreas } from "@/data/site";
+import { brand, contact, phones, serviceAreas } from "@/data/site";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -23,33 +23,37 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.squarebirdnet.com"),
   title: {
-    default: "SQUARE | Bird Net & Invisible Grill in Gujarat",
+    default: "SQUARE | Bird Netting Services & Invisible Grill Contractors in Gujarat",
     template: "%s | SQUARE",
   },
   description: brand.description,
   keywords: [
-    "bird net installation",
-    "bird netting services",
+    "bird netting services in Gujarat",
+    "anti bird net dealers in Gujarat",
+    "mosquito net installation services",
+    "bird spike installation services",
+    "industrial bird netting services",
+    "invisible grill contractors in Gujarat",
+    "nylon bird netting services",
+    "plastic anti bird net",
+    "safety net installation services",
+    "stainless steel invisible grill",
+    "cricket net installation",
     "balcony bird net",
     "pigeon net Gujarat",
-    "invisible grill installation",
-    "balcony invisible grill",
-    "bird spikes",
-    "industrial bird netting",
-    "building bird net",
   ],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "en_IN",
     siteName: "SQUARE — Bird Net & Invisible Grill",
-    title: "SQUARE | Bird Net & Invisible Grill in Gujarat",
+    title: "SQUARE | Bird Netting Services & Invisible Grill Contractors in Gujarat",
     description: brand.description,
     images: [{ url: "/images/hero/hero-balcony.webp", width: 1400, height: 939, alt: "Balcony protected by an invisible grill overlooking the city" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SQUARE | Bird Net & Invisible Grill in Gujarat",
+    title: "SQUARE | Bird Netting Services & Invisible Grill Contractors in Gujarat",
     description: brand.description,
     images: ["/images/hero/hero-balcony.webp"],
   },
@@ -64,6 +68,13 @@ const localBusinessSchema = {
   description: brand.description,
   url: "https://www.squarebirdnet.com",
   telephone: contact.phoneDisplay,
+  contactPoint: phones.map((phone) => ({
+    "@type": "ContactPoint",
+    telephone: phone.display,
+    contactType: "customer service",
+    areaServed: "IN",
+    availableLanguage: ["en", "hi", "gu"],
+  })),
   email: contact.email,
   image: "https://www.squarebirdnet.com/images/hero/hero-balcony.webp",
   address: { "@type": "PostalAddress", addressRegion: "Gujarat", addressCountry: "IN" },

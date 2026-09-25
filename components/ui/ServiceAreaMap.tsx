@@ -11,11 +11,12 @@ const PINS = [
   { label: "Jamnagar", x: 105, y: 170 },
   { label: "Rajkot", x: 215, y: 190 },
   { label: "Gandhinagar", x: 335, y: 110 },
-  { label: "Vadodra", x: 375, y: 195 },
+  { label: "Vadodara", x: 375, y: 195 },
   { label: "Upleta", x: 120, y: 255 },
   { label: "Gondal", x: 230, y: 255 },
   { label: "Bhavnagar", x: 310, y: 275 },
   { label: "Junagadh", x: 170, y: 315 },
+  { label: "Porbandar", x: 92, y: 300 },
 ];
 
 export default function ServiceAreaMap() {
@@ -57,6 +58,8 @@ export default function ServiceAreaMap() {
           <path d="M215 190 L335 110" />
           <path d="M335 110 L375 195" />
           <path d="M375 195 L310 275" />
+          <path d="M120 255 L92 300" />
+          <path d="M92 300 L170 315" />
         </g>
 
         {PINS.map((pin, i) => (

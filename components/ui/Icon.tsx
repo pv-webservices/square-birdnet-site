@@ -1,8 +1,10 @@
 import {
   BadgeCheck,
   Bird,
+  Bug,
   Building2,
   Factory,
+  Grid3x3,
   HelpCircle,
   PawPrint,
   ShieldCheck,
@@ -28,6 +30,8 @@ const registry: Record<string, LucideIcon> = {
   bird: Bird,
   paw: PawPrint,
   spike: Zap,
+  net: Grid3x3,
+  bug: Bug,
   help: HelpCircle,
 };
 

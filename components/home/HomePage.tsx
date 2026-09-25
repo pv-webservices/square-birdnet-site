@@ -1,6 +1,7 @@
 import Hero from "@/components/home/Hero";
 import TrustMetrics from "@/components/home/TrustMetrics";
 import Services from "@/components/home/Services";
+import ServiceIndex from "@/components/home/ServiceIndex";
 import InvisibleGrillFeature from "@/components/home/InvisibleGrillFeature";
 import BeforeAfterSection from "@/components/home/BeforeAfterSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Process />
       <Materials />
       <Testimonials />
+      <ServiceIndex />
       <ServiceAreasFaq />
       <FinalCta />
     </main>

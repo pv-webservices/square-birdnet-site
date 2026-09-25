@@ -3,6 +3,8 @@
  * homepage preview. Keep answers factual — avoid absolute safety claims.
  */
 
+import { serviceAreaList } from "@/data/site";
+
 export type Faq = { q: string; a: string };
 export type FaqGroup = { category: string; items: Faq[] };
 
@@ -12,7 +14,7 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Which areas do you serve?",
-        a: "We work across Gujarat — Morbi, Rajkot, Bhavnagar, Junagadh, Upleta, Jamnagar, Gondal, Vadodra, Gandhinagar and surrounding areas. If you are just outside, call us and we will tell you honestly whether we can reach you.",
+        a: `We work across Gujarat — ${serviceAreaList} — and the surrounding areas. If you are just outside, call us and we will tell you honestly whether we can reach you.`,
       },
       {
         q: "Is the site visit really free?",

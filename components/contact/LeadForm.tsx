@@ -6,9 +6,12 @@ import { submitLead, validateLead, type LeadErrors } from "@/lib/leads";
 import { whatsappLink } from "@/data/site";
 
 const SERVICES = [
-  "Bird Net Service",
+  "Bird Netting Service",
   "Invisible Grill Installation",
   "Bird Spike Installation",
+  "Cricket Net Installation",
+  "Safety Net Installation",
+  "Mosquito Net Installation",
   "Not Sure",
 ] as const;
 

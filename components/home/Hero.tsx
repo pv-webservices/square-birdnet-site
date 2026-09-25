@@ -23,8 +23,8 @@ export default function Hero() {
             <span>Zero compromise.</span>
           </h1>
           <p className="hero-enter" style={{ "--enter-delay": "100ms" } as React.CSSProperties}>
-            Professional bird net, invisible grill and bird spike installation for safer, cleaner and
-            more beautiful homes across Gujarat.
+            Professional bird netting, invisible grill, bird spike and cricket net installation for safer,
+            cleaner and more beautiful homes across Gujarat.
           </p>
           <div className="hero-actions hero-enter" style={{ "--enter-delay": "150ms" } as React.CSSProperties}>
             <Link href="/contact" className="btn btn--primary btn--large">

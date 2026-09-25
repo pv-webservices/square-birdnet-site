@@ -12,7 +12,7 @@ import {
   Phone,
   Youtube,
 } from "lucide-react";
-import { brand, contact, socials, whatsappLink } from "@/data/site";
+import { brand, contact, phones, socials, whatsappLink } from "@/data/site";
 import { services } from "@/data/services";
 
 const QUICK_LINKS = [
@@ -93,9 +93,11 @@ export default function Footer() {
 
         <div className="footer-contact">
           <h3>Contact Us</h3>
-          <a href={contact.phoneHref}>
-            <Phone size={16} aria-hidden="true" /> {contact.phoneDisplay}
-          </a>
+          {phones.map((phone) => (
+            <a key={phone.href} href={phone.href}>
+              <Phone size={16} aria-hidden="true" /> {phone.display}
+            </a>
+          ))}
           <a href={whatsappLink()} target="_blank" rel="noreferrer">
             <MessageCircle size={16} aria-hidden="true" /> Chat on WhatsApp
           </a>

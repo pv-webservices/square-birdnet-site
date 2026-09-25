@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import type { Service } from "@/data/services";
 import { videoBySlug } from "@/data/videos";
-import { processSteps, whatsappLink, whyChoose } from "@/data/site";
+import { processSteps, serviceAreas, whatsappLink, whyChoose } from "@/data/site";
 import { projects, type ProjectCategory } from "@/data/projects";
 import Accordion from "@/components/ui/Accordion";
 import BeforeAfter from "@/components/ui/BeforeAfter";
@@ -57,7 +57,7 @@ export default function ServicePage({ service }: { service: Service }) {
     "@type": "Service",
     serviceType: service.name,
     provider: { "@type": "LocalBusiness", name: "SQUARE — Bird Net & Invisible Grill" },
-    areaServed: "Gujarat",
+    areaServed: serviceAreas.map((area) => ({ "@type": "City", name: area })),
     description: service.metaDescription,
   };
 
@@ -189,6 +189,40 @@ export default function ServicePage({ service }: { service: Service }) {
         </section>
       ) : null}
 
+      {/* Related nets the same team installs (anchor targets for other pages) */}
+      {service.extras?.length ? (
+        <section className="section" id="other-nets">
+          <div className="container">
+            <SectionHeading
+              eyebrow="Also installed by our netting team"
+              title="Anti bird net, safety nets and mosquito nets"
+              body="Often fitted on the same visit as a bird net — ask for them together and we quote them together."
+            />
+            <div className="feature-grid">
+              {service.extras.map((extra, i) => (
+                <Reveal key={extra.id} delay={(i % 3) * 80}>
+                  <article className="feature-card extra-card" id={extra.id}>
+                    <span className="feature-card__icon" aria-hidden="true">
+                      <ShieldCheck size={21} />
+                    </span>
+                    <h3>{extra.title}</h3>
+                    <p>{extra.text}</p>
+                    <ul className="spotlight__points">
+                      {extra.points.map((point) => (
+                        <li key={point}>
+                          <CheckCircle2 size={16} aria-hidden="true" />
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       {/* Applications + materials */}
       <section className="section section--icy">
         <div className="container split-grid">
@@ -269,39 +303,41 @@ export default function ServicePage({ service }: { service: Service }) {
       </section>
 
       {/* Gallery */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Project gallery"
-            title={`${service.name} in real spaces`}
-            body={
-              related.length
-                ? "Recent installations from our own sites."
-                : "A closer look at the finish, the materials and the detail."
-            }
-            action={
-              <Link href="/projects" className="text-link">
-                View All Projects <ArrowUpRight size={15} />
-              </Link>
-            }
-          />
-          <div className={galleryClass}>
-            {service.galleryImages.map((src, i) => (
-              <Reveal key={src} delay={(i % 3) * 80}>
-                <div className="gallery-tile">
-                  <Image
-                    src={src}
-                    alt={`${service.name} installation detail ${i + 1}`}
-                    fill
-                    loading="lazy"
-                    sizes="(max-width: 760px) 50vw, 30vw"
-                  />
-                </div>
-              </Reveal>
-            ))}
+      {service.galleryImages.length ? (
+        <section className="section">
+          <div className="container">
+            <SectionHeading
+              eyebrow="Project gallery"
+              title={`${service.name} in real spaces`}
+              body={
+                related.length
+                  ? "Recent installations from our own sites."
+                  : "A closer look at the finish, the materials and the detail."
+              }
+              action={
+                <Link href="/projects" className="text-link">
+                  View All Projects <ArrowUpRight size={15} />
+                </Link>
+              }
+            />
+            <div className={galleryClass}>
+              {service.galleryImages.map((src, i) => (
+                <Reveal key={src} delay={(i % 3) * 80}>
+                  <div className="gallery-tile">
+                    <Image
+                      src={src}
+                      alt={`${service.name} installation detail ${i + 1}`}
+                      fill
+                      loading="lazy"
+                      sizes="(max-width: 760px) 50vw, 30vw"
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       {/* Video */}
       {video ? (

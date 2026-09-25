@@ -11,9 +11,9 @@ import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Our Services — Bird Net, Invisible Grill & Bird Spikes",
+  title: "Our Services — Bird Netting, Invisible Grill, Bird Spikes & Cricket Nets",
   description:
-    "Bird net service, invisible grill installation and bird spikes across Gujarat — for homes, societies and factories. Compare the options and book a free site visit.",
+    "Bird netting services, stainless steel invisible grill installation, bird spikes, cricket nets, safety nets and mosquito nets across Gujarat — for homes, societies and factories. Compare the options and book a free site visit.",
   alternates: { canonical: "/services" },
 };
 
@@ -23,7 +23,7 @@ export default function Page() {
       <PageHero
         eyebrow="Our services"
         title="Protection solutions made for modern spaces."
-        lead="Three services, one standard. We match the solution to the opening, the risk and the way you actually use the space — then install it cleanly."
+        lead="Four core services, one standard. We match the solution to the opening, the risk and the way you actually use the space — then install it cleanly."
         image="/images/hero/towers-skyline.webp"
         imageAlt="Modern residential towers with protected balconies"
         crumbs={[{ label: "Services" }]}

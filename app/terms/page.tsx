@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contact } from "@/data/site";
+import { contact, phones } from "@/data/site";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
@@ -121,7 +121,8 @@ export default function Page() {
             <h2>13. Contact</h2>
             <p>
               Questions about these terms? Email <a href={`mailto:${contact.email}`}>{contact.email}</a> or
-              call <a href={contact.phoneHref}>{contact.phoneDisplay}</a>.
+              call <a href={phones[0].href}>{phones[0].display}</a> or{" "}
+              <a href={phones[1].href}>{phones[1].display}</a>.
             </p>
           </div>
         </div>

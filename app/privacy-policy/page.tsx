@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contact } from "@/data/site";
+import { contact, phones } from "@/data/site";
 import PageHero from "@/components/ui/PageHero";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function Page() {
 
             <h2>1. Who we are</h2>
             <p>
-              SQUARE — Bird Net &amp; Invisible Grill provides bird netting, invisible grill and bird spike
+              SQUARE — Bird Net &amp; Invisible Grill provides bird netting, invisible grill, bird spike and cricket net
               installation services across Gujarat. This policy explains how we handle
               personal information collected through this website.
             </p>
@@ -107,7 +107,8 @@ export default function Page() {
             <p>
               For any question about this policy or about information we hold, contact us at{" "}
               <a href={`mailto:${contact.email}`}>{contact.email}</a> or call{" "}
-              <a href={contact.phoneHref}>{contact.phoneDisplay}</a>.
+              <a href={phones[0].href}>{phones[0].display}</a> or{" "}
+              <a href={phones[1].href}>{phones[1].display}</a>.
             </p>
           </div>
         </div>

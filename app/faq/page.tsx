@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, MessageCircle, Phone } from "lucide-react";
 import { allFaqs } from "@/data/faqs";
-import { contact, whatsappLink } from "@/data/site";
+import { phones, whatsappLink } from "@/data/site";
 import CtaBand from "@/components/ui/CtaBand";
 import FaqBrowser from "@/components/faq/FaqBrowser";
 import PageHero from "@/components/ui/PageHero";
@@ -10,7 +10,7 @@ import PageHero from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions",
   description:
-    "Answers about bird netting, invisible grills, bird spikes, installation, warranty, maintenance and pricing.",
+    "Answers about bird netting, anti bird nets, invisible grills, bird spikes, cricket nets, installation, warranty, maintenance and pricing.",
   alternates: { canonical: "/faq" },
 };
 
@@ -34,9 +34,11 @@ export default function Page() {
         crumbs={[{ label: "FAQ" }]}
         actions={
           <>
-            <a href={contact.phoneHref} className="btn btn--primary btn--large">
-              <Phone size={17} /> {contact.phoneDisplay}
-            </a>
+            {phones.map((phone) => (
+              <a key={phone.href} href={phone.href} className="btn btn--primary btn--large">
+                <Phone size={17} /> {phone.display}
+              </a>
+            ))}
             <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--secondary btn--large">
               <MessageCircle size={18} /> Ask on WhatsApp
             </a>

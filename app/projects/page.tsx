@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import { projects } from "@/data/projects";
-import { whatsappLink } from "@/data/site";
+import { projectStats, whatsappLink } from "@/data/site";
 import CtaBand from "@/components/ui/CtaBand";
 import PageHero from "@/components/ui/PageHero";
 import ProjectGallery from "@/components/ui/ProjectGallery";
@@ -11,16 +11,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Projects & Gallery — Real Installations",
   description:
-    "Browse real bird netting, invisible grill and industrial netting installations completed by SQUARE across Gujarat.",
+    "Browse real bird netting, invisible grill, bird spike and industrial bird netting installations completed by SQUARE across Gujarat.",
   alternates: { canonical: "/projects" },
 };
-
-const SEGMENTS = [
-  { label: "Residential", count: projects.filter((p) => p.segment === "Residential").length },
-  { label: "Commercial", count: projects.filter((p) => p.segment === "Commercial").length },
-  // Projects without a confirmed town are listed as "Gujarat" — not a location to count.
-  { label: "Locations covered", count: new Set(projects.map((p) => p.location).filter((l) => l !== "Gujarat")).size },
-];
 
 export default function Page() {
   return (
@@ -47,11 +40,11 @@ export default function Page() {
       <section className="section section--tight">
         <div className="container">
           <div className="metrics-grid" style={{ transform: "none", gridTemplateColumns: "repeat(3, 1fr)" }}>
-            {SEGMENTS.map((segment) => (
-              <div className="metric" key={segment.label}>
+            {projectStats.map((stat) => (
+              <div className="metric" key={stat.label}>
                 <div>
-                  <strong>{segment.count}</strong>
-                  <span>{segment.label}</span>
+                  <strong>{stat.value}</strong>
+                  <span>{stat.label}</span>
                 </div>
               </div>
             ))}

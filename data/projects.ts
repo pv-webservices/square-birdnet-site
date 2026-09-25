@@ -196,7 +196,7 @@ export const projects: Project[] = [
     service: "Invisible Grill",
     category: "Invisible Grill",
     segment: "Residential",
-    location: "Vadodra",
+    location: "Vadodara",
     propertyType: "Apartment balcony",
     challenge:
       "A corner balcony with a solid parapet needed a barrier above it that would not interrupt the view.",

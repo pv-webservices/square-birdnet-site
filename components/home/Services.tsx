@@ -12,7 +12,7 @@ export default function Services() {
         <SectionHeading
           eyebrow="Our services"
           title="Solutions for every space"
-          body="Bird netting, invisible grills and bird spikes — from a single balcony to a full building or a factory shed."
+          body="Bird netting, invisible grills, bird spikes and cricket nets — from a single balcony to a full building, a factory shed or a practice ground."
           action={
             <Link className="text-link" href="/services">
               Explore All Services <ArrowRight size={16} />
@@ -24,7 +24,7 @@ export default function Services() {
           {homeServiceCards.map((card, i) => (
             <Reveal key={`${card.title}-${card.titleBold}`} delay={i * 70}>
               <Link href={card.href} className="service-card hover-card">
-                <div className="hover-media" style={{ aspectRatio: "0.92" }}>
+                <div className="hover-media" style={{ aspectRatio: "1.1" }}>
                   <Image
                     src={card.image}
                     alt={card.alt}
