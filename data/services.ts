@@ -40,6 +40,8 @@ export type Service = {
   cardTitle: string;
   cardSubtitle: string;
   navLabel: string;
+  /** Key into components/ui/Icon. */
+  icon: string;
   eyebrow: string;
   heroTitle: string;
   heroLead: string;
@@ -68,6 +70,7 @@ export const services: Service[] = [
     cardTitle: "Bird Net Service",
     cardSubtitle: "Humane bird protection for balconies, buildings and factory sheds.",
     navLabel: "Bird Netting Services",
+    icon: "bird",
     eyebrow: "BIRD NETTING SERVICES IN GUJARAT",
     heroTitle: "Cleaner open spaces, without the constant bird nuisance.",
     heroLead:
@@ -207,6 +210,7 @@ export const services: Service[] = [
     cardTitle: "Invisible Grill",
     cardSubtitle: "Child and pet safety with a clean, open balcony view.",
     navLabel: "Invisible Grill Installation",
+    icon: "shield",
     eyebrow: "STAINLESS STEEL INVISIBLE GRILL — CHILD & PET SAFETY",
     heroTitle: "Safety that does not block your beautiful view.",
     heroLead:
@@ -278,6 +282,7 @@ export const services: Service[] = [
     cardTitle: "Bird Spikes",
     cardSubtitle: "Professional deterrence for ledges, parapets and building edges.",
     navLabel: "Bird Spike Installation",
+    icon: "spike",
     eyebrow: "BIRD SPIKE INSTALLATION SERVICES",
     heroTitle: "Stop birds perching where they cause the most mess.",
     heroLead:
@@ -342,6 +347,7 @@ export const services: Service[] = [
     cardTitle: "Cricket Nets",
     cardSubtitle: "Practice nets and box cricket enclosures for homes, societies and academies.",
     navLabel: "Cricket Net Installation",
+    icon: "net",
     eyebrow: "CRICKET NET INSTALLATION",
     heroTitle: "Practise every day, without losing a single ball.",
     heroLead:

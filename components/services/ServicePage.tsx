@@ -11,7 +11,7 @@ import {
   ShieldCheck,
   Wrench,
 } from "lucide-react";
-import type { Service } from "@/data/services";
+import { services, type Service } from "@/data/services";
 import { videoBySlug } from "@/data/videos";
 import { processSteps, serviceAreas, whatsappLink, whyChoose } from "@/data/site";
 import { projects, type ProjectCategory } from "@/data/projects";
@@ -40,6 +40,11 @@ const PROJECT_CATEGORIES: Record<string, ProjectCategory[]> = {
 export default function ServicePage({ service }: { service: Service }) {
   const video = service.videoSlug ? videoBySlug(service.videoSlug) : undefined;
   const related = projects.filter((p) => PROJECT_CATEGORIES[service.slug]?.includes(p.category));
+  const otherServices = services.filter((s) => s.slug !== service.slug);
+  // Net jobs that live as sections of another service page (safety, mosquito…).
+  const otherExtras = otherServices.flatMap((s) =>
+    (s.extras ?? []).map((extra) => ({ ...extra, href: `/services/${s.slug}#${extra.id}` })),
+  );
   const galleryClass = service.galleryImages.length === 4 ? "gallery-grid gallery-grid--4" : "gallery-grid";
 
   const faqSchema = {
@@ -405,6 +410,49 @@ export default function ServicePage({ service }: { service: Service }) {
             body="We measure, advise and give you a clear written quotation — with no obligation."
             subject={service.name}
           />
+        </div>
+      </section>
+
+      {/* Cross-links to every other service */}
+      <section className="section section--soft" id="other-services">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Other services"
+            title="Explore our other services"
+            body="The same team, the same standard — for every other part of your home, building or ground."
+            action={
+              <Link href="/services" className="text-link">
+                All Services <ArrowUpRight size={15} />
+              </Link>
+            }
+          />
+          <div className="reco-grid">
+            {otherServices.map((other, i) => (
+              <Reveal key={other.slug} delay={i * 80}>
+                <Link href={`/services/${other.slug}`} className="reco-card">
+                  <span className="reco-card__icon" aria-hidden="true">
+                    <Icon name={other.icon} size={21} />
+                  </span>
+                  <span className="reco-card__text">
+                    <span>{other.cardSubtitle}</span>
+                    <strong>
+                      {other.navLabel} <ArrowUpRight size={15} />
+                    </strong>
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+          {otherExtras.length ? (
+            <div className="other-extras">
+              <span>Also available:</span>
+              {otherExtras.map((extra) => (
+                <Link key={extra.id} href={extra.href}>
+                  {extra.title}
+                </Link>
+              ))}
+            </div>
+          ) : null}
         </div>
       </section>
 

@@ -28,13 +28,6 @@ const NAV = [
   { label: "Contact", href: "/contact" },
 ] as const;
 
-const SERVICE_ICONS: Record<string, string> = {
-  "bird-netting": "bird",
-  "invisible-grill": "shield",
-  "bird-spikes": "spike",
-  "cricket-net": "net",
-};
-
 function Brand({ onClick }: { onClick?: () => void }) {
   return (
     <Link href="/" className="brand" aria-label={`${brand.name} — home`} onClick={onClick}>
@@ -141,7 +134,7 @@ export default function Header() {
                   <div className="nav-dropdown">
                     {services.map((service) => (
                       <Link key={service.slug} href={`/services/${service.slug}`}>
-                        <Icon name={SERVICE_ICONS[service.slug] ?? "shield"} size={17} />
+                        <Icon name={service.icon} size={17} />
                         {service.navLabel}
                       </Link>
                     ))}

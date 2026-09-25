@@ -642,6 +642,15 @@ strong { font-weight: 800; }
 .service-row__tags span:hover { transform: translateY(-2px); color: var(--navy-900); }
 .service-row__actions { display: flex; gap: 10px; flex-wrap: wrap; }
 
+/* "Also available" links under the other-services cards on a service page */
+.other-extras { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 22px; font-size: 13px; }
+.other-extras > span { font-weight: 800; color: var(--navy-900); }
+.other-extras a {
+  padding: 7px 12px; border-radius: 8px; background: #fff; border: 1px solid var(--line);
+  font-weight: 700; color: #526c81; transition: color .25s ease, border-color .25s ease;
+}
+.other-extras a:hover { color: var(--navy-900); border-color: var(--blue-400); }
+
 /* Recommendation matrix */
 .reco-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .reco-card {
