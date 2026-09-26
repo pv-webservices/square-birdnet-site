@@ -26,7 +26,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Do you work on weekends?",
-        a: "Our standard working hours are Monday to Saturday, 9:00 AM to 7:00 PM. Commercial work can be scheduled outside these hours when a site needs it.",
+        a: "Yes. We are open all days of the week, 24 hours a day, so you can call or book a site visit whenever it suits you.",
       },
     ],
   },

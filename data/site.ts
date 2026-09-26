@@ -52,7 +52,7 @@ export const contact = {
   email: "squarebirdnetservice@gmail.com",
   location: "Gujarat, India",
   addressLine: `Serving ${serviceAreaList}`,
-  hours: "Mon – Sat, 9:00 AM – 7:00 PM",
+  hours: "Open all days, 24 hours",
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=Gujarat",
 } as const;
 

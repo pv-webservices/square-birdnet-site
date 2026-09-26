@@ -550,3 +550,30 @@ export const serviceIndex = [
     href: "/services/cricket-net",
   },
 ] as const;
+
+/**
+ * Service links listed in the footer under "Our Services". Each label points
+ * at the service page (or section) that covers it.
+ */
+export const footerServiceLinks = [
+  { label: "Bird Netting Services", href: "/services/bird-netting" },
+  { label: "Anti Bird Net", href: "/services/bird-netting#anti-bird-net" },
+  { label: "Mosquito Net Installation Services", href: "/services/bird-netting#mosquito-net" },
+  { label: "Bird Spike", href: "/services/bird-spikes" },
+  { label: "Industrial Bird Netting Services", href: "/services/bird-netting#industrial" },
+  { label: "Invisible Grill Contractors", href: "/services/invisible-grill" },
+  { label: "Nylon Bird Netting Services", href: "/services/bird-netting" },
+  { label: "Plastic Anti Bird Net", href: "/services/bird-netting#anti-bird-net" },
+  { label: "Safety Net Installation Services", href: "/services/bird-netting#safety-net" },
+  { label: "Stainless Steel Invisible Grill", href: "/services/invisible-grill" },
+  { label: "Best Bird Netting Services In Gujarat", href: "/services/bird-netting" },
+  { label: "Best Anti Bird Net Dealers In Gujarat", href: "/services/bird-netting#anti-bird-net" },
+  { label: "Best Mosquito Net Installation Services In Gujarat", href: "/services/bird-netting#mosquito-net" },
+  { label: "Best Bird Spike Installation Services In Gujarat", href: "/services/bird-spikes" },
+  { label: "Best Industrial Bird Netting Services In Gujarat", href: "/services/bird-netting#industrial" },
+  { label: "Best Invisible Grill Contractors In Gujarat", href: "/services/invisible-grill" },
+  { label: "Best Nylon Bird Netting Services In Gujarat", href: "/services/bird-netting" },
+  { label: "Plastic Anti Bird Net Installation Services In Gujarat", href: "/services/bird-netting#anti-bird-net" },
+  { label: "Safety Net Installation Services In Gujarat", href: "/services/bird-netting#safety-net" },
+  { label: "Stainless Steel Invisible Grill Installation Services In Gujarat", href: "/services/invisible-grill" },
+] as const;

@@ -13,7 +13,7 @@ import {
   Youtube,
 } from "lucide-react";
 import { brand, contact, phones, socials, whatsappLink } from "@/data/site";
-import { services } from "@/data/services";
+import { footerServiceLinks } from "@/data/services";
 
 const QUICK_LINKS = [
   ["Home", "/"],
@@ -80,14 +80,11 @@ export default function Footer() {
         <nav aria-label="Our services">
           <h3>Our Services</h3>
           <ul>
-            {services.map((service) => (
-              <li key={service.slug}>
-                <Link href={`/services/${service.slug}`}>{service.navLabel}</Link>
+            {footerServiceLinks.map((link) => (
+              <li key={link.label}>
+                <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
-            <li>
-              <Link href="/services">All Services</Link>
-            </li>
           </ul>
         </nav>
 
