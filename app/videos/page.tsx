@@ -9,17 +9,21 @@ import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import VideoLibrary from "@/components/videos/VideoLibrary";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Videos — Installations on Site",
+export const metadata: Metadata = pageMetadata({
+  title: "Installation Videos — Bird Netting on Site",
   description:
-    "Watch real SQUARE bird netting installations filmed on site across Gujarat — Morbi Eden Garden, full building facades and industrial factory sheds.",
-  alternates: { canonical: "/videos" },
-};
+    "Watch real SQUARE bird netting installations filmed on site in Gujarat — Morbi Eden Garden, full building facades and industrial factory sheds.",
+  path: "/videos",
+  image: "videos",
+});
 
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Videos", path: "/videos" }])} />
       <PageHero
         eyebrow="Videos"
         title="See the work, not just the claims."
@@ -57,8 +61,8 @@ export default function Page() {
           <div className="feature-grid feature-grid--2">
             {videos.map((video, i) => (
               <Reveal key={video.slug} delay={i * 90}>
-                <article className="service-row" style={{ gridTemplateColumns: "180px 1fr" }}>
-                  <div className="service-row__media" style={{ minHeight: 220 }}>
+                <article className="service-row service-row--clip">
+                  <div className="service-row__media">
                     <Image
                       src={video.poster}
                       alt={`${video.title} — still frame`}
@@ -67,10 +71,10 @@ export default function Page() {
                       sizes="180px"
                     />
                   </div>
-                  <div className="service-row__body" style={{ padding: "28px 30px" }}>
+                  <div className="service-row__body">
                     <div className="eyebrow">{video.category}</div>
-                    <h3 style={{ fontSize: 20 }}>{video.title}</h3>
-                    <p style={{ fontSize: 13.5 }}>{video.description}</p>
+                    <h3>{video.title}</h3>
+                    <p>{video.description}</p>
                   </div>
                 </article>
               </Reveal>

@@ -25,6 +25,8 @@ export default function FaqBrowser() {
       .filter((group) => group.items.length > 0);
   }, [query]);
 
+  const matches = filtered.reduce((total, group) => total + group.items.length, 0);
+
   return (
     <div className="faq-layout">
       <nav className="faq-toc" aria-label="FAQ categories">
@@ -46,10 +48,13 @@ export default function FaqBrowser() {
             aria-label="Search frequently asked questions"
           />
         </div>
+        <p className="sr-only" role="status" aria-live="polite">
+          {query.trim() ? `${matches} matching question${matches === 1 ? "" : "s"}` : ""}
+        </p>
 
         {filtered.length === 0 ? (
           <div className="faq-empty">
-            <h3>No matching questions</h3>
+            <p className="faq-empty__title">No matching questions</p>
             <p style={{ margin: 0 }}>
               Try a different word, or call us — we would rather answer it directly.
             </p>

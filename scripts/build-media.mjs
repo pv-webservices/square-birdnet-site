@@ -89,9 +89,8 @@ async function brand() {
 async function hero() {
   console.log("hero & banners");
   await emit(GENERATED("hero-balcony"), "hero/hero-balcony.webp", 1400, { quality: 80 });
-  await emit(GENERATED("towers-skyline"), "hero/towers-skyline.webp", 1600);
+  await emit(GENERATED("towers-skyline"), "hero/towers-skyline.webp", 1600, { quality: 72 });
   await emit(GENERATED("cta-balcony-night"), "hero/cta-balcony-night.webp", 1600);
-  await emit(GENERATED("commercial-facade"), "hero/commercial-facade.webp", 1400);
 }
 
 /* ------------------------------------------------------------- services -- */
@@ -101,7 +100,6 @@ async function services() {
   await emit(CLIENT(16), "services/invisible-grill-night.webp", 1000);
   await emit(CLIENT(3), "services/bird-netting-residential.webp", 1000);
   await emit(CLIENT(14), "services/bird-netting-commercial.webp", 1000);
-  await emit(GENERATED("invisible-grill-wide"), "services/invisible-grill.webp", 1000);
   await emit(GENERATED("bird-spikes"), "services/bird-spikes.webp", 1000);
   await emit(GENERATED("safety-net"), "services/balcony-bird-net.webp", 1000);
   await emit(FRAME("factory-roof"), "services/factory-roof-netting.webp", 720);
@@ -109,7 +107,6 @@ async function services() {
   await emit(FRAME("building-facade"), "services/building-facade-netting.webp", 720);
   await emit(FRAME("morbi-balcony"), "services/society-balcony-netting.webp", 720);
   await emit(FRAME("morbi-garden"), "services/society-garden-netting.webp", 720);
-  await emit(CLIENT(8), "services/window-netting.webp", 1000);
   await emit(GENERATED("invisible-grill-wide"), "services/invisible-grill-wide.webp", 1400);
   await emit(GENERATED("invisible-grill-closeup"), "services/invisible-grill-closeup.webp", 760);
   // Client photographs added in the second revision.
@@ -133,9 +130,9 @@ async function services() {
 // Free-licence stock from pexels.com (Pexels licence: commercial use allowed).
 async function cricket() {
   console.log("cricket net");
-  await emit(STOCK(36676877), "services/cricket-box-net.webp", 1600);
-  await emit(STOCK(31171122), "services/cricket-net-batting.webp", 1000);
-  await emit(STOCK(9559761), "services/cricket-net-practice.webp", 1000);
+  await emit(STOCK(36676877), "services/cricket-box-net.webp", 1400, { quality: 72 });
+  await emit(STOCK(31171122), "services/cricket-net-batting.webp", 1000, { quality: 72 });
+  await emit(STOCK(9559761), "services/cricket-net-practice.webp", 1000, { quality: 72 });
 }
 
 /* ------------------------------------------------------------- projects -- */
@@ -175,10 +172,38 @@ async function compare() {
 async function videoPosters() {
   console.log("video posters");
   await emit(path.join(SOURCE, "video-1-poster.jpg"), "videos/residential-netting.webp", 720, { quality: 72 });
-  await emit(path.join(SOURCE, "video-2-poster.jpg"), "videos/commercial-netting.webp", 720, { quality: 72 });
   await emit(FRAME("morbi-balcony"), "videos/morbi-eden-garden.webp", 720, { quality: 72 });
   await emit(FRAME("factory-poster"), "videos/industrial-factory-netting.webp", 720, { quality: 72 });
   await emit(FRAME("building-facade"), "videos/building-facade-netting.webp", 720, { quality: 72 });
+}
+
+/* --------------------------------------------------------------- social -- */
+// 1200x630 JPEG share cards for Open Graph / WhatsApp / X. JPEG rather than
+// WebP because some link-preview crawlers (WhatsApp in particular) skip WebP.
+// File names match the `socialImage` keys used by lib/seo.ts.
+async function social() {
+  console.log("social share images");
+  const cards = {
+    home: GENERATED("hero-balcony"),
+    about: CLIENT(5),
+    services: GENERATED("towers-skyline"),
+    projects: CLIENT(2),
+    videos: CLIENT(14),
+    "bird-netting": CLIENT(3),
+    "invisible-grill": GENERATED("invisible-grill-wide"),
+    "bird-spikes": PHOTO("spike-1"),
+    "cricket-net": STOCK(36676877),
+  };
+  await ensureDir(path.join(IMAGES, "social"));
+  for (const [name, input] of Object.entries(cards)) {
+    const out = path.join(IMAGES, "social", `${name}.jpg`);
+    const { size } = await sharp(input)
+      .rotate()
+      .resize(1200, 630, { fit: "cover", position: "attention" })
+      .jpeg({ quality: 80, mozjpeg: true })
+      .toFile(out);
+    console.log(`  social/${name}.jpg`.padEnd(44), `1200x630  ${Math.round(size / 1024)}kb`);
+  }
 }
 
 /* ---------------------------------------------------------------- clean -- */
@@ -189,7 +214,7 @@ async function removeLegacyPlaceholders() {
   for (const file of await readdir(dir)) await unlink(path.join(dir, file));
 }
 
-const STEPS = { brand, hero, services, cricket, projects, materials, team, compare, videoPosters, removeLegacyPlaceholders };
+const STEPS = { brand, hero, services, cricket, projects, materials, team, compare, videoPosters, social, removeLegacyPlaceholders };
 const requested = process.argv.slice(2);
 for (const [name, step] of Object.entries(STEPS)) {
   if (requested.length === 0 || requested.includes(name)) await step();

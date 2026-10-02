@@ -23,6 +23,8 @@ import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceSpotlights from "@/components/services/ServiceSpotlights";
+import JsonLd from "@/components/seo/JsonLd";
+import { absoluteUrl, breadcrumbSchema, BUSINESS_ID } from "@/lib/seo";
 import ServiceVideo from "@/components/services/ServiceVideo";
 
 const HOW_ICONS = [Ruler, Layers3, Wrench, CheckCircle2];
@@ -60,11 +62,19 @@ export default function ServicePage({ service }: { service: Service }) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    name: service.name,
     serviceType: service.name,
-    provider: { "@type": "LocalBusiness", name: "SQUARE — Bird Net & Invisible Grill" },
+    url: absoluteUrl(`/services/${service.slug}`),
+    image: absoluteUrl(service.heroImage),
+    provider: { "@id": BUSINESS_ID },
     areaServed: serviceAreas.map((area) => ({ "@type": "City", name: area })),
     description: service.metaDescription,
   };
+
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Services", path: "/services" },
+    { name: service.name, path: `/services/${service.slug}` },
+  ]);
 
   return (
     <main>
@@ -456,8 +466,9 @@ export default function ServicePage({ service }: { service: Service }) {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <JsonLd data={faqSchema} />
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={breadcrumbs} />
     </main>
   );
 }

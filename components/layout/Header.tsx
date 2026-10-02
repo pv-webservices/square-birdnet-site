@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
   ChevronDown,
@@ -17,6 +17,7 @@ import {
 import { brand, contact, phones, whatsappLink } from "@/data/site";
 import { services } from "@/data/services";
 import Icon from "@/components/ui/Icon";
+import { useDialogFocus } from "@/components/ui/useDialogFocus";
 
 const NAV = [
   { label: "Home", href: "/" },
@@ -47,6 +48,9 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [compact, setCompact] = useState(false);
   const pathname = usePathname();
+  const drawerRef = useRef<HTMLDivElement>(null);
+  const closeDrawer = useCallback(() => setOpen(false), []);
+  useDialogFocus(drawerRef, open, closeDrawer);
 
   // Drives the stuck-state shadow only — it changes no box dimensions, so it
   // cannot move the page. Read once per frame, with a dead zone between the
@@ -74,22 +78,6 @@ export default function Header() {
     setOpen(false);
     setServicesOpen(false);
   }, [pathname]);
-
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [open]);
 
   const isCurrent = (href: string) =>
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
@@ -170,6 +158,7 @@ export default function Header() {
               onClick={() => setOpen(true)}
               aria-label="Open menu"
               aria-expanded={open}
+              aria-controls="mobile-drawer"
               type="button"
             >
               <Menu size={24} />
@@ -181,7 +170,7 @@ export default function Header() {
       {open ? (
         <>
           <div className="drawer-scrim" onClick={() => setOpen(false)} aria-hidden="true" />
-          <div className="mobile-drawer" role="dialog" aria-modal="true" aria-label="Site menu">
+          <div className="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Site menu" ref={drawerRef}>
             <div className="mobile-drawer__top">
               <Brand onClick={() => setOpen(false)} />
               <button className="icon-button" onClick={() => setOpen(false)} aria-label="Close menu" type="button">
@@ -200,6 +189,7 @@ export default function Header() {
                     >
                       {item.label}
                       <ChevronDown
+                        aria-hidden="true"
                         size={20}
                         style={{ transform: servicesOpen ? "rotate(180deg)" : undefined, transition: "transform .3s" }}
                       />

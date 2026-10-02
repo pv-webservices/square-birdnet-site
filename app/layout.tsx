@@ -1,10 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope, Caveat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFab from "@/components/ui/WhatsAppFab";
+import JsonLd from "@/components/seo/JsonLd";
 import { brand, contact, phones, serviceAreas } from "@/data/site";
+import { BUSINESS_ID, INDEX_ROBOTS, SITE_NAME, SITE_URL, socialImage } from "@/lib/seo";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -20,71 +22,86 @@ const caveat = Caveat({
   display: "swap",
 });
 
+const HOME_TITLE = "Bird Netting & Invisible Grill in Gujarat | SQUARE";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.squarebirdnet.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "SQUARE | Bird Netting Services & Invisible Grill Contractors in Gujarat",
+    default: HOME_TITLE,
     template: "%s | SQUARE",
   },
   description: brand.description,
-  keywords: [
-    "bird netting services in Gujarat",
-    "anti bird net dealers in Gujarat",
-    "mosquito net installation services",
-    "bird spike installation services",
-    "industrial bird netting services",
-    "invisible grill contractors in Gujarat",
-    "nylon bird netting services",
-    "plastic anti bird net",
-    "safety net installation services",
-    "stainless steel invisible grill",
-    "cricket net installation",
-    "balcony bird net",
-    "pigeon net Gujarat",
-  ],
-  alternates: { canonical: "/" },
+  applicationName: SITE_NAME,
+  // No site-wide canonical here: each page declares its own, and pages that
+  // declare none (e.g. the 404) must not claim the homepage as canonical.
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "SQUARE — Bird Net & Invisible Grill",
-    title: "SQUARE | Bird Netting Services & Invisible Grill Contractors in Gujarat",
+    siteName: SITE_NAME,
+    title: HOME_TITLE,
     description: brand.description,
-    images: [{ url: "/images/hero/hero-balcony.webp", width: 1400, height: 939, alt: "Balcony protected by an invisible grill overlooking the city" }],
+    images: [socialImage("home")],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SQUARE | Bird Netting Services & Invisible Grill Contractors in Gujarat",
+    title: HOME_TITLE,
     description: brand.description,
-    images: ["/images/hero/hero-balcony.webp"],
+    images: [{ url: socialImage("home").url, alt: socialImage("home").alt }],
   },
-  robots: { index: true, follow: true },
+  robots: INDEX_ROBOTS,
+  formatDetection: { telephone: false, email: false, address: false },
+  // TODO(client): paste the Google Search Console HTML-tag token here if you
+  // verify with the "HTML tag" method instead of DNS.
+  verification: process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+    : undefined,
 };
 
-/** LocalBusiness schema — one copy for the whole site. */
-const localBusinessSchema = {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#07365f",
+};
+
+/** WebSite + LocalBusiness schema — one copy for the whole site; pages reference BUSINESS_ID. */
+const siteSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "SQUARE — Bird Net & Invisible Grill",
-  description: brand.description,
-  url: "https://www.squarebirdnet.com",
-  telephone: contact.phoneDisplay,
-  contactPoint: phones.map((phone) => ({
-    "@type": "ContactPoint",
-    telephone: phone.display,
-    contactType: "customer service",
-    areaServed: "IN",
-    availableLanguage: ["en", "hi", "gu"],
-  })),
-  email: contact.email,
-  image: "https://www.squarebirdnet.com/images/hero/hero-balcony.webp",
-  address: { "@type": "PostalAddress", addressRegion: "Gujarat", addressCountry: "IN" },
-  areaServed: serviceAreas.map((area) => ({ "@type": "City", name: area })),
-  openingHoursSpecification: [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "23:59",
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: SITE_NAME,
+      inLanguage: "en-IN",
+      publisher: { "@id": BUSINESS_ID },
+    },
+    {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": BUSINESS_ID,
+      name: SITE_NAME,
+      alternateName: brand.name,
+      description: brand.description,
+      url: `${SITE_URL}/`,
+      logo: `${SITE_URL}${brand.logoLockup}`,
+      image: `${SITE_URL}/images/hero/hero-balcony.webp`,
+      telephone: contact.phoneHref.replace("tel:", ""),
+      email: contact.email,
+      contactPoint: phones.map((phone) => ({
+        "@type": "ContactPoint",
+        telephone: phone.href.replace("tel:", ""),
+        contactType: "customer service",
+        areaServed: "IN",
+      })),
+      address: { "@type": "PostalAddress", addressRegion: "Gujarat", addressCountry: "IN" },
+      areaServed: serviceAreas.map((area) => ({ "@type": "City", name: area })),
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      ],
     },
   ],
 };
@@ -97,13 +114,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to content
         </a>
         <Header />
-        <div id="main">{children}</div>
+        <div id="main" tabIndex={-1}>
+          {children}
+        </div>
         <Footer />
         <WhatsAppFab />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
+        <JsonLd data={siteSchema} />
       </body>
     </html>
   );

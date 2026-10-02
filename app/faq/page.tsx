@@ -6,13 +6,15 @@ import { phones, whatsappLink } from "@/data/site";
 import CtaBand from "@/components/ui/CtaBand";
 import FaqBrowser from "@/components/faq/FaqBrowser";
 import PageHero from "@/components/ui/PageHero";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Frequently Asked Questions",
+export const metadata: Metadata = pageMetadata({
+  title: "FAQ — Bird Netting & Invisible Grill Questions",
   description:
-    "Answers about bird netting, anti bird nets, invisible grills, bird spikes, cricket nets, installation, warranty, maintenance and pricing.",
-  alternates: { canonical: "/faq" },
-};
+    "Answers about bird netting, anti bird nets, invisible grills, bird spikes and cricket nets — installation, warranty, maintenance and pricing.",
+  path: "/faq",
+});
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -27,6 +29,7 @@ const faqSchema = {
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "FAQ", path: "/faq" }])} />
       <PageHero
         eyebrow="FAQ"
         title="Clear answers before you book a site visit."
@@ -71,7 +74,7 @@ export default function Page() {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <JsonLd data={faqSchema} />
     </main>
   );
 }

@@ -23,7 +23,8 @@ export default function Testimonials() {
           body="Feedback from families and property managers we have worked with across the region."
         />
 
-        <div className="reviews-grid">
+        {/* Scrolls sideways on phones, so it must be keyboard-focusable. */}
+        <div className="reviews-grid" role="region" aria-label="Customer reviews" tabIndex={0}>
           <Reveal>
             <div className="review-summary">
               <span className="review-summary__badge" aria-hidden="true">
@@ -32,7 +33,7 @@ export default function Testimonials() {
               <strong>
                 {reviewSummary.rating} / {reviewSummary.outOf}
               </strong>
-              <div className="stars" aria-label={`${reviewSummary.rating} out of ${reviewSummary.outOf} stars`}>
+              <div className="stars" role="img" aria-label={`${reviewSummary.rating} out of ${reviewSummary.outOf} stars`}>
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} size={15} fill="currentColor" aria-hidden="true" />
                 ))}
@@ -44,7 +45,7 @@ export default function Testimonials() {
           {testimonials.slice(0, 3).map((review, i) => (
             <Reveal key={review.name} delay={(i + 1) * 80}>
               <article className="review-card">
-                <div className="stars" aria-label={`${review.rating} out of 5 stars`}>
+                <div className="stars" role="img" aria-label={`${review.rating} out of 5 stars`}>
                   {Array.from({ length: review.rating }).map((_, s) => (
                     <Star key={s} size={15} fill="currentColor" aria-hidden="true" />
                   ))}

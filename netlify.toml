@@ -1,0 +1,30 @@
+# Netlify configuration for squarebirdnet.com (Next.js App Router).
+#
+# Netlify detects Next.js and runs it on its OpenNext-based runtime, which
+# applies the headers and redirects in next.config.mjs. This file only pins the
+# build and the domain-level rules that must run before the Next.js server.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Canonical origin for canonicals, Open Graph, robots.txt and sitemap.xml.
+  # Must match Netlify's primary domain (the apex; www redirects to it).
+  # Overrides any NEXT_PUBLIC_SITE_URL set in the Netlify UI.
+  NEXT_PUBLIC_SITE_URL = "https://squarebirdnet.com"
+
+# www -> apex in a single hop, for both http and https. Netlify also does this
+# automatically for the primary domain; declaring it keeps http://www from
+# taking two redirects (http://www -> https://www -> https://apex).
+[[redirects]]
+  from = "http://www.squarebirdnet.com/*"
+  to = "https://squarebirdnet.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.squarebirdnet.com/*"
+  to = "https://squarebirdnet.com/:splat"
+  status = 301
+  force = true

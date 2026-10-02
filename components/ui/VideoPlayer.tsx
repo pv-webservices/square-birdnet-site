@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import { Play, X, Clock3 } from "lucide-react";
 import type { Video } from "@/data/videos";
+import { useDialogFocus } from "@/components/ui/useDialogFocus";
 
 /**
  * Click-to-play video presentation.
@@ -38,7 +39,7 @@ export function VideoCard({
       <span className="video-card__info">
         <strong>{video.title}</strong>
         <span>
-          <Clock3 size={12} /> {video.duration}
+          <Clock3 size={12} aria-hidden="true" /> {video.duration}
         </span>
       </span>
       <span className="sr-only">Play video: {video.title}</span>
@@ -47,29 +48,15 @@ export function VideoCard({
 }
 
 export function VideoModal({ video, onClose }: { video: Video | null; onClose: () => void }) {
-  const handleKey = useCallback(
-    (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    },
-    [onClose],
-  );
-
-  useEffect(() => {
-    if (!video) return;
-    document.addEventListener("keydown", handleKey);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = previousOverflow;
-    };
-  }, [video, handleKey]);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useDialogFocus(dialogRef, Boolean(video), onClose);
 
   if (!video) return null;
 
   return (
     <div
       className="video-modal"
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-label={video.title}

@@ -9,17 +9,21 @@ import Icon from "@/components/ui/Icon";
 import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Services — Bird Netting, Invisible Grill, Bird Spikes & Cricket Nets",
+export const metadata: Metadata = pageMetadata({
+  title: "Bird Netting, Invisible Grill & Bird Spike Services",
   description:
-    "Bird netting services, stainless steel invisible grill installation, bird spikes, cricket nets, safety nets and mosquito nets across Gujarat — for homes, societies and factories. Compare the options and book a free site visit.",
-  alternates: { canonical: "/services" },
-};
+    "Bird netting, stainless steel invisible grills, bird spikes, cricket, safety and mosquito nets for homes, societies and factories across Gujarat.",
+  path: "/services",
+  image: "services",
+});
 
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Services", path: "/services" }])} />
       <PageHero
         eyebrow="Our services"
         title="Protection solutions made for modern spaces."

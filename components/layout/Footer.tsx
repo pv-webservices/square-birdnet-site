@@ -33,6 +33,8 @@ const SOCIAL_ICONS = {
   linkedin: Linkedin,
 } as const;
 
+const liveSocials = socials.filter((social) => social.href);
+
 export default function Footer() {
   return (
     <footer className="site-footer">
@@ -48,26 +50,28 @@ export default function Footer() {
             </span>
           </Link>
           <p>{brand.description}</p>
-          <div className="socials">
-            {socials.map((social) => {
-              const IconComponent = SOCIAL_ICONS[social.icon];
-              return (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={`${brand.name} on ${social.label}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <IconComponent size={17} />
-                </a>
-              );
-            })}
-          </div>
+          {liveSocials.length ? (
+            <div className="socials">
+              {liveSocials.map((social) => {
+                const IconComponent = SOCIAL_ICONS[social.icon];
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    aria-label={`${brand.name} on ${social.label}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <IconComponent size={17} aria-hidden="true" />
+                  </a>
+                );
+              })}
+            </div>
+          ) : null}
         </div>
 
         <nav aria-label="Quick links">
-          <h3>Quick Links</h3>
+          <h2>Quick Links</h2>
           <ul>
             {QUICK_LINKS.map(([label, href]) => (
               <li key={href}>
@@ -78,7 +82,7 @@ export default function Footer() {
         </nav>
 
         <nav aria-label="Our services">
-          <h3>Our Services</h3>
+          <h2>Our Services</h2>
           <ul>
             {footerServiceLinks.map((link) => (
               <li key={link.label}>
@@ -89,7 +93,7 @@ export default function Footer() {
         </nav>
 
         <div className="footer-contact">
-          <h3>Contact Us</h3>
+          <h2>Contact Us</h2>
           {phones.map((phone) => (
             <a key={phone.href} href={phone.href}>
               <Phone size={16} aria-hidden="true" /> {phone.display}
@@ -120,7 +124,8 @@ export default function Footer() {
         <div className="footer-bottom__links">
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/terms">Terms &amp; Conditions</Link>
-          <Link href="/sitemap.xml">Sitemap</Link>
+          {/* Plain anchor: an XML file, not a page Next.js should prefetch. */}
+          <a href="/sitemap.xml">Sitemap</a>
         </div>
         <span className="footer-script">
           Safe.

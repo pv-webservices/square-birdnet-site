@@ -9,17 +9,21 @@ import LeadForm from "@/components/contact/LeadForm";
 import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact — Book a Free Site Visit",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact Us — Book a Free Site Visit",
   description:
-    "Call +91 91044 16804 or +91 62076 09077, WhatsApp or send an enquiry to book a free site visit for bird netting, invisible grill, bird spikes or cricket nets across Gujarat.",
-  alternates: { canonical: "/contact" },
-};
+    "Call +91 91044 16804, WhatsApp or send an enquiry to book a free site visit for bird netting, invisible grills, bird spikes or cricket nets in Gujarat.",
+  path: "/contact",
+  image: "home",
+});
 
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Contact", path: "/contact" }])} />
       <PageHero
         eyebrow="Contact SQUARE"
         title="Let's make your space safer."

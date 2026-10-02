@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import { contact, phones } from "@/data/site";
 import PageHero from "@/components/ui/PageHero";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Terms & Conditions",
-  description: "The terms that apply to using this website and to work carried out by SQUARE.",
-  alternates: { canonical: "/terms" },
-  robots: { index: false, follow: true },
-};
+  description:
+    "The terms that apply to using this website and to work carried out by SQUARE.",
+  path: "/terms",
+  noIndex: true,
+});
 
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Terms & Conditions", path: "/terms" }])} />
       <PageHero
         eyebrow="Legal"
         title="Terms &amp; Conditions"

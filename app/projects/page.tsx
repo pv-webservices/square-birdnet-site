@@ -7,17 +7,21 @@ import CtaBand from "@/components/ui/CtaBand";
 import PageHero from "@/components/ui/PageHero";
 import ProjectGallery from "@/components/ui/ProjectGallery";
 import SectionHeading from "@/components/ui/SectionHeading";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Projects & Gallery — Real Installations",
   description:
-    "Browse real bird netting, invisible grill, bird spike and industrial bird netting installations completed by SQUARE across Gujarat.",
-  alternates: { canonical: "/projects" },
-};
+    "Browse real bird netting, invisible grill, bird spike and industrial netting installations completed by SQUARE across Gujarat.",
+  path: "/projects",
+  image: "projects",
+});
 
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Projects", path: "/projects" }])} />
       <PageHero
         eyebrow="Our projects"
         title="Real spaces. Real results."

@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
                   <Icon name={item.icon} size={20} />
                 </span>
                 <div>
-                  <h4>{item.title}</h4>
+                  <h3>{item.title}</h3>
                   <p>{item.text}</p>
                 </div>
               </Reveal>

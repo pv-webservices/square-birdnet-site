@@ -31,7 +31,8 @@ export default function Materials() {
           </p>
         </Reveal>
 
-        <div className="material-cards">
+        {/* Scrolls sideways on phones, so it must be keyboard-focusable. */}
+        <div className="material-cards" role="region" aria-label="Materials" tabIndex={0}>
           {materials.map((item, i) => (
             <Reveal key={item.title} delay={i * 80}>
               <article className="material-card hover-card">

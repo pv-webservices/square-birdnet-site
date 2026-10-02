@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
 import { contact, phones } from "@/data/site";
 import PageHero from "@/components/ui/PageHero";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Privacy Policy",
-  description: "How SQUARE collects, uses and protects the information you share through this website.",
-  alternates: { canonical: "/privacy-policy" },
-  robots: { index: false, follow: true },
-};
+  description:
+    "How SQUARE collects, uses and protects the information you share through this website.",
+  path: "/privacy-policy",
+  noIndex: true,
+});
 
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Privacy Policy", path: "/privacy-policy" }])} />
       <PageHero
         eyebrow="Legal"
         title="Privacy Policy"

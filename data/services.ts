@@ -85,9 +85,9 @@ export const services: Service[] = [
       "/images/services/factory-net-fittings.webp",
       "/images/services/factory-warehouse-netting.webp",
     ],
-    metaTitle: "Bird Netting Services in Gujarat — Anti Bird Net, Nylon & Industrial",
+    metaTitle: "Bird Netting Services in Gujarat — Anti Bird Net",
     metaDescription:
-      "Bird netting services in Gujarat for balconies, windows, building facades, societies and factory sheds. Nylon bird netting, plastic anti bird net, industrial bird netting, safety nets and mosquito nets — with a free site visit.",
+      "Bird netting for balconies, windows, facades, societies and factory sheds across Gujarat. Nylon, HDPE anti bird and industrial nets. Free site visit.",
     overview: [
       "Bird netting is the most reliable way to keep pigeons and other birds out of an opening without harming them. A tensioned mesh is fixed to the perimeter of the balcony, window, duct, facade or shed so birds simply cannot enter or nest.",
       "Because the mesh is thin and taut, it reads as almost invisible from a few feet away. You keep the light, the breeze and the view — you only lose the birds.",
@@ -225,9 +225,9 @@ export const services: Service[] = [
       "/images/projects/project-07.webp",
       "/images/projects/project-12.webp",
     ],
-    metaTitle: "Stainless Steel Invisible Grill Installation in Gujarat — Invisible Grill Contractors",
+    metaTitle: "Stainless Steel Invisible Grill Installation in Gujarat",
     metaDescription:
-      "Stainless steel invisible grill installation for balconies and windows across Gujarat. Experienced invisible grill contractors — child and pet safety with high-tensile cable, rust-resistant fittings and a free site visit.",
+      "Invisible grill contractors in Gujarat. Stainless steel cable grills for balconies and windows — child and pet safe, rust resistant. Free site visit.",
     overview: [
       "An invisible grill replaces the heavy welded MS grill with a run of tensioned stainless steel cables. Each cable is only a few millimetres thick, so at normal viewing distance the balcony reads as open.",
       "It is the solution most high-rise families choose when a society will not allow external grills, or when the view is the reason they bought the home in the first place.",
@@ -296,7 +296,7 @@ export const services: Service[] = [
     ],
     metaTitle: "Bird Spike Installation Services in Gujarat",
     metaDescription:
-      "Bird spike installation services across Gujarat for ledges, parapets, terrace railings, AC units and commercial facades. Humane polycarbonate and stainless steel bird spikes with a free site visit.",
+      "Humane bird spike installation across Gujarat for ledges, parapets, railings, AC units and facades. Stainless steel and polycarbonate. Free site visit.",
     overview: [
       "Bird spikes are the right answer where netting would be impractical — a narrow ledge, the top of a signboard, a parapet edge, the casing of an outdoor AC unit.",
       "The strips are fixed along the landing surface so there is no comfortable place to perch. Birds are not injured; they simply choose somewhere else.",
@@ -355,9 +355,9 @@ export const services: Service[] = [
     image: "/images/services/cricket-net-batting.webp",
     heroImage: "/images/services/cricket-box-net.webp",
     galleryImages: [],
-    metaTitle: "Cricket Net Installation in Gujarat — Practice & Box Cricket Nets",
+    metaTitle: "Cricket Net Installation in Gujarat — Box & Practice",
     metaDescription:
-      "Cricket net installation across Gujarat for home terraces, society grounds, schools and academies. Practice nets, box cricket nets and ground boundary nets in nylon and HDPE with a free site visit.",
+      "Cricket net installation in Gujarat for terraces, society grounds, schools and academies. Practice, box cricket and boundary nets. Free site visit.",
     overview: [
       "A cricket net gives players a safe, contained lane to bat and bowl in. We build single and multi-lane practice nets, rooftop and terrace nets for homes, and fully enclosed box cricket arenas for societies, schools and turf owners.",
       "The net is hung on a steel frame or tensioned cable so it stays taut, absorbs the ball without rebounding hard and does not sag after a season of use.",

@@ -57,7 +57,7 @@ export const videos: Video[] = [
     description:
       "Netting fitted across the balconies and window openings of a residential block, floor by floor, to a single consistent line.",
     category: "Bird Netting",
-    src: "/videos/services video-1.mp4",
+    src: "/videos/residential-netting.mp4",
     poster: "/images/videos/residential-netting.webp",
     duration: "0:15",
     orientation: "portrait",

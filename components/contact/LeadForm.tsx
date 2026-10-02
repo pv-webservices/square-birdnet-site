@@ -1,8 +1,15 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { AlertCircle, ArrowUpRight, CheckCircle2, MessageCircle } from "lucide-react";
-import { submitLead, validateLead, type LeadErrors } from "@/lib/leads";
+import {
+  FIELD_LIMITS,
+  LEAD_FORM_ACTION,
+  MIN_FILL_MS,
+  submitLead,
+  validateLead,
+  type LeadErrors,
+} from "@/lib/leads";
 import { whatsappLink } from "@/data/site";
 
 const SERVICES = [
@@ -35,6 +42,9 @@ const EMPTY = {
   message: "",
 };
 
+/** Form order of validated fields; each input's id is `lead-<field>`. */
+const FIELD_ORDER = ["name", "mobile", "email", "location", "service", "message", "consent"] as const;
+
 type Status = "idle" | "submitting" | "success" | "error";
 
 /**
@@ -43,6 +53,11 @@ type Status = "idle" | "submitting" | "success" | "error";
  * Validates on submit (and clears a field's error as soon as it is corrected),
  * blocks duplicate submissions while a request is in flight, and surfaces
  * submitting / success / error states explicitly.
+ *
+ * Spam protection: a hidden honeypot field and a minimum fill time. Bots that
+ * trip either are shown the success state but nothing is sent. FormSubmit
+ * adds its own filtering on top. Without JavaScript the form still posts
+ * straight to FormSubmit (which then shows its own captcha).
  */
 export default function LeadForm({ defaultService = "" }: { defaultService?: string }) {
   const [values, setValues] = useState({ ...EMPTY, service: defaultService });
@@ -50,6 +65,15 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
   const [errors, setErrors] = useState<LeadErrors>({});
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const honeypotRef = useRef<HTMLInputElement>(null);
+  const successRef = useRef<HTMLDivElement>(null);
+  const shownAtRef = useRef(0);
+
+  useEffect(() => {
+    if (status === "idle") shownAtRef.current = Date.now();
+    // The form is replaced by the confirmation, so move focus with it.
+    if (status === "success") successRef.current?.focus();
+  }, [status]);
 
   const update = (field: keyof typeof EMPTY, value: string) => {
     setValues((current) => ({ ...current, [field]: value }));
@@ -62,9 +86,17 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
 
     const found = validateLead(values, consent);
     setErrors(found);
-    if (Object.values(found).some(Boolean)) {
-      const firstInvalid = document.querySelector<HTMLElement>('[aria-invalid="true"]');
-      firstInvalid?.focus();
+    const firstInvalid = FIELD_ORDER.find((field) => found[field]);
+    if (firstInvalid) {
+      // Look up by id: aria-invalid is not in the DOM until React re-renders.
+      document.getElementById(`lead-${firstInvalid}`)?.focus();
+      return;
+    }
+
+    const isBot =
+      Boolean(honeypotRef.current?.value) || Date.now() - shownAtRef.current < MIN_FILL_MS;
+    if (isBot) {
+      setStatus("success");
       return;
     }
 
@@ -87,11 +119,11 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
   if (status === "success") {
     return (
       <div className="contact-panel">
-        <div className="form-status form-status--success" role="status">
-          <CheckCircle2 size={20} />
+        <div className="form-status form-status--success" role="status" tabIndex={-1} ref={successRef}>
+          <CheckCircle2 size={20} aria-hidden="true" />
           <span>
             Thank you — your request has been received. We will call you to confirm a convenient time for
-            the site visit, usually within one working day.
+            the site visit.
           </span>
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 22 }}>
@@ -107,14 +139,26 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
   }
 
   return (
-    <form className="contact-panel" onSubmit={handleSubmit} noValidate>
+    <form className="contact-panel" action={LEAD_FORM_ACTION} method="POST" onSubmit={handleSubmit} noValidate>
+      {/* Used only by the no-JavaScript fallback; the scripted path sends its own. */}
+      <input type="hidden" name="_subject" value="New site visit request (website)" />
+      <input type="hidden" name="_template" value="table" />
+      <div className="hp-field" aria-hidden="true">
+        <label htmlFor="lead-company">Company website</label>
+        <input ref={honeypotRef} id="lead-company" type="text" name="_honey" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <div className="eyebrow">Free site visit</div>
       <h2 style={{ fontSize: 26 }}>Request a free site visit</h2>
       <p style={{ fontSize: 14 }}>
         Fill this in and we will call you back to fix a time. No charge, no obligation.
       </p>
+      <p className="form-note">
+        Fields marked <span aria-hidden="true">*</span>
+        <span className="sr-only">with an asterisk</span> are required.
+      </p>
 
-      <div className="form-grid" style={{ marginTop: 24 }}>
+      <div className="form-grid" style={{ marginTop: 18 }}>
         <div className="field">
           <label htmlFor="lead-name">
             Full Name <span aria-hidden="true">*</span>
@@ -123,6 +167,8 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
             id="lead-name"
             name="name"
             autoComplete="name"
+            required
+            maxLength={FIELD_LIMITS.name}
             value={values.name}
             onChange={(e) => update("name", e.target.value)}
             aria-invalid={Boolean(errors.name)}
@@ -131,7 +177,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
           />
           {errors.name ? (
             <span className="field__error" id="lead-name-error">
-              <AlertCircle size={13} /> {errors.name}
+              <AlertCircle size={13} aria-hidden="true" /> {errors.name}
             </span>
           ) : null}
         </div>
@@ -146,6 +192,8 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
             type="tel"
             inputMode="tel"
             autoComplete="tel"
+            required
+            maxLength={FIELD_LIMITS.mobile}
             value={values.mobile}
             onChange={(e) => update("mobile", e.target.value)}
             aria-invalid={Boolean(errors.mobile)}
@@ -154,7 +202,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
           />
           {errors.mobile ? (
             <span className="field__error" id="lead-mobile-error">
-              <AlertCircle size={13} /> {errors.mobile}
+              <AlertCircle size={13} aria-hidden="true" /> {errors.mobile}
             </span>
           ) : null}
         </div>
@@ -166,6 +214,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
             name="email"
             type="email"
             autoComplete="email"
+            maxLength={FIELD_LIMITS.email}
             value={values.email}
             onChange={(e) => update("email", e.target.value)}
             aria-invalid={Boolean(errors.email)}
@@ -174,7 +223,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
           />
           {errors.email ? (
             <span className="field__error" id="lead-email-error">
-              <AlertCircle size={13} /> {errors.email}
+              <AlertCircle size={13} aria-hidden="true" /> {errors.email}
             </span>
           ) : null}
         </div>
@@ -187,6 +236,8 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
             id="lead-location"
             name="location"
             autoComplete="address-level2"
+            required
+            maxLength={FIELD_LIMITS.location}
             value={values.location}
             onChange={(e) => update("location", e.target.value)}
             aria-invalid={Boolean(errors.location)}
@@ -195,7 +246,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
           />
           {errors.location ? (
             <span className="field__error" id="lead-location-error">
-              <AlertCircle size={13} /> {errors.location}
+              <AlertCircle size={13} aria-hidden="true" /> {errors.location}
             </span>
           ) : null}
         </div>
@@ -221,6 +272,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
           <select
             id="lead-service"
             name="service"
+            required
             value={values.service}
             onChange={(e) => update("service", e.target.value)}
             aria-invalid={Boolean(errors.service)}
@@ -233,7 +285,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
           </select>
           {errors.service ? (
             <span className="field__error" id="lead-service-error">
-              <AlertCircle size={13} /> {errors.service}
+              <AlertCircle size={13} aria-hidden="true" /> {errors.service}
             </span>
           ) : null}
         </div>
@@ -244,10 +296,18 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
             id="lead-message"
             name="message"
             rows={4}
+            maxLength={FIELD_LIMITS.message}
             value={values.message}
             onChange={(e) => update("message", e.target.value)}
+            aria-invalid={Boolean(errors.message)}
+            aria-describedby={errors.message ? "lead-message-error" : undefined}
             placeholder="Tell us about the space — balcony size, floor, what the problem is."
           />
+          {errors.message ? (
+            <span className="field__error" id="lead-message-error">
+              <AlertCircle size={13} aria-hidden="true" /> {errors.message}
+            </span>
+          ) : null}
         </div>
 
         <div className="field field--full">
@@ -255,20 +315,22 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
             <input
               id="lead-consent"
               type="checkbox"
+              required
               checked={consent}
               onChange={(e) => {
                 setConsent(e.target.checked);
                 if (errors.consent) setErrors((c) => ({ ...c, consent: undefined }));
               }}
               aria-invalid={Boolean(errors.consent)}
+              aria-describedby={errors.consent ? "lead-consent-error" : undefined}
             />
             <label htmlFor="lead-consent">
               I agree to be contacted by SQUARE about this enquiry by phone, WhatsApp or email.
             </label>
           </div>
           {errors.consent ? (
-            <span className="field__error">
-              <AlertCircle size={13} /> {errors.consent}
+            <span className="field__error" id="lead-consent-error">
+              <AlertCircle size={13} aria-hidden="true" /> {errors.consent}
             </span>
           ) : null}
         </div>
@@ -276,13 +338,18 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
 
       {status === "error" ? (
         <div className="form-status form-status--error" role="alert" style={{ marginTop: 18 }}>
-          <AlertCircle size={20} />
+          <AlertCircle size={20} aria-hidden="true" />
           <span>{errorMessage}</span>
         </div>
       ) : null}
 
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 22 }}>
-        <button type="submit" className="btn btn--primary btn--large" disabled={status === "submitting"}>
+        <button
+          type="submit"
+          className="btn btn--primary btn--large"
+          disabled={status === "submitting"}
+          aria-busy={status === "submitting"}
+        >
           {status === "submitting" ? (
             <>
               <span className="spinner" aria-hidden="true" /> Sending…

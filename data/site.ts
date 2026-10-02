@@ -64,12 +64,16 @@ export function whatsappLink(subject?: string) {
   return `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
-export const socials = [
-  { label: "Facebook", href: "https://facebook.com", icon: "facebook" },
-  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
-  { label: "YouTube", href: "https://youtube.com", icon: "youtube" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
-] as const;
+type Social = { label: string; href: string; icon: "facebook" | "instagram" | "youtube" | "linkedin" };
+
+// TODO(client): add SQUARE's real profile URLs. An entry with an empty href is
+// not rendered — previously these pointed at the platforms' home pages.
+export const socials: Social[] = [
+  { label: "Facebook", href: "", icon: "facebook" },
+  { label: "Instagram", href: "", icon: "instagram" },
+  { label: "YouTube", href: "", icon: "youtube" },
+  { label: "LinkedIn", href: "", icon: "linkedin" },
+];
 
 // TODO(client): confirm each figure before launch.
 export const metrics = [

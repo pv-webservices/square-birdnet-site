@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import { ArrowUpRight, Maximize2, MessageCircle, X } from "lucide-react";
 import { projectFilters, type Project } from "@/data/projects";
 import { whatsappLink } from "@/data/site";
 import Reveal from "@/components/ui/Reveal";
+import { useDialogFocus } from "@/components/ui/useDialogFocus";
 
 type Props = {
   projects: Project[];
@@ -30,20 +31,8 @@ export default function ProjectGallery({ projects, withFilters = true, variant =
   );
 
   const close = useCallback(() => setActive(null), []);
-
-  useEffect(() => {
-    if (!active) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") close();
-    };
-    document.addEventListener("keydown", onKey);
-    const previous = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = previous;
-    };
-  }, [active, close]);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useDialogFocus(dialogRef, Boolean(active), close);
 
   return (
     <>
@@ -97,6 +86,7 @@ export default function ProjectGallery({ projects, withFilters = true, variant =
       {active ? (
         <div
           className="lightbox"
+          ref={dialogRef}
           role="dialog"
           aria-modal="true"
           aria-label={`${active.title} case study`}

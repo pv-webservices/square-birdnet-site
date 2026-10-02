@@ -10,13 +10,16 @@ import Icon from "@/components/ui/Icon";
 import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
+import JsonLd from "@/components/seo/JsonLd";
+import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About SQUARE — Bird Net & Invisible Grill Specialists",
+export const metadata: Metadata = pageMetadata({
+  title: "About Us — Bird Net & Invisible Grill Specialists",
   description:
-    "Who we are, how we work and what we stand for. Bird netting services, invisible grill contractors, bird spike and cricket net installation across Gujarat.",
-  alternates: { canonical: "/about" },
-};
+    "Meet SQUARE: bird netting, invisible grill, bird spike and cricket net installers serving homes, housing societies and factories across Gujarat.",
+  path: "/about",
+  image: "about",
+});
 
 const STORY = [
   {
@@ -58,6 +61,7 @@ const PHILOSOPHY = [
 export default function Page() {
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "About", path: "/about" }])} />
       <PageHero
         eyebrow="About SQUARE"
         title="Safety that blends into your home."
@@ -94,7 +98,7 @@ export default function Page() {
                     <Check size={20} />
                   </span>
                   <div>
-                    <h4>{item.title}</h4>
+                    <h3>{item.title}</h3>
                     <p>{item.text}</p>
                   </div>
                 </div>
@@ -303,7 +307,7 @@ export default function Page() {
             {testimonials.slice(0, 3).map((review, i) => (
               <Reveal key={review.name} delay={i * 80}>
                 <article className="feature-card">
-                  <div className="stars" aria-label={`${review.rating} out of 5 stars`}>
+                  <div className="stars" role="img" aria-label={`${review.rating} out of 5 stars`}>
                     {Array.from({ length: review.rating }).map((_, s) => (
                       <Star key={s} size={15} fill="currentColor" aria-hidden="true" />
                     ))}
