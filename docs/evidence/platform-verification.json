@@ -1,0 +1,40 @@
+{
+  "audit_date_ist": "2026-10-09",
+  "method": "Read-only inspection of connected Chrome Netlify and Search Console UI",
+  "netlify": {
+    "project": "square-birdnet-site",
+    "project_id": "e4dcce6b-7711-4c68-a4cd-3e42e620abf8",
+    "deploy_url": "https://app.netlify.com/projects/square-birdnet-site/deploys/6abfac355a2b125a9ff0bade",
+    "deploy_id": "6abfac355a2b125a9ff0bade",
+    "state": "Currently published production deploy",
+    "commit": "dda7fcd006377af8d3b42dd31037232ea7fed16c",
+    "branch": "main",
+    "repository": "https://github.com/pv-webservices/square-birdnet-site",
+    "build_started_ist": "2026-10-02 18:35:58",
+    "build_ended_ist": "2026-10-02 18:36:44",
+    "build_command": "npm run build",
+    "publish_directory": ".next",
+    "base_directory": "/",
+    "runtime": "Next.js Runtime (auto-detected)",
+    "production_visibility": "Public",
+    "build_status": "Active",
+    "primary_domain": "squarebirdnet.com",
+    "www": "Redirects automatically to primary domain",
+    "https": "Enabled for squarebirdnet.com and www.squarebirdnet.com",
+    "redirect_rules": "5 processed, all deployed without errors",
+    "header_rules": "1 processed, all deployed without errors",
+    "functions": "1 deployed",
+    "waf": "Disabled",
+    "firewall_traffic_rules": "No active rules",
+    "rate_limiting": "No active rules"
+  },
+  "search_console": {
+    "property_requested": "sc-domain:squarebirdnet.com",
+    "default_account_result": "Oops, you don't have access to this property",
+    "hosting_owner_account_result": "Oops, you don't have access to this property",
+    "hosting_owner_property_menu": "No matching property",
+    "reports_read": false,
+    "verification_or_submissions_changed": false
+  },
+  "external_state_changed": false
+}

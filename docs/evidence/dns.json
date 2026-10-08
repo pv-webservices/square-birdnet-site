@@ -1,0 +1,66 @@
+[
+  {
+    "name": "squarebirdnet.com",
+    "type": "A",
+    "answers": [
+      {
+        "Name": "squarebirdnet.com",
+        "Type": 1,
+        "IPAddress": "75.2.60.5",
+        "NameHost": null,
+        "TTL": 325,
+        "Section": 1
+      }
+    ]
+  },
+  {
+    "name": "squarebirdnet.com",
+    "type": "AAAA",
+    "answers": [
+      {
+        "Name": "squarebirdnet.com",
+        "Type": 6,
+        "IPAddress": null,
+        "NameHost": null,
+        "TTL": 417,
+        "Section": 2
+      }
+    ]
+  },
+  {
+    "name": "www.squarebirdnet.com",
+    "type": "CNAME",
+    "answers": [
+      {
+        "Name": "www.squarebirdnet.com",
+        "Type": 5,
+        "IPAddress": null,
+        "NameHost": "square-birdnet-site.netlify.app",
+        "TTL": 3325,
+        "Section": 1
+      }
+    ]
+  },
+  {
+    "name": "squarebirdnet.com",
+    "type": "NS",
+    "answers": [
+      {
+        "Name": "squarebirdnet.com",
+        "Type": 2,
+        "IPAddress": null,
+        "NameHost": "ns19.domaincontrol.com",
+        "TTL": 3600,
+        "Section": 1
+      },
+      {
+        "Name": "squarebirdnet.com",
+        "Type": 2,
+        "IPAddress": null,
+        "NameHost": "ns20.domaincontrol.com",
+        "TTL": 3600,
+        "Section": 1
+      }
+    ]
+  }
+]

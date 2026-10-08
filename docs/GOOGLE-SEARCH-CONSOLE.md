@@ -12,10 +12,10 @@ eye on it afterwards. No coding is needed for anything in this guide.
 
 ---
 
-## 0. Why the sitemap was not being picked up (October 2026)
+## 0. Historical issues and current verification (October 2026)
 
-The sitemap was submitted on 28 September 2026 and had not been processed.
-An audit found these problems on the live site at that time:
+The earlier audit recorded an unprocessed sitemap submitted on 28 September
+2026. Its historical findings were:
 
 1. **Every address Google was given was a redirect.** Netlify serves the site
    at `squarebirdnet.com` and forwards `www.squarebirdnet.com` there. But the
@@ -27,20 +27,27 @@ An audit found these problems on the live site at that time:
 2. **The sitemap listed pages that `robots.txt` blocked.** Privacy Policy and
    Terms were in the sitemap and also blocked in `robots.txt` — Search Console
    reports that as an error.
-3. **The 404 ("page not found") page told Google to index it** and claimed to
-   be the homepage.
-4. **Four days is short.** For a brand-new domain it is normal for Search
-   Console to show "Couldn't fetch" or "Pending" for several days, and for
-   pages to take one to four weeks to appear.
+3. **The 404 inherited conflicting homepage metadata.** The old layout
+   supplied an index directive and homepage canonical. Next.js can inject
+   its own noindex on not-found responses, so archived source alone does not
+   prove the old 404 was actually indexable.
+These are historical findings documented by the earlier audit, not proof of
+current production failures. On **9 October 2026 (IST)**, fresh public HTTP
+checks found 11 directly accessible apex pages, consistent apex canonicals,
+valid sitemap XML, permissive robots.txt, and correct HTTPS www redirects.
+See [the technical audit and evidence](INDEXING-AUDIT-2026-10-09.md).
 
-All of these are fixed in the code. **They only take effect once the updated
-site is deployed to Netlify.** After deploying, work through section 1 and
-then resubmit the sitemap (section 3).
+The exact reason for the reported Search Console sitemap fetch failure is
+still unverified without that account's error details and live test. A
+"Couldn't fetch" status should be investigated; it is not evidence by itself
+that the current site is broken, or merely waiting. There is no guaranteed
+indexing timetable.
 
-> If you added the site as a **URL-prefix** property for
-> `https://www.squarebirdnet.com/`, Google will never fetch the sitemap,
-> because everything on `www` forwards to the non-www address. Use a
-> **Domain** property instead (section 2), which covers both.
+Use the **Domain** property `squarebirdnet.com`, or a verified **URL-prefix**
+property `https://squarebirdnet.com/`. The www URL-prefix property does not
+cover the apex sitemap. This property scope limitation is different from an
+HTTP fetch failure. Submit the exact apex sitemap URL directly, rather than
+relying on a redirected www sitemap address.
 
 ---
 
@@ -73,11 +80,10 @@ must start with `https://squarebirdnet.com` and match the page you are on.
 A **Domain** property covers every version of the address (`http`, `https`,
 `www` and non-`www`) in one place. It is verified with a DNS record.
 
-> A `google-site-verification` TXT record already exists on
-> `squarebirdnet.com`, so the Domain property may already be set up and
-> verified. Open [Search Console](https://search.google.com/search-console)
-> and check the property list first. If `squarebirdnet.com` is listed with a
-> globe icon, skip to section 3.
+> Open [Search Console](https://search.google.com/search-console) and check
+> the property list and ownership status first. An existing verification TXT
+> record does not establish that your current account has verified access.
+> If the Domain property is already verified for your account, skip to section 3.
 
 1. Go to <https://search.google.com/search-console> and sign in with the
    Google account that should own the website data.
@@ -106,21 +112,32 @@ Keep the TXT record permanently. Removing it un-verifies the property.
 
 1. In Search Console, select the `squarebirdnet.com` property.
 2. In the left menu click **Sitemaps**.
-3. Under *Add a new sitemap* type `sitemap.xml` (Search Console fills in the
-   rest) and click **Submit**.
-4. If an older entry is listed — especially one with `www` in it — click it,
-   then the three-dot menu → **Remove sitemap**, and submit the new one.
+3. In a Domain property, enter the full URL
+   `https://squarebirdnet.com/sitemap.xml`. In the apex HTTPS URL-prefix
+   property, enter `sitemap.xml` if the interface already supplies that prefix.
+4. If the exact canonical sitemap is already submitted, open its row and
+   expand the fetch error details before considering another submission.
+   An obsolete www entry can be removed from the report for clarity;
+   removing it does not make Google forget the sitemap or its URLs.
 
 What to expect:
 
 - **One sitemap is enough.** It lists every page that should be in Google. You
   do not need to submit pages one by one.
-- **"Couldn't fetch", "Pending" or "Processing"** can show for several days on
-  a new property, even when everything is correct. Do not keep resubmitting —
-  check again after 3–5 days. If it still says *Couldn't fetch* after a week,
-  open the sitemap address in a browser to confirm it loads.
-- **"Success"** means Google read the file. It does not mean every page is
-  indexed yet — that happens gradually over the following weeks.
+- **"Couldn't fetch"** means Google's reported attempt failed. Open the row,
+  record its exact URL, last read and expanded diagnostic details. Inspect
+  that exact URL and run **Test live URL**; expand **Page availability** and
+  check **Crawl allowed? Yes** and **Page fetch: Successful**. XML need not
+  itself be indexable. If the current test fails, investigate the stated cause
+  immediately, including Crawl Stats host availability and Manual Actions.
+- **"Unknown"** can mean an unprocessed file or an unrecognized format.
+  Public HTTP/XML checks help distinguish these possibilities but cannot
+  establish Google's own fetch result.
+- **"Success"** means Google fetched and processed the sitemap. It does not
+  guarantee that every listed page will be crawled or indexed.
+- After fixing a demonstrated fetch problem, resubmit once. If current tests
+  succeed and the canonical sitemap is already submitted, monitor its next
+  read rather than repeatedly deleting and resubmitting it.
 
 ---
 
@@ -157,20 +174,21 @@ exactly these.
 
 ### Pages worth requesting manually
 
-Google finds every page through the sitemap, so this is optional. Requesting
-the most important pages can speed up the first crawl. Search Console allows
-roughly 10 requests per day, so use two small batches:
+The sitemap helps Google discover pages; discovery and indexing are not
+guaranteed. Optionally request the most important eligible pages once, within
+the quota shown by your account:
 
 - **Day 1:** Home, Bird Netting, Invisible Grill, Services overview, Contact
 - **Day 2:** Bird Spikes, Cricket Net, Projects, About
 
 How to request: paste the address into the search bar at the very top of
 Search Console → press Enter → wait for the result → click
+**Test live URL**. If the fetch succeeds and indexing is allowed, click
 **Request indexing**. Request each page **once**; repeating it does not help.
 
 If the result says **"URL is not on Google"** right after launch, that is
-expected — it means the page has not been crawled *yet*, not that something is
-wrong. The thing to check is the **"Page fetch: Successful"** and
+not a diagnosis: a page may be undiscovered, excluded, or crawled but not
+indexed. Read the stated reason and last crawl date. Check **"Page fetch: Successful"** and
 **"Indexing allowed? Yes"** lines when you click *Test live URL*.
 
 ---
@@ -212,7 +230,8 @@ show anything.
 - [ ] **Pages** report: open *Why pages aren't indexed*. Anything other than
       *Excluded by 'noindex'* and *Page with redirect* is worth a look —
       for example *Crawled – currently not indexed* or *Discovered – currently
-      not indexed* (both usually resolve with time).
+      not indexed*. Read the reason, live-test the page, and assess content and
+      Google's selected canonical rather than assuming time will resolve it.
 - [ ] **Enhancements** (left menu, below *Experience*): check *Breadcrumbs*
       and *FAQ* for errors. The site publishes breadcrumbs on every inner page
       and FAQ data on the FAQ and service pages.
@@ -225,7 +244,7 @@ show anything.
 **Week 3**
 - [ ] **Performance → Search results:** check *Total impressions* and
       *Queries*. Expect very small numbers at first; the trend matters more.
-- [ ] Confirm all 11 pages are indexed. For any that are not, use URL
+- [ ] Review indexing status for all 11 pages; full indexing is not guaranteed. For any that are not, use URL
       Inspection → *Test live URL* to confirm the page fetches successfully.
 
 **Week 4**
@@ -244,10 +263,41 @@ show anything.
 
 ## 7. When the website changes
 
-- **New page added:** it is added to the sitemap automatically when the site
-  is rebuilt. Optionally request indexing for it once.
+- **New page added:** update `app/sitemap.ts` for a static page, or
+  `data/services.ts` and the matching route for a service. Rebuild and run
+  the audits; adding a route alone does not automatically add it to the sitemap.
 - **Page renamed or removed:** ask the developer to add a permanent (301)
   redirect from the old address so existing Google results keep working.
 - **Changing to `www` (or any other domain):** the canonical address is set in
   `netlify.toml` (`NEXT_PUBLIC_SITE_URL`) and must match Netlify's primary
   domain. Changing one without the other recreates the problem in section 0.
+
+## 8. Diagnostics and regression checks
+
+- Under **Settings → Crawl stats**, check host status and DNS resolution,
+  server connectivity, robots.txt fetches, response codes and crawl dates.
+- Review **Security & Manual Actions → Manual actions** and **Security issues**.
+  These reports were not available to the public HTTP audit.
+- For each of the five old www URLs, compare the reported last crawl with the
+  latest live test. **Page with redirect** is expected; **Redirect error** is
+  a failed attempt and should be investigated if it persists on fresh crawls.
+  Do not request indexing for www redirects.
+- Inspect canonical apex pages and compare **User-declared canonical** and
+  **Google-selected canonical** in the indexed report. A live fetch is not
+  confirmation that Google has indexed the page or chosen that canonical.
+- Run `npm run typecheck`, `npm run build`, then `npm run audit:seo`.
+  To audit live content: set `AUDIT_BASE_URL=https://squarebirdnet.com` and
+  run `npm run audit:seo`.
+- With Python 3 and curl available, run
+  `python scripts/audit-crawlability.py` for production host/redirect, XML,
+  source-route, robots, header, canonical, image and 404 checks. JSON evidence
+  is saved under `docs/evidence/`. For local checks, start the production
+  server and pass `--base http://localhost:3107 --output docs/evidence/crawlability-local.json`.
+- `scripts/audit-navigation.playwright.js` is a function for Playwright MCP's
+  `browser_run_code_unsafe` filename input. It verifies desktop/mobile
+  navigation on production and the local production server on port 3107.
+
+Official references: [property coverage](https://support.google.com/webmasters/answer/34592?hl=en),
+[sitemap diagnostics](https://support.google.com/webmasters/answer/7451001),
+[URL Inspection](https://support.google.com/webmasters/answer/12482179?hl=en),
+and [sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap).

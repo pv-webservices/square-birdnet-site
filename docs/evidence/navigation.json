@@ -1,0 +1,13 @@
+{
+  "audit_date_ist": "2026-10-09",
+  "tool": "Playwright MCP browser_run_code_unsafe",
+  "script": "scripts/audit-navigation.playwright.js",
+  "expected_navigation_destinations": ["/", "/about", "/services", "/projects", "/videos", "/faq", "/contact", "/services/bird-netting", "/services/invisible-grill", "/services/bird-spikes", "/services/cricket-net"],
+  "results": [
+    {"base": "https://squarebirdnet.com", "width": 1440, "homepage_status": 200, "all_expected_links_present": true, "clicked": "/about", "canonical": "https://squarebirdnet.com/about", "result": "PASS"},
+    {"base": "https://squarebirdnet.com", "width": 390, "homepage_status": 200, "all_expected_links_present": true, "services_expanded": true, "clicked": "/about", "canonical": "https://squarebirdnet.com/about", "drawer_closed": true, "result": "PASS"},
+    {"base": "http://localhost:3107", "width": 1440, "homepage_status": 200, "all_expected_links_present": true, "clicked": "/about", "canonical": "https://squarebirdnet.com/about", "result": "PASS"},
+    {"base": "http://localhost:3107", "width": 390, "homepage_status": 200, "all_expected_links_present": true, "services_expanded": true, "clicked": "/about", "canonical": "https://squarebirdnet.com/about", "drawer_closed": true, "result": "PASS"}
+  ],
+  "console_note": "One unused image-preload warning occurred during rapid localhost responsive navigation. No indexing failure was inferred. Raw warning preserved in browser-console.log."
+}

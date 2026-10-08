@@ -1,0 +1,2868 @@
+{
+  "checked_at_utc": "2026-10-08T18:56:20.464669+00:00",
+  "base": "http://localhost:3107",
+  "commit": "dda7fcd006377af8d3b42dd31037232ea7fed16c",
+  "routes": [
+    "/about",
+    "/contact",
+    "/faq",
+    "/",
+    "/projects",
+    "/services/bird-netting",
+    "/services/bird-spikes",
+    "/services/cricket-net",
+    "/services/invisible-grill",
+    "/services",
+    "/videos"
+  ],
+  "legal": [
+    "/privacy-policy",
+    "/terms"
+  ],
+  "records": [
+    {
+      "url": "http://localhost:3107/about",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/about",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/about",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"t2t7tnkxwa34rm\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 146260,
+          "sha256": "8c0594f0ce1f03527fbbd5b0c975b03e93b801040a916d1ccb24acae84273e1d"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/about",
+      "canonicals": [
+        "https://squarebirdnet.com/about"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/about",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/about",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/about",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"t2t7tnkxwa34rm\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 146260,
+          "sha256": "8c0594f0ce1f03527fbbd5b0c975b03e93b801040a916d1ccb24acae84273e1d"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/about",
+      "canonicals": [
+        "https://squarebirdnet.com/about"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/contact",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/contact",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/contact",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"dtryyva0ct1xax\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 89873,
+          "sha256": "5761fc202029d3322dcdb8924847367099ce63814ecf8a51fff563ab9f709469"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/contact",
+      "canonicals": [
+        "https://squarebirdnet.com/contact"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/contact",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/contact",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/contact",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"dtryyva0ct1xax\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 89873,
+          "sha256": "5761fc202029d3322dcdb8924847367099ce63814ecf8a51fff563ab9f709469"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/contact",
+      "canonicals": [
+        "https://squarebirdnet.com/contact"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/faq",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/faq",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/faq",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"75ebwdms0228ul\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 104877,
+          "sha256": "4d9f0579d52ca3e3f729ee681fa811ab46c6d3b23330405887edf4ea7bdad86f"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/faq",
+      "canonicals": [
+        "https://squarebirdnet.com/faq"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/faq",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/faq",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/faq",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"75ebwdms0228ul\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 104877,
+          "sha256": "4d9f0579d52ca3e3f729ee681fa811ab46c6d3b23330405887edf4ea7bdad86f"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/faq",
+      "canonicals": [
+        "https://squarebirdnet.com/faq"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"c1zjkqd1s15ugq\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 272906,
+          "sha256": "c1e5c78fcd1a6684401a3f7ebad5504c9502d932aee8ca2e230f133b5fea15ef"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/",
+      "canonicals": [
+        "https://squarebirdnet.com"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"c1zjkqd1s15ugq\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 272906,
+          "sha256": "c1e5c78fcd1a6684401a3f7ebad5504c9502d932aee8ca2e230f133b5fea15ef"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/",
+      "canonicals": [
+        "https://squarebirdnet.com"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/projects",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/projects",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/projects",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"xjiygkhcfa2701\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 102471,
+          "sha256": "b63d0462740e7d6a081293fca1629618c32568d7666cb3a6348290d5c71fee5f"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/projects",
+      "canonicals": [
+        "https://squarebirdnet.com/projects"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/projects",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/projects",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/projects",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"xjiygkhcfa2701\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 102471,
+          "sha256": "b63d0462740e7d6a081293fca1629618c32568d7666cb3a6348290d5c71fee5f"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/projects",
+      "canonicals": [
+        "https://squarebirdnet.com/projects"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/bird-netting",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/services/bird-netting",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/bird-netting",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"foqyzvqqb946lq\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 195332,
+          "sha256": "882a7186289f25fc954e64e9b23d9be4675911f1cbc9230b9ad914e1156716cc"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/bird-netting",
+      "canonicals": [
+        "https://squarebirdnet.com/services/bird-netting"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/bird-netting",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/services/bird-netting",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/bird-netting",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"foqyzvqqb946lq\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 195332,
+          "sha256": "882a7186289f25fc954e64e9b23d9be4675911f1cbc9230b9ad914e1156716cc"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/bird-netting",
+      "canonicals": [
+        "https://squarebirdnet.com/services/bird-netting"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/bird-spikes",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/services/bird-spikes",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/bird-spikes",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"8jinb8wsau34d4\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 145706,
+          "sha256": "bbb1127352169c2f9126bbd6c05a5f4c99502201bfc84d4496c5f395d91eb92e"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/bird-spikes",
+      "canonicals": [
+        "https://squarebirdnet.com/services/bird-spikes"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/bird-spikes",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/services/bird-spikes",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/bird-spikes",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"8jinb8wsau34d4\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 145706,
+          "sha256": "bbb1127352169c2f9126bbd6c05a5f4c99502201bfc84d4496c5f395d91eb92e"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/bird-spikes",
+      "canonicals": [
+        "https://squarebirdnet.com/services/bird-spikes"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/cricket-net",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/services/cricket-net",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/cricket-net",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"cchig5hpr32zkc\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 139490,
+          "sha256": "754e906a13d03df7a5346d5617b8b77694a9d4dacb7c2555675212bb224ba0bc"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/cricket-net",
+      "canonicals": [
+        "https://squarebirdnet.com/services/cricket-net"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/cricket-net",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/services/cricket-net",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/cricket-net",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"cchig5hpr32zkc\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 139490,
+          "sha256": "754e906a13d03df7a5346d5617b8b77694a9d4dacb7c2555675212bb224ba0bc"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/cricket-net",
+      "canonicals": [
+        "https://squarebirdnet.com/services/cricket-net"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/invisible-grill",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/services/invisible-grill",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/invisible-grill",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"7mpkltv2gw3cq0\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 156570,
+          "sha256": "fc41cd1113b065012e195a92d7c5cf125419ddd68958ca891bb514e98a654ba2"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/invisible-grill",
+      "canonicals": [
+        "https://squarebirdnet.com/services/invisible-grill"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services/invisible-grill",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/services/invisible-grill",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services/invisible-grill",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"7mpkltv2gw3cq0\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 156570,
+          "sha256": "fc41cd1113b065012e195a92d7c5cf125419ddd68958ca891bb514e98a654ba2"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services/invisible-grill",
+      "canonicals": [
+        "https://squarebirdnet.com/services/invisible-grill"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/services",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"cq3ly6tuav2txt\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 132187,
+          "sha256": "cc420b01663e0fcfcaf43ec5bd7cadd238ae1b072bac29ccc0f0bfcc00aadf91"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services",
+      "canonicals": [
+        "https://squarebirdnet.com/services"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/services",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/services",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/services",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"cq3ly6tuav2txt\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 132187,
+          "sha256": "cc420b01663e0fcfcaf43ec5bd7cadd238ae1b072bac29ccc0f0bfcc00aadf91"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/services",
+      "canonicals": [
+        "https://squarebirdnet.com/services"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/videos",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/videos",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/videos",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "cache-control": [
+              "public, max-age=2592000, stale-while-revalidate=86400"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "etag": [
+              "\"13auvxnzatd1pnj\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 80007,
+          "sha256": "b5acafab8d19584f2a91302d6e4f36ef8d29a8c490e29a3921d876241c8fb35d"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/videos",
+      "canonicals": [
+        "https://squarebirdnet.com/videos"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/videos",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/videos",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/videos",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "cache-control": [
+              "public, max-age=2592000, stale-while-revalidate=86400"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "etag": [
+              "\"13auvxnzatd1pnj\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 80007,
+          "sha256": "b5acafab8d19584f2a91302d6e4f36ef8d29a8c490e29a3921d876241c8fb35d"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/videos",
+      "canonicals": [
+        "https://squarebirdnet.com/videos"
+      ],
+      "robots": [
+        "index, follow, max-image-preview:large"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/robots.txt",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/robots.txt",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/robots.txt",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "text/plain"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 71,
+          "sha256": "3ce711fd5b2cb3a19676760322680311067725010b6e2501181e174b4ff8a444"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/robots.txt"
+    },
+    {
+      "url": "http://localhost:3107/robots.txt",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/robots.txt",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/robots.txt",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "text/plain"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 71,
+          "sha256": "3ce711fd5b2cb3a19676760322680311067725010b6e2501181e174b4ff8a444"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/robots.txt"
+    },
+    {
+      "url": "http://localhost:3107/sitemap.xml",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/sitemap.xml",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/sitemap.xml",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "application/xml"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 3015,
+          "sha256": "93d6683e7a908ab45183f5f2ce5d633773082587ffd566ddd15d1ea77f6b0475"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/sitemap.xml"
+    },
+    {
+      "url": "http://localhost:3107/sitemap.xml",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/sitemap.xml",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/sitemap.xml",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "application/xml"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 3015,
+          "sha256": "93d6683e7a908ab45183f5f2ce5d633773082587ffd566ddd15d1ea77f6b0475"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/sitemap.xml"
+    },
+    {
+      "url": "http://localhost:3107/privacy-policy",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/privacy-policy",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/privacy-policy",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"6k3lp8yroa17kt\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 56519,
+          "sha256": "40f956d4a09e8f50470a26d232dbeea2f9277f32a05b3129e659a50d2bd11a35"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/privacy-policy",
+      "canonicals": [],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/privacy-policy",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/privacy-policy",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/privacy-policy",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"6k3lp8yroa17kt\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 56519,
+          "sha256": "40f956d4a09e8f50470a26d232dbeea2f9277f32a05b3129e659a50d2bd11a35"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/privacy-policy",
+      "canonicals": [],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/terms",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/terms",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/terms",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"yemqnn9vlq18bz\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 57505,
+          "sha256": "46b458235d3ace4173f5e0b97809a993fb058df3cc6e1982fec8ddf739006e16"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/terms",
+      "canonicals": [],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/terms",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/terms",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/terms",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"yemqnn9vlq18bz\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:19 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 57505,
+          "sha256": "46b458235d3ace4173f5e0b97809a993fb058df3cc6e1982fec8ddf739006e16"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/terms",
+      "canonicals": [],
+      "robots": [
+        "noindex, follow"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/this-page-should-not-exist-404-check",
+      "agent": "browser",
+      "method": "GET",
+      "path": "/this-page-should-not-exist-404-check",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/this-page-should-not-exist-404-check",
+          "status": 404,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "cache-control": [
+              "private, no-cache, no-store, max-age=0, must-revalidate"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "etag": [
+              "\"hyu2bgbiul14az\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 52285,
+          "sha256": "969f6f312d4a0e26baf90e6b78f1add1e86f6ae7fa5b4b15075682a7cd4f9d2c"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/this-page-should-not-exist-404-check",
+      "canonicals": [],
+      "robots": [
+        "noindex",
+        "noindex, follow"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/this-page-should-not-exist-404-check",
+      "agent": "googlebot",
+      "method": "GET",
+      "path": "/this-page-should-not-exist-404-check",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/this-page-should-not-exist-404-check",
+          "status": 404,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "cache-control": [
+              "private, no-cache, no-store, max-age=0, must-revalidate"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "etag": [
+              "\"hyu2bgbiul14az\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-encoding": [
+              "gzip"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ],
+            "transfer-encoding": [
+              "chunked"
+            ]
+          },
+          "bytes": 52285,
+          "sha256": "969f6f312d4a0e26baf90e6b78f1add1e86f6ae7fa5b4b15075682a7cd4f9d2c"
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/this-page-should-not-exist-404-check",
+      "canonicals": [],
+      "robots": [
+        "noindex",
+        "noindex, follow"
+      ],
+      "h1": 1
+    },
+    {
+      "url": "http://localhost:3107/",
+      "agent": "browser",
+      "method": "HEAD",
+      "path": "/",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"c1zjkqd1s15ugq\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-length": [
+              "272906"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/"
+    },
+    {
+      "url": "http://localhost:3107/",
+      "agent": "googlebot",
+      "method": "HEAD",
+      "path": "/",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"c1zjkqd1s15ugq\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-length": [
+              "272906"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/"
+    },
+    {
+      "url": "http://localhost:3107/about",
+      "agent": "browser",
+      "method": "HEAD",
+      "path": "/about",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/about",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"t2t7tnkxwa34rm\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-length": [
+              "146260"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/about"
+    },
+    {
+      "url": "http://localhost:3107/about",
+      "agent": "googlebot",
+      "method": "HEAD",
+      "path": "/about",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/about",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "x-nextjs-prerender": [
+              "1",
+              "1"
+            ],
+            "x-nextjs-stale-time": [
+              "300"
+            ],
+            "cache-control": [
+              "s-maxage=31536000"
+            ],
+            "etag": [
+              "\"t2t7tnkxwa34rm\""
+            ],
+            "content-type": [
+              "text/html; charset=utf-8"
+            ],
+            "content-length": [
+              "146260"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/about"
+    },
+    {
+      "url": "http://localhost:3107/robots.txt",
+      "agent": "browser",
+      "method": "HEAD",
+      "path": "/robots.txt",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/robots.txt",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "text/plain"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/robots.txt"
+    },
+    {
+      "url": "http://localhost:3107/robots.txt",
+      "agent": "googlebot",
+      "method": "HEAD",
+      "path": "/robots.txt",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/robots.txt",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "text/plain"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/robots.txt"
+    },
+    {
+      "url": "http://localhost:3107/sitemap.xml",
+      "agent": "browser",
+      "method": "HEAD",
+      "path": "/sitemap.xml",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/sitemap.xml",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "application/xml"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/sitemap.xml"
+    },
+    {
+      "url": "http://localhost:3107/sitemap.xml",
+      "agent": "googlebot",
+      "method": "HEAD",
+      "path": "/sitemap.xml",
+      "failures": [],
+      "chain": [
+        {
+          "url": "http://localhost:3107/sitemap.xml",
+          "status": 200,
+          "headers": {
+            "x-content-type-options": [
+              "nosniff"
+            ],
+            "referrer-policy": [
+              "strict-origin-when-cross-origin"
+            ],
+            "x-frame-options": [
+              "SAMEORIGIN"
+            ],
+            "permissions-policy": [
+              "camera=(), microphone=(), geolocation=()"
+            ],
+            "vary": [
+              "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+            ],
+            "x-nextjs-cache": [
+              "HIT"
+            ],
+            "cache-control": [
+              "public, max-age=0, must-revalidate"
+            ],
+            "content-type": [
+              "application/xml"
+            ],
+            "date": [
+              "Thu, 08 Oct 2026 18:56:20 GMT"
+            ],
+            "connection": [
+              "keep-alive"
+            ],
+            "keep-alive": [
+              "timeout=5"
+            ]
+          },
+          "bytes": 0,
+          "sha256": null
+        }
+      ],
+      "hops": 0,
+      "final": "http://localhost:3107/sitemap.xml"
+    }
+  ],
+  "sitemap": [
+    {
+      "agent": "browser",
+      "urls": [
+        "https://squarebirdnet.com/",
+        "https://squarebirdnet.com/services",
+        "https://squarebirdnet.com/contact",
+        "https://squarebirdnet.com/about",
+        "https://squarebirdnet.com/projects",
+        "https://squarebirdnet.com/faq",
+        "https://squarebirdnet.com/videos",
+        "https://squarebirdnet.com/services/bird-netting",
+        "https://squarebirdnet.com/services/invisible-grill",
+        "https://squarebirdnet.com/services/bird-spikes",
+        "https://squarebirdnet.com/services/cricket-net"
+      ],
+      "images": [
+        "https://squarebirdnet.com/images/hero/hero-balcony.webp",
+        "https://squarebirdnet.com/images/hero/towers-skyline.webp",
+        "https://squarebirdnet.com/images/team/installation-01.webp",
+        "https://squarebirdnet.com/images/projects/project-02.webp",
+        "https://squarebirdnet.com/images/videos/building-facade-netting.webp",
+        "https://squarebirdnet.com/images/services/bird-netting-residential.webp",
+        "https://squarebirdnet.com/images/services/invisible-grill-wide.webp",
+        "https://squarebirdnet.com/images/services/bird-spikes-rooftop.webp",
+        "https://squarebirdnet.com/images/services/cricket-box-net.webp"
+      ],
+      "robots": "User-Agent: *\nAllow: /\n\nSitemap: https://squarebirdnet.com/sitemap.xml\n",
+      "xml_valid": true
+    },
+    {
+      "agent": "googlebot",
+      "urls": [
+        "https://squarebirdnet.com/",
+        "https://squarebirdnet.com/services",
+        "https://squarebirdnet.com/contact",
+        "https://squarebirdnet.com/about",
+        "https://squarebirdnet.com/projects",
+        "https://squarebirdnet.com/faq",
+        "https://squarebirdnet.com/videos",
+        "https://squarebirdnet.com/services/bird-netting",
+        "https://squarebirdnet.com/services/invisible-grill",
+        "https://squarebirdnet.com/services/bird-spikes",
+        "https://squarebirdnet.com/services/cricket-net"
+      ],
+      "images": [
+        "https://squarebirdnet.com/images/hero/hero-balcony.webp",
+        "https://squarebirdnet.com/images/hero/towers-skyline.webp",
+        "https://squarebirdnet.com/images/team/installation-01.webp",
+        "https://squarebirdnet.com/images/projects/project-02.webp",
+        "https://squarebirdnet.com/images/videos/building-facade-netting.webp",
+        "https://squarebirdnet.com/images/services/bird-netting-residential.webp",
+        "https://squarebirdnet.com/images/services/invisible-grill-wide.webp",
+        "https://squarebirdnet.com/images/services/bird-spikes-rooftop.webp",
+        "https://squarebirdnet.com/images/services/cricket-box-net.webp"
+      ],
+      "robots": "User-Agent: *\nAllow: /\n\nSitemap: https://squarebirdnet.com/sitemap.xml\n",
+      "xml_valid": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "limitations": [
+    "UA spoofing does not verify real Googlebot access.",
+    "Public responses do not identify the Netlify deployed commit."
+  ]
+}

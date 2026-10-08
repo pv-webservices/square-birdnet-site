@@ -1,0 +1,198 @@
+{
+  "checked_at_utc": "2026-10-08T18:48:10.959543+00:00",
+  "hosts": [
+    {
+      "host": "squarebirdnet.com",
+      "protocol": "TLSv1.3",
+      "certificate": {
+        "subject": [
+          [
+            [
+              "commonName",
+              "squarebirdnet.com"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "Let's Encrypt"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "YE2"
+            ]
+          ]
+        ],
+        "version": 3,
+        "serialNumber": "054F99E3DC95660325E4B024ADDA2B933BA1",
+        "notBefore": "Sep 26 11:34:22 2026 GMT",
+        "notAfter": "Dec 25 11:34:21 2026 GMT",
+        "subjectAltName": [
+          [
+            "DNS",
+            "squarebirdnet.com"
+          ],
+          [
+            "DNS",
+            "www.squarebirdnet.com"
+          ]
+        ],
+        "caIssuers": [
+          "http://ye2.i.lencr.org/"
+        ],
+        "crlDistributionPoints": [
+          "http://ye2.c.lencr.org/34.crl"
+        ]
+      },
+      "verified": true
+    },
+    {
+      "host": "www.squarebirdnet.com",
+      "protocol": "TLSv1.3",
+      "certificate": {
+        "subject": [
+          [
+            [
+              "commonName",
+              "squarebirdnet.com"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "Let's Encrypt"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "YE2"
+            ]
+          ]
+        ],
+        "version": 3,
+        "serialNumber": "054F99E3DC95660325E4B024ADDA2B933BA1",
+        "notBefore": "Sep 26 11:34:22 2026 GMT",
+        "notAfter": "Dec 25 11:34:21 2026 GMT",
+        "subjectAltName": [
+          [
+            "DNS",
+            "squarebirdnet.com"
+          ],
+          [
+            "DNS",
+            "www.squarebirdnet.com"
+          ]
+        ],
+        "caIssuers": [
+          "http://ye2.i.lencr.org/"
+        ],
+        "crlDistributionPoints": [
+          "http://ye2.c.lencr.org/34.crl"
+        ]
+      },
+      "verified": true
+    },
+    {
+      "host": "square-birdnet-site.netlify.app",
+      "protocol": "TLSv1.3",
+      "certificate": {
+        "subject": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "stateOrProvinceName",
+              "California"
+            ]
+          ],
+          [
+            [
+              "localityName",
+              "San Francisco"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "Netlify, Inc"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "*.netlify.app"
+            ]
+          ]
+        ],
+        "issuer": [
+          [
+            [
+              "countryName",
+              "US"
+            ]
+          ],
+          [
+            [
+              "organizationName",
+              "DigiCert Inc"
+            ]
+          ],
+          [
+            [
+              "commonName",
+              "DigiCert Global G2 TLS RSA SHA256 2020 CA1"
+            ]
+          ]
+        ],
+        "version": 3,
+        "serialNumber": "0CD5D0AFB0611B5BD9D692535C0CA7C4",
+        "notBefore": "Feb 16 00:00:00 2026 GMT",
+        "notAfter": "Mar 19 23:59:59 2027 GMT",
+        "subjectAltName": [
+          [
+            "DNS",
+            "*.netlify.app"
+          ],
+          [
+            "DNS",
+            "netlify.app"
+          ]
+        ],
+        "OCSP": [
+          "http://ocsp.digicert.com"
+        ],
+        "caIssuers": [
+          "http://cacerts.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crt"
+        ],
+        "crlDistributionPoints": [
+          "http://crl3.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crl",
+          "http://crl4.digicert.com/DigiCertGlobalG2TLSRSASHA2562020CA1-1.crl"
+        ]
+      },
+      "verified": true
+    }
+  ]
+}
