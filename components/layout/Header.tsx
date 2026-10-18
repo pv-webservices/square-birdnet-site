@@ -9,11 +9,11 @@ import {
   ChevronDown,
   Clock3,
   MapPin,
-  MessageCircle,
   Menu,
   Phone,
   X,
 } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { brand, contact, phones, whatsappLink } from "@/data/site";
 import { services } from "@/data/services";
 import Icon from "@/components/ui/Icon";
@@ -102,7 +102,7 @@ export default function Header() {
               </a>
             ))}
             <a className="utility-bar__wa" href={whatsappLink()} target="_blank" rel="noreferrer">
-              <MessageCircle size={13} aria-hidden="true" /> WhatsApp Us
+              <WhatsAppIcon size={13} aria-hidden="true" /> WhatsApp Us
             </a>
           </div>
         </div>
@@ -221,7 +221,7 @@ export default function Header() {
                 </a>
               ))}
               <a href={whatsappLink()} target="_blank" rel="noreferrer">
-                <MessageCircle size={18} aria-hidden="true" /> Chat on WhatsApp
+                <WhatsAppIcon size={18} aria-hidden="true" /> Chat on WhatsApp
               </a>
               <Link href="/contact" className="btn btn--primary btn--block">
                 Get Free Site Visit <ArrowUpRight size={17} />

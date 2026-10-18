@@ -2,7 +2,8 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { MessageCircle, Phone, RotateCcw } from "lucide-react";
+import { Phone, RotateCcw } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { contact, whatsappLink } from "@/data/site";
 
 /**
@@ -35,7 +36,7 @@ export default function RouteError({ error, reset }: { error: Error & { digest?:
               <Phone size={17} /> Call {contact.phoneDisplay}
             </a>
             <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--ghost btn--large">
-              <MessageCircle size={18} /> WhatsApp Us
+              <WhatsAppIcon size={18} /> WhatsApp Us
             </a>
           </div>
           <nav className="notfound__links" aria-label="Popular pages">

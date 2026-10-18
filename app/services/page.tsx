@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, CheckCircle2, MessageCircle } from "lucide-react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { recommendations, services } from "@/data/services";
 import { materials, whatsappLink } from "@/data/site";
 import CtaBand from "@/components/ui/CtaBand";
@@ -13,9 +14,9 @@ import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumbSchema, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Bird Netting, Invisible Grill & Bird Spike Services",
+  title: "Bird Net Service, Invisible Grill Dealer & Bird Spikes",
   description:
-    "Bird netting, stainless steel invisible grills, bird spikes, cricket, safety and mosquito nets for homes, societies and factories across Gujarat.",
+    "Bird net service, anti bird net service, invisible grill dealer and bird spike installation for homes, societies and factories across Gujarat. Free site visit.",
   path: "/services",
   image: "services",
 });
@@ -26,7 +27,7 @@ export default function Page() {
       <JsonLd data={breadcrumbSchema([{ name: "Services", path: "/services" }])} />
       <PageHero
         eyebrow="Our services"
-        title="Protection solutions made for modern spaces."
+        title="Bird net service, invisible grills & bird spikes in Gujarat."
         lead="Four core services, one standard. We match the solution to the opening, the risk and the way you actually use the space — then install it cleanly."
         image="/images/hero/towers-skyline.webp"
         imageAlt="Modern residential towers with protected balconies"
@@ -37,7 +38,7 @@ export default function Page() {
               Get Free Site Visit <ArrowUpRight size={17} />
             </Link>
             <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--light btn--large">
-              <MessageCircle size={18} /> Chat on WhatsApp
+              <WhatsAppIcon size={18} /> Chat on WhatsApp
             </a>
           </>
         }
@@ -96,9 +97,10 @@ export default function Page() {
                         href={whatsappLink(service.name)}
                         target="_blank"
                         rel="noreferrer"
-                        className="btn btn--ghost btn--compact"
+                        className="btn btn--whatsapp btn--compact"
+                        aria-label={`Ask about ${service.name} on WhatsApp`}
                       >
-                        <MessageCircle size={15} /> Ask a Question
+                        <WhatsAppIcon size={17} /> WhatsApp Us
                       </a>
                     </div>
                   </div>

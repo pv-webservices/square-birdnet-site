@@ -12,8 +12,8 @@ export default function ServiceIndex() {
       <div className="container">
         <SectionHeading
           eyebrow="Everything we install"
-          title="Bird netting, invisible grill & net services across Gujarat"
-          body={`One experienced team for every job below, serving ${serviceAreaList}.`}
+          title="Bird net service, invisible grill dealer & bird spikes across Gujarat"
+          body={`Looking for a reliable bird net service, anti bird net service, invisible grill dealer or bird spike installer? One experienced team handles every job below, serving ${serviceAreaList}.`}
         />
         <Reveal className="service-index">
           {serviceIndex.map((item) => (

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Home, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Home } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { whatsappLink } from "@/data/site";
 
 export default function FinalCta() {
@@ -22,7 +23,7 @@ export default function FinalCta() {
         </div>
         <div className="final-cta__actions">
           <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--whatsapp btn--large">
-            <MessageCircle size={18} /> Chat on WhatsApp
+            <WhatsAppIcon size={18} /> Chat on WhatsApp
           </a>
           <Link href="/contact" className="btn btn--light btn--large">
             Get Free Site Visit <ArrowUpRight size={17} />

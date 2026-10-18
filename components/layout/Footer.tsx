@@ -8,10 +8,10 @@ import {
   Linkedin,
   Mail,
   MapPin,
-  MessageCircle,
   Phone,
   Youtube,
 } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { brand, contact, phones, socials, whatsappLink } from "@/data/site";
 import { footerServiceLinks } from "@/data/services";
 
@@ -100,7 +100,7 @@ export default function Footer() {
             </a>
           ))}
           <a href={whatsappLink()} target="_blank" rel="noreferrer">
-            <MessageCircle size={16} aria-hidden="true" /> Chat on WhatsApp
+            <WhatsAppIcon size={16} aria-hidden="true" /> Chat on WhatsApp
           </a>
           <a href={`mailto:${contact.email}`}>
             <Mail size={16} aria-hidden="true" /> {contact.email}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle, Phone } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { services } from "@/data/services";
 import { contact, whatsappLink } from "@/data/site";
 
@@ -43,7 +44,7 @@ export default function NotFound() {
               <Phone size={17} /> Call {contact.phoneDisplay}
             </a>
             <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--ghost btn--large">
-              <MessageCircle size={18} /> WhatsApp Us
+              <WhatsAppIcon size={18} /> WhatsApp Us
             </a>
           </div>
           <nav className="notfound__links" aria-label="Website sections">

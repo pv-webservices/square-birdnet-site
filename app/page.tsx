@@ -4,7 +4,7 @@ import { brand } from "@/data/site";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Bird Netting & Invisible Grill in Gujarat | SQUARE",
+  title: "Bird Net Service & Invisible Grill Dealer in Gujarat | SQUARE",
   absoluteTitle: true,
   description: brand.description,
   path: "/",

@@ -12,7 +12,7 @@ export default function Services() {
         <SectionHeading
           eyebrow="Our services"
           title="Solutions for every space"
-          body="Bird netting, invisible grills, bird spikes and cricket nets — from a single balcony to a full building, a factory shed or a practice ground."
+          body="Bird net service, anti bird net installation, invisible grills, bird spikes and cricket nets — from a single balcony to a full building, a factory shed or a practice ground."
           action={
             <Link className="text-link" href="/services">
               Explore All Services <ArrowRight size={16} />

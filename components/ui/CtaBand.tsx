@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { whatsappLink } from "@/data/site";
 import Reveal from "@/components/ui/Reveal";
 
@@ -31,7 +32,7 @@ export default function CtaBand({
           {primaryLabel} <ArrowUpRight size={17} />
         </Link>
         <a href={whatsappLink(subject)} target="_blank" rel="noreferrer" className="btn btn--whatsapp">
-          <MessageCircle size={18} /> Chat on WhatsApp
+          <WhatsAppIcon size={18} /> Chat on WhatsApp
         </a>
       </div>
     </Reveal>
