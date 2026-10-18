@@ -14,8 +14,8 @@ export default function Hero() {
     <section className="hero">
       <div className="container hero-grid">
         <div className="hero-copy">
-          <div className="eyebrow hero-enter">Safe homes. Happier living.</div>
           <h1 className="hero-enter" style={{ "--enter-delay": "50ms" } as React.CSSProperties}>
+            <span className="eyebrow hero-kicker">Bird Net Service &amp; Invisible Grill Dealer in Gujarat</span>{" "}
             Safe balconies.
             <br />
             Clear views.
@@ -23,8 +23,8 @@ export default function Hero() {
             <span>Zero compromise.</span>
           </h1>
           <p className="hero-enter" style={{ "--enter-delay": "100ms" } as React.CSSProperties}>
-            Professional bird netting, invisible grill, bird spike and cricket net installation for safer,
-            cleaner and more beautiful homes across Gujarat.
+            Trusted bird net service, anti bird net installation, invisible grill dealer and bird spike
+            installer for safer, cleaner and more beautiful homes across Gujarat.
           </p>
           <div className="hero-actions hero-enter" style={{ "--enter-delay": "150ms" } as React.CSSProperties}>
             <Link href="/contact" className="btn btn--primary btn--large">

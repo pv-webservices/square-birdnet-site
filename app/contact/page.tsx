@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ArrowUpRight, Clock3, Mail, MapPin, Phone } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { contact, phones, serviceAreas, whatsappLink } from "@/data/site";
 import { homeFaqs } from "@/data/faqs";
 import Accordion from "@/components/ui/Accordion";
@@ -37,7 +38,7 @@ export default function Page() {
               <Phone size={17} /> {contact.phoneDisplay}
             </a>
             <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--whatsapp btn--large">
-              <MessageCircle size={18} /> Chat on WhatsApp
+              <WhatsAppIcon size={18} /> Chat on WhatsApp
             </a>
           </>
         }
@@ -67,7 +68,7 @@ export default function Page() {
                 ))}
                 <a href={whatsappLink()} target="_blank" rel="noreferrer">
                   <span className="contact-list__icon" aria-hidden="true">
-                    <MessageCircle size={19} />
+                    <WhatsAppIcon size={19} />
                   </span>
                   <span className="contact-list__text">
                     <span>WhatsApp</span>

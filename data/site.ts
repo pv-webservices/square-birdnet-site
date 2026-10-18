@@ -12,7 +12,7 @@ export const brand = {
   promise: "Safe. Clean. Beautiful.",
   utilityLine: "Protecting Homes. Beautifying Views.",
   description:
-    "Bird netting services, stainless steel invisible grills, bird spikes and cricket nets — installed for homes, societies and factories across Gujarat.",
+    "Trusted bird net service, anti bird net installation, invisible grill dealer and bird spike supplier in Gujarat — for homes, societies and factories. Free site visit.",
   logoMark: "/images/brand/logo-mark.webp",
   logoLockup: "/images/brand/logo-lockup.webp",
 } as const;

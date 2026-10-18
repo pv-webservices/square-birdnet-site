@@ -6,11 +6,11 @@ import {
   CircleAlert,
   Layers3,
   MapPin,
-  MessageCircle,
   Ruler,
   ShieldCheck,
   Wrench,
 } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { services, type Service } from "@/data/services";
 import { videoBySlug } from "@/data/videos";
 import { processSteps, serviceAreas, whatsappLink, whyChoose } from "@/data/site";
@@ -63,7 +63,8 @@ export default function ServicePage({ service }: { service: Service }) {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.name,
-    serviceType: service.name,
+    serviceType: service.cardTitle,
+    alternateName: service.navLabel,
     url: absoluteUrl(`/services/${service.slug}`),
     image: absoluteUrl(service.heroImage),
     provider: { "@id": BUSINESS_ID },
@@ -91,7 +92,7 @@ export default function ServicePage({ service }: { service: Service }) {
               Get Free Site Visit <ArrowUpRight size={17} />
             </Link>
             <a href={whatsappLink(service.name)} target="_blank" rel="noreferrer" className="btn btn--light btn--large">
-              <MessageCircle size={18} /> Chat on WhatsApp
+              <WhatsAppIcon size={18} /> Chat on WhatsApp
             </a>
           </>
         }

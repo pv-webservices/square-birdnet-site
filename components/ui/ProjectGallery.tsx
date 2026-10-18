@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState } from "react";
-import { ArrowUpRight, Maximize2, MessageCircle, X } from "lucide-react";
+import { ArrowUpRight, Maximize2, X } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { projectFilters, type Project } from "@/data/projects";
 import { whatsappLink } from "@/data/site";
 import Reveal from "@/components/ui/Reveal";
@@ -144,7 +145,7 @@ export default function ProjectGallery({ projects, withFilters = true, variant =
                     rel="noreferrer"
                     className="btn btn--ghost btn--compact"
                   >
-                    <MessageCircle size={16} /> WhatsApp
+                    <WhatsAppIcon size={16} /> WhatsApp
                   </a>
                 </div>
               </div>

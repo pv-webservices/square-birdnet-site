@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppFab from "@/components/ui/WhatsAppFab";
 import JsonLd from "@/components/seo/JsonLd";
 import { brand, contact, phones, serviceAreas } from "@/data/site";
+import { services } from "@/data/services";
 import { BUSINESS_ID, INDEX_ROBOTS, SITE_NAME, SITE_URL, socialImage } from "@/lib/seo";
 
 const manrope = Manrope({
@@ -22,7 +23,7 @@ const caveat = Caveat({
   display: "swap",
 });
 
-const HOME_TITLE = "Bird Netting & Invisible Grill in Gujarat | SQUARE";
+const HOME_TITLE = "Bird Net Service & Invisible Grill Dealer in Gujarat | SQUARE";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -94,6 +95,15 @@ const siteSchema = {
       })),
       address: { "@type": "PostalAddress", addressRegion: "Gujarat", addressCountry: "IN" },
       areaServed: serviceAreas.map((area) => ({ "@type": "City", name: area })),
+      keywords: "bird net service, anti bird net service, invisible grill dealer, bird spike, bird netting, invisible grill, Gujarat",
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Bird net, invisible grill and bird spike services",
+        itemListElement: services.map((service) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: service.cardTitle, url: `${SITE_URL}/services/${service.slug}` },
+        })),
+      },
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",

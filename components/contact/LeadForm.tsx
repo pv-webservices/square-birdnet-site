@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { AlertCircle, ArrowUpRight, CheckCircle2, MessageCircle } from "lucide-react";
+import { AlertCircle, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import {
   FIELD_LIMITS,
   LEAD_FORM_ACTION,
@@ -128,7 +129,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 22 }}>
           <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--whatsapp">
-            <MessageCircle size={18} /> Message Us Now
+            <WhatsAppIcon size={18} /> Message Us Now
           </a>
           <button type="button" className="btn btn--ghost" onClick={() => setStatus("idle")}>
             Send Another Request
@@ -361,7 +362,7 @@ export default function LeadForm({ defaultService = "" }: { defaultService?: str
           )}
         </button>
         <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--ghost btn--large">
-          <MessageCircle size={18} /> Or WhatsApp Us
+          <WhatsAppIcon size={18} /> Or WhatsApp Us
         </a>
       </div>
     </form>

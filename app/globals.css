@@ -471,6 +471,23 @@ strong { font-weight: 800; }
 }
 .wa-fab:hover .wa-fab__label { opacity: 1; transform: none; }
 
+/* One-tap call shortcut, stacked above the WhatsApp button on phones only. */
+.call-fab {
+  position: fixed; right: 18px; bottom: 86px; z-index: 110;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: none; place-items: center; color: #fff;
+  background: linear-gradient(135deg, #147fc9, #0a4d83);
+  box-shadow: 0 12px 28px rgba(10, 77, 131, 0.38);
+  transition: transform .4s var(--ease-out), box-shadow .4s ease;
+}
+.call-fab svg { animation: callRing 3.2s ease-in-out infinite; }
+@keyframes callRing {
+  0%, 70%, 100% { transform: rotate(0); }
+  74%, 82%, 90% { transform: rotate(-14deg); }
+  78%, 86%, 94% { transform: rotate(14deg); }
+}
+.call-fab:active { transform: scale(0.94); }
+
 /* ================================================================== HERO */
 .hero {
   position: relative; overflow: hidden;
@@ -500,6 +517,12 @@ strong { font-weight: 800; }
   animation: btnFlow 9s linear infinite;
 }
 .hero-copy > p { max-width: 540px; font-size: 17px; }
+/* Keyword line rendered inside the h1 but styled as the eyebrow above it. */
+.hero-copy h1 .hero-kicker {
+  display: flex; line-height: 1.5; margin-bottom: 14px;
+  background: none; animation: none;
+  -webkit-text-fill-color: var(--blue-600); color: var(--blue-600);
+}
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 24px 0 36px; }
 .hero-benefits { display: flex; gap: 26px; flex-wrap: wrap; }
 .hero-benefits span { display: flex; align-items: center; gap: 9px; color: #4e687d; font-size: 12.5px; font-weight: 800; }
@@ -1647,8 +1670,9 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .lightbox, .video-modal { padding: 14px; }
   .lightbox__body { padding: 26px 22px; }
   .lightbox__meta { grid-template-columns: 1fr; }
-  .wa-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; }
+  .wa-fab { right: 14px; bottom: 14px; width: 56px; height: 56px; }
   .wa-fab__label { display: none; }
+  .call-fab { display: grid; right: 16px; bottom: 82px; }
 }
 
 /* Touch devices: hover effects double as press feedback. */

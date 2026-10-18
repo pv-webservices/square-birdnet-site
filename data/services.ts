@@ -69,10 +69,10 @@ export const services: Service[] = [
     name: "Bird Netting",
     cardTitle: "Bird Net Service",
     cardSubtitle: "Humane bird protection for balconies, buildings and factory sheds.",
-    navLabel: "Bird Netting Services",
+    navLabel: "Bird Net Service",
     icon: "bird",
-    eyebrow: "BIRD NETTING SERVICES IN GUJARAT",
-    heroTitle: "Cleaner open spaces, without the constant bird nuisance.",
+    eyebrow: "BIRD NET SERVICE & ANTI BIRD NET IN GUJARAT",
+    heroTitle: "Bird net service that ends the pigeon nuisance for good.",
     heroLead:
       "From a single balcony to a full building facade or a factory shed — a tensioned, near-transparent net keeps pigeons out while daylight, airflow and your view stay exactly as they were.",
     image: "/images/services/balcony-bird-net.webp",
@@ -85,10 +85,11 @@ export const services: Service[] = [
       "/images/services/factory-net-fittings.webp",
       "/images/services/factory-warehouse-netting.webp",
     ],
-    metaTitle: "Bird Netting Services in Gujarat — Anti Bird Net",
+    metaTitle: "Bird Net Service & Anti Bird Net Service in Gujarat",
     metaDescription:
-      "Bird netting for balconies, windows, facades, societies and factory sheds across Gujarat. Nylon, HDPE anti bird and industrial nets. Free site visit.",
+      "Professional bird net service and anti bird net service for balconies, windows, societies and factory sheds in Rajkot, Morbi & across Gujarat. Free site visit.",
     overview: [
+      "SQUARE offers a complete bird net service across Gujarat — from a single apartment balcony in Rajkot or Morbi to full society towers and factory sheds. Our anti bird net service covers survey, supply, installation and after-care by our own trained team.",
       "Bird netting is the most reliable way to keep pigeons and other birds out of an opening without harming them. A tensioned mesh is fixed to the perimeter of the balcony, window, duct, facade or shed so birds simply cannot enter or nest.",
       "Because the mesh is thin and taut, it reads as almost invisible from a few feet away. You keep the light, the breeze and the view — you only lose the birds.",
       "We fit both nylon bird netting and plastic anti bird net, and recommend one or the other after seeing the site — nylon for large, high-wind spans; plastic mesh where a lighter, budget-friendly net will do the job.",
@@ -137,6 +138,8 @@ export const services: Service[] = [
       { q: "How long does installation take?", a: "A typical balcony is completed within a few hours. Full buildings, sheds and other large spans are scheduled after measurement." },
       { q: "What colours are available?", a: "Transparent and black are the most common choices. Transparent disappears against the sky; black reads better against a dark facade." },
       { q: "Nylon bird netting or plastic anti bird net — which is better?", a: "Nylon netting is stronger and handles wind and large spans better, so it suits facades, sheds and high floors. Plastic anti bird net is lighter and more economical for smaller balconies and windows. We recommend one at the site visit based on the opening, not the invoice." },
+      { q: "What is included in your bird net service?", a: "A free site visit and measurement, a recommendation of the right net, supply of the net and fittings, professional installation with sealed edges, and a final check before handover. Everything is done by our own team, not subcontracted." },
+      { q: "Do you provide anti bird net service near me?", a: "We provide anti bird net service across Gujarat, including Rajkot, Morbi, Jamnagar, Bhavnagar, Junagadh, Gondal, Upleta, Porbandar, Vadodara and Gandhinagar. Call or WhatsApp us with your location and we will confirm a visit." },
       { q: "Do you also install safety nets and mosquito nets?", a: "Yes. The same team installs safety nets for ducts, staircases and open shafts, and mosquito nets for windows, doors and balconies. They can be fitted on the same visit as your bird net." },
     ],
     spotlights: [
@@ -186,8 +189,8 @@ export const services: Service[] = [
     extras: [
       {
         id: "anti-bird-net",
-        title: "Anti bird net — supply and installation",
-        text: "Need the net itself? We supply nylon and plastic anti bird net for contractors and builders, or fit it for you so the edges are sealed and the tension is right first time.",
+        title: "Anti bird net service — supply and installation",
+        text: "Our anti bird net service covers both supply and fitting. Need the net itself? We supply nylon and plastic anti bird net for contractors and builders, or fit it for you so the edges are sealed and the tension is right first time.",
         points: ["Nylon and plastic (HDPE / PP) mesh", "Transparent and black", "Supply-only or supply & install"],
       },
       {
@@ -209,10 +212,10 @@ export const services: Service[] = [
     name: "Invisible Grill",
     cardTitle: "Invisible Grill",
     cardSubtitle: "Child and pet safety with a clean, open balcony view.",
-    navLabel: "Invisible Grill Installation",
+    navLabel: "Invisible Grill Dealer",
     icon: "shield",
-    eyebrow: "STAINLESS STEEL INVISIBLE GRILL — CHILD & PET SAFETY",
-    heroTitle: "Safety that does not block your beautiful view.",
+    eyebrow: "INVISIBLE GRILL DEALER & INSTALLER IN GUJARAT",
+    heroTitle: "Invisible grill that keeps kids safe without blocking your view.",
     heroLead:
       "Slim stainless steel cables tensioned vertically across your balcony give you a real physical barrier for children and pets, while keeping the open, uncluttered look of a modern home.",
     image: "/images/services/invisible-grill-customers.webp",
@@ -225,10 +228,11 @@ export const services: Service[] = [
       "/images/projects/project-07.webp",
       "/images/projects/project-12.webp",
     ],
-    metaTitle: "Stainless Steel Invisible Grill Installation in Gujarat",
+    metaTitle: "Invisible Grill Dealer & Installation in Gujarat",
     metaDescription:
-      "Invisible grill contractors in Gujarat. Stainless steel cable grills for balconies and windows — child and pet safe, rust resistant. Free site visit.",
+      "Leading invisible grill dealer in Gujarat. Stainless steel invisible grills for balconies and windows — child and pet safe, rust resistant. Free site visit.",
     overview: [
+      "SQUARE is an invisible grill dealer and installer serving Rajkot, Morbi, Jamnagar, Vadodara and cities across Gujarat. We supply genuine stainless steel invisible grill cable and fittings and install them with our own team, so you deal with one company from quotation to handover.",
       "An invisible grill replaces the heavy welded MS grill with a run of tensioned stainless steel cables. Each cable is only a few millimetres thick, so at normal viewing distance the balcony reads as open.",
       "It is the solution most high-rise families choose when a society will not allow external grills, or when the view is the reason they bought the home in the first place.",
       "As invisible grill contractors we handle the whole job ourselves — measurement, anchoring, cable tensioning and the final safety check — rather than subcontracting the fixing.",
@@ -268,6 +272,7 @@ export const services: Service[] = [
       "Adjustable tensioners for re-tightening",
     ],
     faqs: [
+      { q: "Are you an invisible grill dealer or only an installer?", a: "Both. As an invisible grill dealer we supply the stainless steel cable, anchors and tensioners, and our own team installs them. Buying supply and installation together means one warranty and one point of contact." },
       { q: "Is the invisible grill really invisible?", a: "The cables are intentionally slim and are genuinely hard to see from a few feet away or from outside the building. Standing directly at the balcony edge you will see them — nothing physical is truly invisible." },
       { q: "Is it safe for children?", a: "Cable spacing is the critical factor. For homes with small children we set the spacing tighter so a child cannot pass through or use the cables as a ladder. We confirm the spacing during the site visit." },
       { q: "Is it safe for pets?", a: "Yes. For cats and small dogs we set the cable spacing tighter so they cannot squeeze through or jump between cables. Tell us about your pets at the site visit and we specify accordingly." },
@@ -281,9 +286,9 @@ export const services: Service[] = [
     name: "Bird Spikes",
     cardTitle: "Bird Spikes",
     cardSubtitle: "Professional deterrence for ledges, parapets and building edges.",
-    navLabel: "Bird Spike Installation",
+    navLabel: "Bird Spikes",
     icon: "spike",
-    eyebrow: "BIRD SPIKE INSTALLATION SERVICES",
+    eyebrow: "BIRD SPIKE SUPPLY & INSTALLATION IN GUJARAT",
     heroTitle: "Stop birds perching where they cause the most mess.",
     heroLead:
       "Discreet polycarbonate and stainless steel bird spike strips make ledges, parapets, AC units and signage edges uncomfortable to land on — so birds move along instead of settling in.",
@@ -294,10 +299,11 @@ export const services: Service[] = [
       "/images/services/bird-spikes-strip.webp",
       "/images/services/bird-spikes-ac-unit.webp",
     ],
-    metaTitle: "Bird Spike Installation Services in Gujarat",
+    metaTitle: "Bird Spike Installation & Supply in Gujarat",
     metaDescription:
-      "Humane bird spike installation across Gujarat for ledges, parapets, railings, AC units and facades. Stainless steel and polycarbonate. Free site visit.",
+      "Bird spike supply and installation in Gujarat for ledges, parapets, AC units and facades. Humane stainless steel and polycarbonate bird spikes. Free site visit.",
     overview: [
+      "We supply and install bird spikes across Gujarat for homes, offices, shops and industrial buildings. Every bird spike job starts with a survey of where birds actually perch, so you pay only for the edges that need protecting.",
       "Bird spikes are the right answer where netting would be impractical — a narrow ledge, the top of a signboard, a parapet edge, the casing of an outdoor AC unit.",
       "The strips are fixed along the landing surface so there is no comfortable place to perch. Birds are not injured; they simply choose somewhere else.",
     ],
@@ -335,6 +341,7 @@ export const services: Service[] = [
       "Stainless mechanical fixings",
     ],
     faqs: [
+      { q: "Do you sell bird spikes or only install them?", a: "Both. We supply polycarbonate and stainless steel bird spike strips, and we install them so they are fixed in a continuous line with corners covered — which is where most self-fitted spikes fail." },
       { q: "Do spikes hurt birds?", a: "No. The tips are blunt and the purpose is discomfort, not injury. Birds land, find no stable footing, and move on." },
       { q: "Will spikes be visible from the street?", a: "From ground level they read as a thin line along the edge. On facades we can specify a finish that blends with the surface." },
       { q: "Do spikes work against all birds?", a: "They are most effective against pigeons and similar perching birds. For smaller birds that nest inside cavities, netting is usually the better solution." },
@@ -490,12 +497,12 @@ export const recommendations = [
  */
 export const serviceIndex = [
   {
-    title: "Bird Netting Services",
+    title: "Bird Net Service",
     text: "Balconies, windows, ducts and terraces netted to keep pigeons out for good.",
     href: "/services/bird-netting",
   },
   {
-    title: "Anti Bird Net Dealers",
+    title: "Anti Bird Net Service",
     text: "Nylon and plastic anti bird net supplied by the roll, or supplied and installed.",
     href: "/services/bird-netting#anti-bird-net",
   },
@@ -520,7 +527,7 @@ export const serviceIndex = [
     href: "/services/bird-netting#society",
   },
   {
-    title: "Invisible Grill Contractors",
+    title: "Invisible Grill Dealer",
     text: "Measured, anchored and tensioned by our own team for child and pet safety.",
     href: "/services/invisible-grill",
   },
@@ -530,8 +537,8 @@ export const serviceIndex = [
     href: "/services/invisible-grill",
   },
   {
-    title: "Bird Spike Installation Services",
-    text: "Polycarbonate and steel spikes for ledges, parapets and AC units.",
+    title: "Bird Spike Supply & Installation",
+    text: "Polycarbonate and steel bird spikes for ledges, parapets and AC units.",
     href: "/services/bird-spikes",
   },
   {
@@ -556,22 +563,22 @@ export const serviceIndex = [
  * at the service page (or section) that covers it.
  */
 export const footerServiceLinks = [
-  { label: "Bird Netting Services", href: "/services/bird-netting" },
-  { label: "Anti Bird Net", href: "/services/bird-netting#anti-bird-net" },
+  { label: "Bird Net Service", href: "/services/bird-netting" },
+  { label: "Anti Bird Net Service", href: "/services/bird-netting#anti-bird-net" },
   { label: "Mosquito Net Installation Services", href: "/services/bird-netting#mosquito-net" },
   { label: "Bird Spike", href: "/services/bird-spikes" },
   { label: "Industrial Bird Netting Services", href: "/services/bird-netting#industrial" },
-  { label: "Invisible Grill Contractors", href: "/services/invisible-grill" },
+  { label: "Invisible Grill Dealer", href: "/services/invisible-grill" },
   { label: "Nylon Bird Netting Services", href: "/services/bird-netting" },
   { label: "Plastic Anti Bird Net", href: "/services/bird-netting#anti-bird-net" },
   { label: "Safety Net Installation Services", href: "/services/bird-netting#safety-net" },
   { label: "Stainless Steel Invisible Grill", href: "/services/invisible-grill" },
-  { label: "Best Bird Netting Services In Gujarat", href: "/services/bird-netting" },
+  { label: "Best Bird Net Service In Gujarat", href: "/services/bird-netting" },
   { label: "Best Anti Bird Net Dealers In Gujarat", href: "/services/bird-netting#anti-bird-net" },
   { label: "Best Mosquito Net Installation Services In Gujarat", href: "/services/bird-netting#mosquito-net" },
-  { label: "Best Bird Spike Installation Services In Gujarat", href: "/services/bird-spikes" },
+  { label: "Best Bird Spike Dealer In Gujarat", href: "/services/bird-spikes" },
   { label: "Best Industrial Bird Netting Services In Gujarat", href: "/services/bird-netting#industrial" },
-  { label: "Best Invisible Grill Contractors In Gujarat", href: "/services/invisible-grill" },
+  { label: "Best Invisible Grill Dealer In Gujarat", href: "/services/invisible-grill" },
   { label: "Best Nylon Bird Netting Services In Gujarat", href: "/services/bird-netting" },
   { label: "Plastic Anti Bird Net Installation Services In Gujarat", href: "/services/bird-netting#anti-bird-net" },
   { label: "Safety Net Installation Services In Gujarat", href: "/services/bird-netting#safety-net" },

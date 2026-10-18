@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, MessageCircle, Phone } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
+import WhatsAppIcon from "@/components/ui/WhatsAppIcon";
 import { allFaqs } from "@/data/faqs";
 import { phones, whatsappLink } from "@/data/site";
 import CtaBand from "@/components/ui/CtaBand";
@@ -43,7 +44,7 @@ export default function Page() {
               </a>
             ))}
             <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn btn--secondary btn--large">
-              <MessageCircle size={18} /> Ask on WhatsApp
+              <WhatsAppIcon size={18} /> Ask on WhatsApp
             </a>
           </>
         }
